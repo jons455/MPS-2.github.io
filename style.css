@@ -75,3 +75,9 @@ h1{
   margin-top: 50px ;
   margin-bottom: 25px;
 }
+
+.logo{
+  position: absolute;
+  top: 1px;
+  left: 1050px;
+}
