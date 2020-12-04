@@ -27,18 +27,49 @@
 </head>
 
 <body>
+	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+		<a class="navbar-brand" href="#">Navbar</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+		  aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+	
+		<!-- Navigation Bar -->
+		<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+		  <!-- Nav Links -->
+		  <ul class="navbar-nav mr-auto">
+			<li class="nav-item active">
+			  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="test.html">Test</a>
+			</li>
+			<li class="nav-item dropdown">
+			  <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+				aria-expanded="false">Places</a>
+			  <div class="dropdown-menu" aria-labelledby="dropdown01">
+				<a class="dropdown-item" href="#">Mensa</a>
+				<a class="dropdown-item" href="#">Lange</a>
+				<a class="dropdown-item" href="#">Findel</a>
+			  </div>
+			</li>
+		  </ul>
+		</div>
+	  </nav>
 	<div class="jumbotron hero-image">
 		<div class="logo">
 			<img src="FAU Logo.png" alt="FauLogo">
 		</div>
 		<div class="hero-text">
 			<h1 id="zumSeitenanfang">Experience FAU just like you where there</h1>
+			<br>
 			<p class="display-12">Hier wird dir eine Tour durch die Nürnberger Standorte der FAU geboten,
 				um alle wichtigen Standorte auch während eines Hybridsemesters erleben zu können. <br>
 				Dafür haben wir eine Aufteilung der Standorte für dich bereitgestellt,
 				in denen nützliche Informationen für ein Home-Studium und ein Präsenzsemester bietet (sobald es wieder
 				möglich ist). <br>
 				Viel Spaß :)</p>
+				<br><br>
 			<a class="btn btn-secondary" role="button" href=#mapid>Explore FAU</a>
 		</div>
 	</div>
@@ -60,6 +91,7 @@
 			</div>
 		</div>
 
+
 	</div>
 	<div class="container-fluid" data-aos="fade-up" data-aos-duration="1000">
 		<div class="mx-auto" style="width: 100%;" id="rundgang">
@@ -69,7 +101,7 @@
 	</div>
 	<div id="Platzhalter">
 		<div class="container" id="LG">
-			<h1 id="LangeGasse">Lange Gasse</h1>
+			<h2 id="LangeGasse">Lange Gasse</h2>
 			<p> <img src=https://www.wiso.rw.fau.de/files/2017/08/WiSo8_Beitrag.jpg alt="LangeGasse"
 					style="border: 4px solid #6c757d"></p>
 			<div class="container">
