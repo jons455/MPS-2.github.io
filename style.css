@@ -80,30 +80,9 @@ h1{
  align-self: center;
  text-align: center;
   position: absolute;
-  
-
-
+ 
 }
-/* code that is here, until the first @media block, will apply to any screen size */
-
-
-@media screen and (max-width: 320px) {
-  /* comes into effect for screens less than or equal to 320 pixels */
-  #logo {
-    margin-left: 50px;
-  }
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
 }
-@media screen and (min-width: 321px) and (max-width: 480px) {
-  /* comes into effect for screens between 321 and 480 pixels (inclusive) */
-  #somethingorother {
-    width: 320px ;
-  }
-}
-@media screen and (min-width: 481px) {
-  /* comes into effect for screens larger than or equal to 481 pixels */
-  #somethingorother {
-    width: 480px ;
-  }
-}
-
-/* code that is here will apply to any screen size */ 
