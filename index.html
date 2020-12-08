@@ -61,7 +61,7 @@
 			<img src="FAU Logo.png" alt="FauLogo">
 		</div>
 		<div class="hero-text">
-			
+
 			<h1 id="zumSeitenanfang">Experience FAU just like you where there</h1>
 			<br>
 			<p class="display-12">Hier wird dir eine Tour durch die Nürnberger Standorte der FAU geboten,
@@ -497,7 +497,7 @@
 
 		<div class="container">
 			<h1 id="FindelGasse">Findelgasse</h1>
-			
+
 			<p>Platzhalter</p>
 			<p>Platzhalter</p>
 			<p>Platzhalter</p>
@@ -596,11 +596,34 @@
 
 
 	<!-- All kinds of Scripts -->
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+	<script>
+		var firebaseConfig = {
+			apiKey: "AIzaSyAsjpbZDmUC7WCTUdmMEbP_TxMRCpd4nOI",
+			authDomain: "mps-2-bf005.firebaseapp.com",
+			projectId: "mps-2-bf005",
+			storageBucket: "mps-2-bf005.appspot.com",
+			messagingSenderId: "321436711423",
+			appId: "1:321436711423:web:40bf05c097ade8bca10fca",
+			measurementId: "G-K6Y58XLY9W"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
 
-	<!-- Load JQuery and bootstrap scripts -->
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-		crossorigin="anonymous"></script>
+		const auth = firebase.auth();
+		const db = firebase.firestore();
+
+		//update firestore settings
+		db.settings({ timestampsInSnapshots:true})
+	</script>
+	 // Load JQuery and bootstrap scripts 
+
+			<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+				integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+				crossorigin="anonymous"></script>
 	<script>window.jQuery || document.write('<script src="bootstrap/js/vendor/jquery.slim.min.js"><\/script>')</script>
 	<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 	<script src="main.js"></script>
@@ -612,7 +635,7 @@
 		var mymap = L.map('mapid').setView([49.4543342, 11.0849681], 15);
 
 		L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-			attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>,' +
+				attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>,' +
 				'contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>,' +
 				'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
 			maxZoom: 18,
