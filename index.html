@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
 	<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 	<meta name="generator" content="Jekyll v4.1.1">
@@ -17,50 +17,51 @@
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<!--Leaflet-->
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-		  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-		  crossorigin="" />
+		integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+		crossorigin="" />
 	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-			integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-			crossorigin=""></script>
+		integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+		crossorigin=""></script>
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon-256x256.png">
 
 </head>
 
 <body>
-	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-		<a class="navbar-brand" href="#">Navbar</a>
+	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" width=device-width>
+		<a class="navbar-brand" src="#"><img src="favicon-256x256.png" width="20px">FAU</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-		  aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-		  <span class="navbar-toggler-icon"></span>
+			aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
 		</button>
-	
+
 		<!-- Navigation Bar -->
 		<div class="collapse navbar-collapse" id="navbarsExampleDefault">
-		  <!-- Nav Links -->
-		  <ul class="navbar-nav mr-auto">
-			<li class="nav-item active">
-			  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-			</li>
-			<li class="nav-item">
-			  <a class="nav-link" href="test.html">Test</a>
-			</li>
-			<li class="nav-item dropdown">
-			  <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
-				aria-expanded="false">Places</a>
-			  <div class="dropdown-menu" aria-labelledby="dropdown01">
-				<a class="dropdown-item" href="#">Mensa</a>
-				<a class="dropdown-item" href="#">Lange</a>
-				<a class="dropdown-item" href="#">Findel</a>
-			  </div>
-			</li>
-		  </ul>
+			<!-- Nav Links -->
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="test.html">Test</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
+						aria-haspopup="true" aria-expanded="false">Places</a>
+					<div class="dropdown-menu" aria-labelledby="dropdown01">
+						<a class="dropdown-item" href="#">Mensa</a>
+						<a class="dropdown-item" href="#">Lange</a>
+						<a class="dropdown-item" href="#">Findel</a>
+					</div>
+				</li>
+			</ul>
 		</div>
-	  </nav>
+	</nav>
 	<div class="jumbotron hero-image">
-		<div class="logo">
+		<div id="logo">
 			<img src="FAU Logo.png" alt="FauLogo">
 		</div>
 		<div class="hero-text">
+			
 			<h1 id="zumSeitenanfang">Experience FAU just like you where there</h1>
 			<br>
 			<p class="display-12">Hier wird dir eine Tour durch die Nürnberger Standorte der FAU geboten,
@@ -69,7 +70,7 @@
 				in denen nützliche Informationen für ein Home-Studium und ein Präsenzsemester bietet (sobald es wieder
 				möglich ist). <br>
 				Viel Spaß :)</p>
-				<br><br>
+			<br><br>
 			<a class="btn btn-secondary" role="button" href=#mapid>Explore FAU</a>
 		</div>
 	</div>
@@ -95,7 +96,8 @@
 	</div>
 	<div class="container-fluid" data-aos="fade-up" data-aos-duration="1000">
 		<div class="mx-auto" style="width: 100%;" id="rundgang">
-			<a class="btn btn-secondary" role="button" target="_blank" href="https://www.youtube.com/watch?v=Ec2yPWzVHe8">virtueller
+			<a class="btn btn-secondary" role="button" target="_blank"
+				href="https://www.youtube.com/watch?v=Ec2yPWzVHe8">virtueller
 				Rundgang starten </a>
 		</div>
 	</div>
@@ -128,22 +130,28 @@
 				<div class="jumbotron">
 					In der Universitätsbibliothek kann man Bücher ausleihen. Es gibt hier auch Gruppenarbeitsplätze und
 					Lernräume, in denen du ungestört studieren kannst!
-					<div><a href="https://ub.fau.de/ueber-uns/standorte-oeffnungszeiten/wszb/">Weitere Infos über die Unibib</a></div>
+					<div><a href="https://ub.fau.de/ueber-uns/standorte-oeffnungszeiten/wszb/">Weitere Infos über die
+							Unibib</a></div>
 				</div>
 			</div>
 			<div class="collapse" id="Cafeteria" data-parent="#LG">
 				<div class="jumbotron">
-					In der Cafeteria kannst du dir ein Snacks holen: ein Kuchen oder liber ein belegtes Brötchen? Hier findest du alles!
+					In der Cafeteria kannst du dir ein Snacks holen: ein Kuchen oder liber ein belegtes Brötchen? Hier
+					findest du alles!
 					In den hochmodernen Kaffeevollautomaten kannst du dir noch köstliche Kaffespezialitäten besorgen.
 					Verschiedene Aktionsessen stehen im Wechsel zur Auswahl.
-					<div><a href="https://www.werkswelt.de/index.php?id=cafeteria-langegasse">Weitere Infos über die Cafeteria</a></div>
+					<div><a href="https://www.werkswelt.de/index.php?id=cafeteria-langegasse">Weitere Infos über die
+							Cafeteria</a></div>
 				</div>
 			</div>
 			<div class="collapse" id="CIP" data-parent="#LG">
 				<div class="jumbotron">
-					In der Langen Gasse befinden sich die Räume des Rechenzentrums auf Ebene 0 im Neubau des Gebäudes (0.420 bis 0.422)
-					PC-Pool 2 sowie im Altbau neben der Cafeteria (0.215) PC-Pool 1. Für Kurse werden bevorzugt die Räume (LG) 0.420
-					bis 0.422 genutzt PC-Pool 2. In kursfreien Zeiten steht dieser PC-Pool ebenfalls den studentischen Benutzern
+					In der Langen Gasse befinden sich die Räume des Rechenzentrums auf Ebene 0 im Neubau des Gebäudes
+					(0.420 bis 0.422)
+					PC-Pool 2 sowie im Altbau neben der Cafeteria (0.215) PC-Pool 1. Für Kurse werden bevorzugt die
+					Räume (LG) 0.420
+					bis 0.422 genutzt PC-Pool 2. In kursfreien Zeiten steht dieser PC-Pool ebenfalls den studentischen
+					Benutzern
 					zur Verfügung.
 					<div><a href="https://www.izn.rrze.fau.de/cip-pools/raeume/">Webseite des RRZE</a></div>
 				</div>
@@ -152,15 +160,17 @@
 				<div class="jumbotron">
 					In der Langen Gasse gibt es insgesamt 6 Hörsäle. Diese sind immer mit H und einer Zahl bezeichnet.
 					<div>
-					<a href="https://www.univis.fau.de/form?__s=2&dsc=anew/room:&dir=rw/serw/wirau&anonymous=1&ref=room&rooms=rw/serw/wirau/lgh6&sem=2020w&__e=598">
-						Übersicht aller Räumlichkeiten der WiSo</a>
+						<a
+							href="https://www.univis.fau.de/form?__s=2&dsc=anew/room:&dir=rw/serw/wirau&anonymous=1&ref=room&rooms=rw/serw/wirau/lgh6&sem=2020w&__e=598">
+							Übersicht aller Räumlichkeiten der WiSo</a>
 					</div>
 				</div>
 			</div>
 			<div class="collapse" id="Seminar" data-parent="#LG">
 				<div class="jumbotron">
 					<div>
-						<a href="https://www.univis.fau.de/form?__s=2&dsc=anew/room:&dir=rw/serw/wirau&anonymous=1&ref=room&rooms=rw/serw/wirau/lgh6&sem=2020w&__e=598">
+						<a
+							href="https://www.univis.fau.de/form?__s=2&dsc=anew/room:&dir=rw/serw/wirau&anonymous=1&ref=room&rooms=rw/serw/wirau/lgh6&sem=2020w&__e=598">
 							Übersicht aller Räumlichkeiten der WiSo
 						</a>
 					</div>
@@ -168,13 +178,20 @@
 			</div>
 			<div class="collapse" id="Info" data-parent="#LG">
 				<div class="jumbotron">
-					In der Infothek in der Langen Gasse stehen den Studierenden Fachbereichslotsen zur Verfügung, die ihnen Fragen 
-					rund ums Studium am Fachbereich Wirtschafts- und Sozialwissenschaften beantworten. Neben schneller und 
-					kompetenter Hilfe gibt es dort auch die neuesten Broschüren und Publikationen des Fachbereichs. Darunter 
-					auch den jährlich erscheinenden Bachelor-Studienführer „Studieren“, in dem alle Studiengänge inklusive den 
-					dazugehörigen Modulen aufgeführt und viele wissenswerte Hintergrundinformationen über den Fachbereich, 
-					Möglichkeiten zum Studium im Ausland oder zum Leben in Nürnberg enthalten sind. Die durch Studienbeiträge, 
-					jetzt Studienzuschüsse, ermöglichte Infothek befindet sich in der Langen Gasse 20 auf Ebene 1, gegenüber 
+					In der Infothek in der Langen Gasse stehen den Studierenden Fachbereichslotsen zur Verfügung, die
+					ihnen Fragen
+					rund ums Studium am Fachbereich Wirtschafts- und Sozialwissenschaften beantworten. Neben schneller
+					und
+					kompetenter Hilfe gibt es dort auch die neuesten Broschüren und Publikationen des Fachbereichs.
+					Darunter
+					auch den jährlich erscheinenden Bachelor-Studienführer „Studieren“, in dem alle Studiengänge
+					inklusive den
+					dazugehörigen Modulen aufgeführt und viele wissenswerte Hintergrundinformationen über den
+					Fachbereich,
+					Möglichkeiten zum Studium im Ausland oder zum Leben in Nürnberg enthalten sind. Die durch
+					Studienbeiträge,
+					jetzt Studienzuschüsse, ermöglichte Infothek befindet sich in der Langen Gasse 20 auf Ebene 1,
+					gegenüber
 					der Poststelle.
 					<div><a href="https://www.infothek.rw.fau.de/">Webseite der Infothek</a></div>
 				</div>
@@ -361,20 +378,26 @@
 							<tr>
 								<th scope="row">Lehrstuhl für Volkswirtschaftslehre, insbes. Arbeitsmarkt- und
 									Regionalpolitik</th>
-								<td><a href="http://www.arbeitsmarkt.wiso.uni-erlangen.de/">http://www.arbeitsmarkt.wiso.uni-erlangen.de/</a></td>
+								<td><a
+										href="http://www.arbeitsmarkt.wiso.uni-erlangen.de/">http://www.arbeitsmarkt.wiso.uni-erlangen.de/</a>
+								</td>
 								<td>Prof. Dr. Schnabel, Claus</td>
 								<td></td>
 							</tr>
 							<tr>
 								<th scope="row">Lehrstuhl für Volkswirtschaftslehre, insbes. Empirische Mikroökonomie
 								</th>
-								<td><a href="http://www.emmi.rw.uni-erlangen.de/">http://www.emmi.rw.uni-erlangen.de/</a></td>
+								<td><a
+										href="http://www.emmi.rw.uni-erlangen.de/">http://www.emmi.rw.uni-erlangen.de/</a>
+								</td>
 								<td>Prof. Dr. Stephan, Gesine</td>
 								<td></td>
 							</tr>
 							<tr>
 								<th scope="row">Lehrstuhl für Volkswirtschaftslehre, insbes. Finanzwissenschaft</th>
-								<td><a href="http://www.finanzwissenschaft.wiso.fau.de/">http://www.finanzwissenschaft.wiso.fau.de/</a></td>
+								<td><a
+										href="http://www.finanzwissenschaft.wiso.fau.de/">http://www.finanzwissenschaft.wiso.fau.de/</a>
+								</td>
 								<td>Prof. Dr. Büttner, Thiess</td>
 								<td></td>
 							</tr>
@@ -386,20 +409,25 @@
 							</tr>
 							<tr>
 								<th scope="row">Lehrstuhl für Volkswirtschaftslehre, insbes. Wirtschaftspolitik</th>
-								<td><a href="http://www.wettbewerb.wiso.fau.de/">http://www.wettbewerb.wiso.fau.de/</a></td>
+								<td><a href="http://www.wettbewerb.wiso.fau.de/">http://www.wettbewerb.wiso.fau.de/</a>
+								</td>
 								<td>Prof. Dr. Rincke, Johannes</td>
 								<td></td>
 							</tr>
 							<tr>
 								<th scope="row">Lehrstuhl für Volkswirtschaftslehre, insbes. Wirtschaftstheorie</th>
-								<td><a href="http://www.wirtschaftstheorie.wiso.fau.de/">http://www.wirtschaftstheorie.wiso.fau.de/</a></td>
+								<td><a
+										href="http://www.wirtschaftstheorie.wiso.fau.de/">http://www.wirtschaftstheorie.wiso.fau.de/</a>
+								</td>
 								<td>Prof. Dr. Grimm, Veronika</td>
 								<td></td>
 							</tr>
 							<tr>
 								<th scope="row">Professur für Volkswirtschaftslehre, insbes. Industrieökonomik und
 									Energiemärkte</th>
-								<td><a href="http://www.energiewirtschaft.rw.fau.de/">http://www.energiewirtschaft.rw.fau.de/</a></td>
+								<td><a
+										href="http://www.energiewirtschaft.rw.fau.de/">http://www.energiewirtschaft.rw.fau.de/</a>
+								</td>
 								<td>Prof. Dr. Zöttl, Gregor</td>
 								<td></td>
 							</tr>
@@ -411,7 +439,9 @@
 							</tr>
 							<tr>
 								<th scope="row">Juniorprofessur für Energiemärkte und Energiesystemanalyse</th>
-								<td><a href="https://www.energymarkets.wiso.rw.fau.de/">https://www.energymarkets.wiso.rw.fau.de/</a></td>
+								<td><a
+										href="https://www.energymarkets.wiso.rw.fau.de/">https://www.energymarkets.wiso.rw.fau.de/</a>
+								</td>
 								<td>Prof. Dr. Liebensteiner, Mario</td>
 								<td></td>
 							</tr>
@@ -444,13 +474,17 @@
 							</tr>
 							<tr>
 								<th scope="row">Lehrstuhl für Wirtschaftspädagogik und Personalentwicklung</th>
-								<td><a href="http://www.wirtschaftspaedagogik.de/">http://www.wirtschaftspaedagogik.de/</a></td>
+								<td><a
+										href="http://www.wirtschaftspaedagogik.de/">http://www.wirtschaftspaedagogik.de/</a>
+								</td>
 								<td>Prof. Dr. Wilbers, Karl</td>
 								<td></td>
 							</tr>
 							<tr>
 								<th scope="row">Professur für Wirtschaftspädagogik</th>
-								<td><a href="https://www.professur-wirtschaftspaedagogik.rw.fau.de/">https://www.professur-wirtschaftspaedagogik.rw.fau.de/</a></td>
+								<td><a
+										href="https://www.professur-wirtschaftspaedagogik.rw.fau.de/">https://www.professur-wirtschaftspaedagogik.rw.fau.de/</a>
+								</td>
 								<td>Prof. Dr. Kimmelmann, Nicole</td>
 								<td></td>
 							</tr>
