@@ -13,7 +13,7 @@
   <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/jumbotron/">
   <!-- custom stylesheet-->
   <link rel="stylesheet" href="style1.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  
   <!-- css & bootstrap link-->
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -29,69 +29,84 @@
 </head>
 
 <body>
-  <nav class="z-depth-0 grey lighten-4">
-    <div class="nav-wrapper container">
-      <a href="#" class="brand-logo">
-        <img src="favicon-256x256.png" style="width: 50px; height: 50px; margin-top: 10px;">
-      </a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li class="logged-in">
-          <a href="#" class="grey-text modal-trigger" data-target="modal-account">Account</a>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" width=device-width>
+		<a class="navbar-brand" src="#"><img src="favicon-256x256.png" width="20px">FAU</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+			aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<!-- Navigation Bar -->
+		<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+			<!-- Nav Links -->
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="index.html">Home </a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="test.html">test</a>
         </li>
-        <li class="logged-in">
-          <a href="#" class="grey-text" id="logout">Logout</a>
+        <li class="nav-item">
+					<a class="nav-link" href="#" data-target="#modal-account" data-toggle="modal">Account</a>
         </li>
-        <li class="logged-in">
-          <a href="#" class="grey-text modal-trigger" data-target="modal-create">Create Guide</a>
+        <li class="nav-item">
+					<a class="nav-link" href="#" data-target="#modal-login" data-toggle="modal">Login</a>
         </li>
-        <li class="logged-out">
-          <a href="#" class="grey-text modal-trigger" data-target="modal-login">Login</a>
-        </li>
-        <li class="logged-out">
-          <a href="#" class="grey-text modal-trigger" data-target="modal-signup">Sign up</a>
-        </li>
-        </span>
-      </ul>
-    </div>
-  </nav>
+        <li class="nav-item">
+					<a class="nav-link" href="#" data-target="#modal-signup" data-toggle="modal">Sign up</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+  
 
   <!-- Modals -->
-  <div id="modal-signup" class="modal">
+  <div id="modal-signup" class="modal fade" role="dialog">
+    <div class="modal-dialog">
     <div class="modal-content">
-      <h4>Sign up</h4><br />
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <h4 id="kopf">Sign up</h4><br />
       <form id="signup-form">
-        <div class="input-field">
+        <div class="form-group">
           <input type="email" id="signup-email" required />
           <label for="signup-email">Email address</label>
         </div>
-        <div class="input-field">
+        <div class="form-group">
           <input type="password" id="signup-password" required />
           <label for="signup-password">Choose password</label>
         </div>
-        <button class="btn yellow darken-2 z-depth-0">Sign up</button>
+        <button class="btn btn-secondary">Sign up</button>
       </form>
     </div>
   </div>
-
+</div>
   <div id="modal-login" class="modal">
     <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
       <h4>Login</h4><br />
       <form id="login-form">
-        <div class="input-field">
+        <div class="gorm-group">
           <input type="email" id="login-email" required />
           <label for="login-email">Email address</label>
         </div>
-        <div class="input-field">
+        <div class="from-group">
           <input type="password" id="login-password" required />
           <label for="login-password">Your password</label>
         </div>
-        <button class="btn yellow darken-2 z-depth-0">Login</button>
+        <button class="btn btn-secondary">Login</button>
       </form>
     </div>
   </div>
 
   <div id="modal-account" class="modal">
     <div class="modal-content center-align">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
       <h4>Account details</h4><br />
       <div class="account-details"></div>
     </div>
@@ -99,39 +114,42 @@
 
   <div id="modal-create" class="modal">
     <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
       <h4>Create Guide</h4><br />
       <form id="create-form">
-        <div class="input-field">
+        <div class="from-group">
           <input type="text" id="title" required>
           <label for="title">Guide Title</label>
         </div>
-        <div class="input-field">
-          <textarea id="content" class="materialize-textarea" required></textarea>
+        <div class="form-group">
+          <textarea id="content" class="form-control" required></textarea>
           <label for="content">Guide Content</label>
         </div>
-        <button class="btn yellow darken-2 z-depth-0">Create</button>
+        <button class="btn btn-secondary">Create</button>
       </form>
     </div>
   </div>
 
   <!-- Content -->
   <div class="container" style="margin-top: 40px;">
-    <ul class="collapsible z-depth-0 guides" style="border: none;">
+    <ul class="collapse" style="border: none;">
       <li>
-        <div class="collapsible-header grey lighten-4">Guide title</div>
-        <div class="collapsible-body white">Lorem ipsum dolor sit amet.</div>
+        <div class="collapse">Guide title</div>
+        <div class="collapse">Lorem ipsum dolor sit amet.</div>
       </li>
       <li>
-        <div class="collapsible-header grey lighten-4">Guide title</div>
-        <div class="collapsible-body white"><span>Lorem ipsum dolor sit amet.</span></div>
+        <div class="collapse">Guide title</div>
+        <div class="collapse"><span>Lorem ipsum dolor sit amet.</span></div>
       </li>
       <li>
-        <div class="collapsible-header grey lighten-4">Guide title</div>
-        <div class="collapsible-body white"><span>Lorem ipsum dolor sit amet.</span></div>
+        <div class="collapse">Guide title</div>
+        <div class="collapse"><span>Lorem ipsum dolor sit amet.</span></div>
       </li>
       <li>
-        <div class="collapsible-header grey lighten-4">Guide title</div>
-        <div class="collapsible-body white"><span>Lorem ipsum dolor sit amet.</span></div>
+        <div class="collapse">Guide title</div>
+        <div class="collapse"><span>Lorem ipsum dolor sit amet.</span></div>
       </li>
     </ul>
   </div>

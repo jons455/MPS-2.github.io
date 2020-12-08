@@ -77,9 +77,8 @@ h1{
 }
 
 #logo{
- align-self: center;
- text-align: center;
-  position: absolute;
+ right: 1%;
+ position: absolute;
  
 }
 @viewport {
