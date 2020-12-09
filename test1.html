@@ -13,7 +13,7 @@
   <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/jumbotron/">
   <!-- custom stylesheet-->
   <link rel="stylesheet" href="style1.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <!-- css & bootstrap link-->
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -29,88 +29,69 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" width=device-width>
-    <a class="navbar-brand" src="#"><img src="favicon-256x256.png" width="20px">FAU</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Navigation Bar -->
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-      <!-- Nav Links -->
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="index.html">Home </a>
+  <nav class="z-depth-0 grey lighten-4">
+    <div class="nav-wrapper container">
+      <a href="#" class="brand-logo">
+        <img src="favicon-256x256.png" style="width: 50px; height: 50px; margin-top: 10px;">
+      </a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li class="logged-in">
+          <a href="#" class="grey-text modal-trigger" data-target="modal-account">Account</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="test.html">test</a>
+        <li class="logged-in">
+          <a href="#" class="grey-text" id="logout">Logout</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-target="#modal-account" data-toggle="modal">Account</a>
+        <li class="logged-in">
+          <a href="#" class="grey-text modal-trigger" data-target="modal-create">Create Guide</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-target="#modal-login" data-toggle="modal">Login</a>
+        <li class="logged-out">
+          <a href="#" class="grey-text modal-trigger" data-target="modal-login">Login</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-target="#modal-signup" data-toggle="modal">Sign up</a>
+        <li class="logged-out">
+          <a href="#" class="grey-text modal-trigger" data-target="modal-signup">Sign up</a>
         </li>
-        <!-- show/hide durch logged in/logged -->
-        <li class="nav-item">
-          <a class="nav-link" href=" #" id="logout" >Logout</a>
-        </li>
+        </span>
       </ul>
     </div>
   </nav>
 
-
   <!-- Modals -->
-  <div id="modal-signup" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
+  <div id="modal-signup" class="modal">
+    <div class="modal-content">
+      <h4>Sign up</h4><br />
+      <form id="signup-form">
+        <div class="input-field">
+          <input type="email" id="signup-email" required />
+          <label for="signup-email">Email address</label>
         </div>
-        <h4 id="kopf">Sign up</h4><br />
-        <form id="signup-form">
-          <div class="form-group">
-            <input type="email" id="signup-email" required />
-            <label for="signup-email">Email address</label>
-          </div>
-          <div class="form-group">
-            <input type="password" id="signup-password" required />
-            <label for="signup-password">Choose password</label>
-          </div>
-          <button class="btn btn-secondary">Sign up</button>
-        </form>
-      </div>
+        <div class="input-field">
+          <input type="password" id="signup-password" required />
+          <label for="signup-password">Choose password</label>
+        </div>
+        <button class="btn yellow darken-2 z-depth-0">Sign up</button>
+      </form>
     </div>
   </div>
+
   <div id="modal-login" class="modal">
     <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
       <h4>Login</h4><br />
       <form id="login-form">
-        <div class="gorm-group">
+        <div class="input-field">
           <input type="email" id="login-email" required />
           <label for="login-email">Email address</label>
         </div>
-        <div class="from-group">
+        <div class="input-field">
           <input type="password" id="login-password" required />
           <label for="login-password">Your password</label>
         </div>
-        <button class="btn btn-secondary">Login</button>
+        <button class="btn yellow darken-2 z-depth-0">Login</button>
       </form>
     </div>
   </div>
 
   <div id="modal-account" class="modal">
     <div class="modal-content center-align">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
       <h4>Account details</h4><br />
       <div class="account-details"></div>
     </div>
@@ -118,78 +99,51 @@
 
   <div id="modal-create" class="modal">
     <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
       <h4>Create Guide</h4><br />
       <form id="create-form">
-        <div class="from-group">
+        <div class="input-field">
           <input type="text" id="title" required>
           <label for="title">Guide Title</label>
         </div>
-        <div class="form-group">
-          <textarea id="content" class="form-control" required></textarea>
+        <div class="input-field">
+          <textarea id="content" class="materialize-textarea" required></textarea>
           <label for="content">Guide Content</label>
         </div>
-        <button class="btn btn-secondary">Create</button>
+        <button class="btn yellow darken-2 z-depth-0">Create</button>
       </form>
     </div>
   </div>
 
   <!-- Content -->
   <div class="container" style="margin-top: 40px;">
-    <ul class="collapse" style="border: none;">
+    <ul class="collapsible z-depth-0 guides" style="border: none;">
       <li>
-        <div modal-signup>Guide title</div>
-        <div class="collapse">Lorem ipsum dolor sit amet.</div>
+        <div class="collapsible-header grey lighten-4">Guide title</div>
+        <div class="collapsible-body white">Lorem ipsum dolor sit amet.</div>
       </li>
       <li>
-        <div class="collapse">Guide title</div>
-        <div class="collapse"><span>Lorem ipsum dolor sit amet.</span></div>
+        <div class="collapsible-header grey lighten-4">Guide title</div>
+        <div class="collapsible-body white"><span>Lorem ipsum dolor sit amet.</span></div>
       </li>
       <li>
-        <div class="collapse">Guide title</div>
-        <div class="collapse"><span>Lorem ipsum dolor sit amet.</span></div>
+        <div class="collapsible-header grey lighten-4">Guide title</div>
+        <div class="collapsible-body white"><span>Lorem ipsum dolor sit amet.</span></div>
       </li>
       <li>
-        <div class="collapse">Guide title</div>
-        <div class="collapse"><span>Lorem ipsum dolor sit amet.</span></div>
+        <div class="collapsible-header grey lighten-4">Guide title</div>
+        <div class="collapsible-body white"><span>Lorem ipsum dolor sit amet.</span></div>
       </li>
     </ul>
   </div>
 
 
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
-  <script>
-    var firebaseConfig = {
-      apiKey: "AIzaSyAsjpbZDmUC7WCTUdmMEbP_TxMRCpd4nOI",
-      authDomain: "mps-2-bf005.firebaseapp.com",
-      projectId: "mps-2-bf005",
-      storageBucket: "mps-2-bf005.appspot.com",
-      messagingSenderId: "321436711423",
-      appId: "1:321436711423:web:40bf05c097ade8bca10fca",
-      measurementId: "G-K6Y58XLY9W"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
 
-    const auth = firebase.auth();
-    const db = firebase.firestore();
-
-    //update firestore settings
-    db.settings({ timestampsInSnapshots: true })
-  </script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="bootstrap/js/vendor/jquery.slim.min.js"><\/script>')</script>
   <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="test3.js"></script>
   <script src="test4.js"></script>
 </body>
