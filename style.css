@@ -10,6 +10,11 @@ html {
 
 body {
   padding-top: 0rem;
+  margin-bottom: 40px;
+}
+#Rundi{
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 /* The hero image */
