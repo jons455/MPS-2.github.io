@@ -12,11 +12,29 @@ body {
   padding-top: 0rem;
   margin-bottom: 40px;
 }
-#Rundi{
+#Tour{
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
+.modal {
+  size: 50%;
+}
+#signup-form{
+  margin-left: 20%;
+  margin-bottom: 20px;
+}
+#login-form{
+  margin-left: 20%;
+  margin-bottom: 20px;
+}
+
+.h4{
+  margin-left: 50%;
+}
+#kopf{
+  margin-left: 3%;
+}
 /* The hero image */
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */

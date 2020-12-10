@@ -22,13 +22,13 @@
 	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
 		integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
 		crossorigin=""></script>
-	<link rel="icon" type="image/png" sizes="16x16" href="favicon-256x256.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="IMG/favicon-256x256.png">
 
 </head>
 
 <body>
 	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" width=device-width>
-		<a class="navbar-brand" src="#"><img src="favicon-256x256.png" width="20px">FAU</a>
+		<a class="navbar-brand" src="#"><img src="IMG/favicon-256x256.png" width="20px">FAU</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
 			aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -37,9 +37,10 @@
 		<!-- Navigation Bar -->
 		<div class="collapse navbar-collapse" id="navbarsExampleDefault">
 			<!-- Nav Links -->
+
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active">
-					<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="index.html">Home</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="LangeGasse.html">Lange Gasse</a>
@@ -54,12 +55,31 @@
 					<a class="nav-link" href="SonstigePlacesToBe.html">Sonstige</a>
 				</li>
 			</ul>
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item" id="special">
+					<a class="nav-link" id="logged-in" href="#" data-target="#modal-account"
+						data-toggle="modal">Account</a>
+				</li>
+				<li class="nav-item" id="special">
+					<a class="nav-link" id="logged-out" href="#" data-target="#modal-login"
+						data-toggle="modal">Login</a>
+				</li>
+				<li class="nav-item" id="special">
+					<a class="nav-link" id="logged-out" href="#" data-target="#modal-signup" data-toggle="modal">Sign
+						up</a>
+				</li>
+				<!-- show/hide durch logged in/logged -->
+				<li class="nav-item" id="special">
+					<a class="nav-link" href=" #" id="logout">Logout</a>
+				</li>
+
+			</ul>
 		</div>
 	</nav>
 
 	<div class="jumbotron hero-image">
 		<div id="logo">
-			<img src="FAU Logo.png" alt="FauLogo">
+			<img src="IMG/FAU_Logo.png" alt="FauLogo">
 		</div>
 		<div class="hero-text">
 
@@ -79,13 +99,68 @@
 
 	<!--data-aos="fade-up" data-aos-duration="3000" -->
 
-	<div class="container-fluid" id="Rundi">
+	<div class="container-fluid" id="Tour">
 		<div class="mx-auto" style="width: 100%;" id="rundgang">
 			<a class="btn btn-secondary" role="button" target="_blank"
 				href="https://www.youtube.com/watch?v=Ec2yPWzVHe8">virtueller
 				Rundgang starten </a>
 		</div>
 	</div>
+	<!-- Modals -->
+	<div id="modal-signup" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<h4 id="kopf">Sign up</h4><br />
+				<form id="signup-form">
+					<div class="form-group">
+						<input type="email" id="signup-email" required />
+						<label for="signup-email">Email address</label>
+					</div>
+					<div class="form-group">
+						<input type="password" id="signup-password" required />
+						<label for="signup-password">Choose password</label>
+					</div>
+					<button class="btn btn-secondary">Sign up</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="modal-login" class="modal fade" role="dialog">
+
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<h4 id="kopf">Login</h4><br />
+				<form id="login-form">
+					<div class="gorm-group">
+						<input type="email" id="login-email" required />
+						<label for="login-email">Email address</label>
+					</div>
+					<div class="from-group">
+						<input type="password" id="login-password" required />
+						<label for="login-password">Your password</label>
+					</div>
+					<button class="btn btn-secondary">Login</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div id="modal-account" class="modal fade">
+		<div class="modal-content center-align">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+			<h4>Account details</h4><br />
+			<div class="account-details"></div>
+		</div>
+	</div>
+
 
 
 	<!-- All kinds of Scripts -->
@@ -119,7 +194,8 @@
 		crossorigin="anonymous"></script>
 	<script>window.jQuery || document.write('<script src="bootstrap/js/vendor/jquery.slim.min.js"><\/script>')</script>
 	<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="main.js"></script>
+	<script src="Scripts/main.js"></script>
+	<script src="Scripts/fb_auth.js"></script>
 
 	<!-- AOS script for animations -->
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

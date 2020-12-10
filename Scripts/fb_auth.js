@@ -1,3 +1,31 @@
+// setup materialize components
+
+//Bootstrap anpassen required
+document.addEventListener('DOMContentLoaded', function() {
+
+    
+  
+  });
+const loggedOutLinks = document.querySelectorAll('#logged-out');
+const logouti = document.querySelectorAll('#logout');
+const loggedInLinks = document.querySelectorAll('#logged-in');
+const accountDetails = document.querySelector('.account-details');
+//logged-in/logged-out (Admin berechtigungen möglich)
+auth.onAuthStateChanged(user => {
+  console.log("authCheck");
+  if (user) {
+    console.log("logged-in");
+      setupUI(user);
+  } else {
+    console.log("logged-out");
+    setupUI();
+    
+  }
+});
+
+
+
+
 //signup
 const signupForm = document.querySelector('#signup-form');
 //preventdefault nicht automatisch refreshen
@@ -49,3 +77,17 @@ loginForm.addEventListener('submit', (e) => {
     });
 
 })
+
+//logged-in/logged-out (Admin berechtigungen möglich)
+const setupUI = (user) => {
+  if(user){
+      loggedInLinks.forEach(item => item.style.display = 'block');
+      logouti.forEach(item => item.style.display = 'block');
+      loggedOutLinks.forEach(item => item.style.display = 'none');
+  } else {
+      // toggle user elements
+      loggedInLinks.forEach(item => item.style.display = 'none');
+      loggedOutLinks.forEach(item => item.style.display = 'block');
+      logouti.forEach(item => item.style.display = 'none');
+  }
+};
