@@ -1,124 +1,140 @@
-// setup materialize components
-
-//Bootstrap anpassen required
-document.addEventListener('DOMContentLoaded', function() {
-
-    
-  
-  });
+/* wenn Admin erstellen Front uund Backend anpassen/ wenn forum oder quiz hinzugefügt wird */
+/* AUTH */
 const loggedOutLinks = document.querySelectorAll('#logged-out');
 const logouti = document.querySelectorAll('#logout');
 const loggedInLinks = document.querySelectorAll('#logged-in');
 const accountDetails = document.querySelector('.account-details');
+/* DB */
+const guideList = document.querySelector('#guides');
+const createForm = document.querySelector('#create-form');
+console.log(guideList);
 
 //logged-in/logged-out (Admin berechtigungen möglich)
 auth.onAuthStateChanged(user => {
   if (user) {
-      setupUI(user);
+
+    /* guides = sammlung */
+    db.collection('guides').onSnapshot(snapshot => {
+      setupGuides(snapshot.docs)
+
+    });
+    setupUI(user);
   } else {
     setupUI();
-    
+    setupGuides([])
   }
 });
 
-
+//errormeldungen ergänzen für login
 
 
 //signup
 const signupForm = document.querySelector('#signup-form');
 //preventdefault nicht automatisch refreshen
 signupForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    //getuserinfo
-    const email = signupForm['signup-email'].value;
-    mail = email;
-    const passwort = signupForm['signup-password'].value;
-    //create User
-    auth.createUserWithEmailAndPassword(email, passwort).then(cred => {
-        //check credentials
-        signupForm.reset();
-        console.log("1111")
-        const modal = document.querySelector('#modal-signup');
-        $('#modal-signup').close();
-        console.log("user signed in")
-    }).catch((error) => {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        console.log(errorCode, errorMessage)
-    });
-    //sychronität behalten
-    //TODO: fix automaticially closing 
+  //getuserinfo
+  const email = signupForm['signup-email'].value;
+  mail = email;
+  const passwort = signupForm['signup-password'].value;
+  //create User
+  auth.createUserWithEmailAndPassword(email, passwort).then(cred => {
+    //check credentials
+    signupForm.reset();
+    console.log("1111")
+    const modal = document.querySelector('#modal-signup');
+    $('#modal-signup').close();
+    signupForm.querySelector('#err').innerHTML = 'err.message';
+    console.log("user signed in")
+  }).catch((error) => {
+    signupForm.querySelector('#err').innerHTML = err.message;
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    console.log(errorCode, errorMessage)
+  });
+  //sychronität behalten
+  //TODO: fix automaticially closing 
 })
 
 //log out
 const logout = document.querySelector('#logout');
 logout.addEventListener('click', (e) => {
-    e.preventDefault();
-    auth.signOut().then(() => {
-        console.log("user signed out")
-    })
+  e.preventDefault();
+  auth.signOut().then(() => {
+    console.log("user signed out")
+  })
 })
 //log in
 const loginForm = document.querySelector('#login-form');
 loginForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const email = loginForm['login-email'].value;
-    mail = email;
-    const password = loginForm['login-password'].value;
+  e.preventDefault();
+  const email = loginForm['login-email'].value;
+  mail = email;
+  const password = loginForm['login-password'].value;
 
-    auth.signInWithEmailAndPassword(email, password).then(cred => {
-        //TODO closen
-        
-        loginForm.reset();
-    });
+  auth.signInWithEmailAndPassword(email, password).then(cred => {
+    //TODO closen
+
+    loginForm.reset();
+  });
 
 })
 
 //logged-in/logged-out (Admin berechtigungen möglich)
 const setupUI = (user) => {
-  if(user){
-    
+  if (user) {
+
     var mail = firebase.auth().currentUser.email;
-      loggedInLinks.forEach(item => item.style.display = 'block');
-      logouti.forEach(item => item.style.display = 'block');
-      loggedOutLinks.forEach(item => item.style.display = 'none');
-      span = document.getElementById("username");
-      txt = document.createTextNode(mail);
-      span.appendChild(txt );
+    loggedInLinks.forEach(item => item.style.display = 'block');
+    logouti.forEach(item => item.style.display = 'block');
+    loggedOutLinks.forEach(item => item.style.display = 'none');
+    span = document.getElementById("username");
+    txt = document.createTextNode(mail);
+    span.appendChild(txt);
   } else {
-      // toggle user elements
-      loggedInLinks.forEach(item => item.style.display = 'none');
-      loggedOutLinks.forEach(item => item.style.display = 'block');
-      logouti.forEach(item => item.style.display = 'none');
+    // toggle user elements
+    loggedInLinks.forEach(item => item.style.display = 'none');
+    loggedOutLinks.forEach(item => item.style.display = 'block');
+    logouti.forEach(item => item.style.display = 'none');
   }
 };
+
 /* DB-Stuff */
-/* guides = sammlung */
-const guideList = document.querySelector('#guides');
-console.log(guideList);
-db.collection('guides').get().then(snapshot =>{
-  setupGuides(snapshot.docs)
-  
-});
-/* Setup Data */
+/* Setup Data  UI-Handling*/
 const setupGuides = (data) => {
- let html = '';
- data.forEach(doc => {
-    const guide = doc.data();
-    console.log(guide.title)
-    /* Template String mit mit ${} wert einsetzen */
-    const li = `
+  if (data.length) {
+    let html = '';
+    data.forEach(doc => {
+      const guide = doc.data();
+      console.log(guide.title)
+      /* Template String mit mit ${} wert einsetzen */
+      const li = `
     <li>
       <div>${guide.title}</div>	
       <div>${guide.content}</div>
     </li>
   `;
 
-  html += li;
-  console.log(html);
- })
-console.log("inner")
- guideList.innerHTML = html;
+      html += li;
+      console.log(html);
+    })
+    console.log("inner")
+    guideList.innerHTML = html;
+  } else {
+    guideList.innerHTML = "<li> Ausgeloggt </li>"
+  }
 }
-      
+/* Noch nicht funktional weil keine Inputform */
+createForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  /* Values hinzufügen zu coll */
+  db.collection('guides').add({
+    title: createForm.title.value,
+    content: createForm.content.value
+  }).then(() => {
+
+  })
+})
+
+
