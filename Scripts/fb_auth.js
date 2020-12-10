@@ -10,14 +10,12 @@ const loggedOutLinks = document.querySelectorAll('#logged-out');
 const logouti = document.querySelectorAll('#logout');
 const loggedInLinks = document.querySelectorAll('#logged-in');
 const accountDetails = document.querySelector('.account-details');
+
 //logged-in/logged-out (Admin berechtigungen möglich)
 auth.onAuthStateChanged(user => {
-  console.log("authCheck");
   if (user) {
-    console.log("logged-in");
       setupUI(user);
   } else {
-    console.log("logged-out");
     setupUI();
     
   }
@@ -34,12 +32,11 @@ signupForm.addEventListener('submit', (e) => {
 
     //getuserinfo
     const email = signupForm['signup-email'].value;
+    mail = email;
     const passwort = signupForm['signup-password'].value;
-    console.log(email, passwort);
     //create User
     auth.createUserWithEmailAndPassword(email, passwort).then(cred => {
         //check credentials
-        console.log(cred);
         signupForm.reset();
         console.log("1111")
         const modal = document.querySelector('#modal-signup');
@@ -67,13 +64,13 @@ const loginForm = document.querySelector('#login-form');
 loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const email = loginForm['login-email'].value;
+    mail = email;
     const password = loginForm['login-password'].value;
 
     auth.signInWithEmailAndPassword(email, password).then(cred => {
         //TODO closen
-        $('#modal-signup').modal.close();
+        
         loginForm.reset();
-        console.log(cred.user)
     });
 
 })
@@ -81,9 +78,14 @@ loginForm.addEventListener('submit', (e) => {
 //logged-in/logged-out (Admin berechtigungen möglich)
 const setupUI = (user) => {
   if(user){
+    
+    var mail = firebase.auth().currentUser.email;
       loggedInLinks.forEach(item => item.style.display = 'block');
       logouti.forEach(item => item.style.display = 'block');
       loggedOutLinks.forEach(item => item.style.display = 'none');
+      span = document.getElementById("username");
+      txt = document.createTextNode(mail);
+      span.appendChild(txt );
   } else {
       // toggle user elements
       loggedInLinks.forEach(item => item.style.display = 'none');
@@ -91,3 +93,4 @@ const setupUI = (user) => {
       logouti.forEach(item => item.style.display = 'none');
   }
 };
+      
