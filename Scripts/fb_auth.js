@@ -93,4 +93,32 @@ const setupUI = (user) => {
       logouti.forEach(item => item.style.display = 'none');
   }
 };
+/* DB-Stuff */
+/* guides = sammlung */
+const guideList = document.querySelector('#guides');
+console.log(guideList);
+db.collection('guides').get().then(snapshot =>{
+  setupGuides(snapshot.docs)
+  
+});
+/* Setup Data */
+const setupGuides = (data) => {
+ let html = '';
+ data.forEach(doc => {
+    const guide = doc.data();
+    console.log(guide.title)
+    /* Template String mit mit ${} wert einsetzen */
+    const li = `
+    <li>
+      <div>${guide.title}</div>	
+      <div>${guide.content}</div>
+    </li>
+  `;
+
+  html += li;
+  console.log(html);
+ })
+console.log("inner")
+ guideList.innerHTML = html;
+}
       
