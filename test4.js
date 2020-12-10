@@ -16,7 +16,7 @@ signupForm.addEventListener('submit', (e) => {
         console.log("1111")
         const modal = document.querySelector('#modal-signup');
         $('#modal-signup').close();
-        console.log("user signed in")
+        console.log("user signed up")
     }).catch((error) => {
         var errorCode = error.code;
         var errorMessage = error.message;
@@ -43,9 +43,22 @@ loginForm.addEventListener('submit', (e) => {
 
     auth.signInWithEmailAndPassword(email, password).then(cred => {
         //TODO closen
-        $('#modal-signup').modal.close();
+        
         loginForm.reset();
-        console.log(cred.user)
+        console.log("user signed in")
     });
 
 })
+//logged-in/logged-out (Admin berechtigungen möglich)
+const setupUI = (user) => {
+    if(user){
+        loggedInLinks.forEach(item => item.style.display = 'block');
+        logouti.forEach(item => item.style.display = 'block');
+        loggedOutLinks.forEach(item => item.style.display = 'none');
+    } else {
+        // toggle user elements
+        loggedInLinks.forEach(item => item.style.display = 'none');
+        loggedOutLinks.forEach(item => item.style.display = 'block');
+        logouti.forEach(item => item.style.display = 'none');
+    }
+};
