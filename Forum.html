@@ -85,14 +85,149 @@
                 </ul>
             </div>
         </nav><br><br><br>
-    
+    <!--Show this, if user not logged-->
+    <div class="jumbotron" id="logged-out">
+        <h2 style="text-align: center;">Du musst dich einloggen, um ins Forum posten zu können!</h2>
+    </div>
     <!--Forum-->
-    <div class="container fluid" >
+    <div class="container fluid" id="logged-in">
+        <table class="table table-borderless table-striped">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col" style="width: 10em;">Betreff</th>
+                    <th scope="col" style="width: 10em;">Author & Datum</th>
+                    <th scope="col">Text</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2" style="text-align:center;">
+                        <input type="text" class="form-control" placeholder="Gib einen Betreff an" id="Betreff" required>
+                    </td>
+                    <td>
+                        <div style="margin-bottom:0.5em;"><textarea type="text" class="form-control" placeholder="Hier kannst du einen Text schreiben" id="Beitrag" required></textarea></div>
+                        <button class="btn btn-secondary">Submit</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">
+                        <div>Betreff</div>
+                    </td>
+                    <td style="text-align:center;">
+                        <div><a href="#0">Andrea</a></div>
+                        <div>16. 12. 2020</div>
+                        <div>18:30</div>
+                    </td>
+                    <td>
+                        <div>
+                            Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text.
+                            Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text.
+                        </div>
+                        <div style="text-align: right; margin-right: 8em"><a href="#a1" data-toggle="collapse">5 Antworten</a></div>
+                        <table class="table table-borderless collapse" id="a1">
+                            <tr>
+                                <td style="width: 10em; text-align:center;">
+                                    <div><a href="#0">Andrea</a></div>
+                                    <div>16. 12. 2020</div>
+                                    <div>20:40</div>
+                                </td>
+                                <td>
+                                    <div>
+                                        Hier steht eine Antwort.
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 10em; text-align:center;">
+                                    <div><a href="#0">Andrea</a></div>
+                                    <div>16. 12. 2020</div>
+                                    <div>20:40</div>
+                                </td>
+                                <td>
+                                    <div>
+                                        Hier steht eine Antwort.
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 10em; text-align:center;">
+                                    <div><a href="#0">Andrea</a></div>
+                                    <div>16. 12. 2020</div>
+                                    <div>20:40</div>
+                                </td>
+                                <td>
+                                    <div>
+                                        Hier steht eine Antwort.
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 10em; text-align:center;">
+                                    <div><a href="#0">Andrea</a></div>
+                                    <div>16. 12. 2020</div>
+                                    <div>20:40</div>
+                                </td>
+                                <td>
+                                    <div>
+                                        Hier steht eine Antwort.
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 10em; text-align:center;">
+                                    <div><a href="#0">Andrea</a></div>
+                                    <div>16. 12. 2020</div>
+                                    <div>20:40</div>
+                                </td>
+                                <td>
+                                    <div>
+                                        Hier steht eine Antwort.
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">
+                        <div>Betreff</div>
+                    </td>
+                    <td style="text-align:center;">
+                        <div><a href="#0">Andrea</a></div>
+                        <div>16. 12. 2020</div>
+                        <div>18:20</div>
+                    </td>
+                    <td>
+                        <div>
+                            Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text.
+                            Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text.
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">
+                        <div>Betreff</div>
+                    </td>
+                    <td style="text-align:center;">
+                        <div><a href="#0">Andrea</a></div>
+                        <div>16. 12. 2020</div>
+                        <div>18:18</div>
+                    </td>
+                    <td>
+                        <div>
+                            Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text.
+                            Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text.
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    <!---<div class="container fluid" id="logged-in">
         <table class="table table-striped table-bordered ">
             <thead class="thead-light">
                 <tr>
                     <th scope="col">Thema</th>
-                    <th scope="col">Beiträge</th>
+                    <th scope="col">Antworten</th>
                     <th scope="col">Letzter Beitrag</th>
                 </tr>
             </thead>
@@ -143,7 +278,7 @@
                     </td>
                 </tr>
             </tbody>
-        </table>
+        </table>-->
         <div class="mb-3 clearfix">
             <nav aria-label="Navigate post pages" class="float-lg-right">
                 <br>
