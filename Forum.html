@@ -84,7 +84,7 @@
 
                 </ul>
             </div>
-        </nav><br><br><br>
+        </nav><br id="posts"><br><br>
     <!--Show this, if user not logged-->
     <div class="jumbotron" id="logged-out">
         <h2 style="text-align: center;">Du musst dich einloggen, um ins Forum posten zu können!</h2>
@@ -94,15 +94,15 @@
         <table class="table table-borderless table-striped">
             <thead class="thead-light">
                 <tr>
-                    <th scope="col" style="width: 10em;">Betreff</th>
-                    <th scope="col" style="width: 10em;">Author & Datum</th>
-                    <th scope="col">Text</th>
+                    <th scope="col" style="min-width:8em; max-width:15em;">Betreff</th>
+                    <th scope="col" style="min-width:8em; max-width:15em;">Author & Datum</th>
+                    <th scope="col" style="min-width:15em;">Text</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td colspan="2" style="text-align:center;">
-                        <input type="text" class="form-control" placeholder="Gib einen Betreff an" id="Betreff" required>
+                        <input type="text" class="form-control" placeholder="Gib ein Thema an" id="Betreff" required>
                     </td>
                     <td>
                         <div style="margin-bottom:0.5em;"><textarea type="text" class="form-control" placeholder="Hier kannst du einen Text schreiben" id="Beitrag" required></textarea></div>
@@ -185,6 +185,12 @@
                                     </div>
                                 </td>
                             </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div style="margin-bottom:0.3em;"><textarea type="text" class="form-control" placeholder="Hier kannst du eine Antwort schreiben" id="Beitrag" required></textarea></div>
+                                    <div style="text-align:right;"><button class="btn btn-secondary">Antworten</button></div>
+                                </td>
+                            </tr>
                         </table>
                     </td>
                 </tr>
@@ -202,6 +208,15 @@
                             Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text.
                             Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text.
                         </div>
+                        <div style="text-align: right; margin-right: 8em"><a href="#a2" data-toggle="collapse">0 Antworten</a></div>
+                        <table class="table table-borderless collapse" id="a2">
+                            <tr>
+                                <td>
+                                    <div style="margin-bottom:0.3em;"><textarea type="text" class="form-control" placeholder="Hier kannst du eine Antwort schreiben" id="Beitrag" required></textarea></div>
+                                    <div style="text-align:right;"><button class="btn btn-secondary">Antworten</button></div>
+                                </td>
+                            </tr>
+                        </table>
                     </td>
                 </tr>
                 <tr>
@@ -218,6 +233,27 @@
                             Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text.
                             Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text.
                         </div>
+                        <div style="text-align: right; margin-right: 8em"><a href="#a3" data-toggle="collapse">1 Antwort</a></div>
+                        <table class="table table-borderless collapse" id="a3">
+                            <tr>
+                                <td style="width: 10em; text-align:center;">
+                                    <div><a href="#0">Andrea</a></div>
+                                    <div>16. 12. 2020</div>
+                                    <div>20:40</div>
+                                </td>
+                                <td>
+                                    <div>
+                                        Hier steht eine Antwort.
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div style="margin-bottom:0.3em;"><textarea type="text" class="form-control" placeholder="Hier kannst du eine Antwort schreiben" id="Beitrag" required></textarea></div>
+                                    <div style="text-align:right;"><button class="btn btn-secondary">Antworten</button></div>
+                                </td>
+                            </tr>
+                        </table>
                     </td>
                 </tr>
             </tbody>
@@ -283,107 +319,107 @@
             <nav aria-label="Navigate post pages" class="float-lg-right">
                 <br>
                 <ul class="pagination pagionation-sm mb-lg-0">
-                    <li class="page-item active"><a href="0" class="page-link">0<span class="sr-only">(current)</span></a></li>
-                    <li class="page-item"><a href="0" class="page-link">1</a></li>
+                    <li class="page-item active"><a href="0" class="page-link">1<span class="sr-only">(current)</span></a></li>
                     <li class="page-item"><a href="0" class="page-link">2</a></li>
                     <li class="page-item"><a href="0" class="page-link">3</a></li>
                     <li class="page-item"><a href="0" class="page-link">4</a></li>
                     <li class="page-item"><a href="0" class="page-link">&hellip; 31</a></li>
                     <li class="page-item"><a href="0" class="page-link">next</a></li>
-
+                    <li class="page-item"><a href="#posts" class="page-link">Top</a></li>
 
                 </ul>
             </nav>
         </div>
     </div>
     <!-- Modals -->
-    <div id="modal-signup" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <h4 id="kopf">Sign up</h4><br />
-                <form id="signup-form">
-                    <div class="form-group">
-                        <input type="email" id="signup-email" required />
-                        <label for="signup-email">Email address</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="password" id="signup-password" required />
-                        <label for="signup-password">Choose password (min. 6 Zeichen)</label>
-                    </div>
-                    <button class="btn btn-secondary">Sign up</button>
-                </form>
-            </div>
-        </div>
-    </div>
-    <div id="modal-login" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <h4 id="kopf">Login</h4><br />
-                <form id="login-form">
-                    <div class="gorm-group">
-                        <input type="email" id="login-email" required />
-                        <label for="login-email">Email address</label>
-                    </div>
-                    <div class="from-group">
-                        <input type="password" id="login-password" required />
-                        <label for="login-password">Your password</label>
-                    </div>
-                    <button class="btn btn-secondary">Login</button>
-                </form>
-            </div>
-        </div>
-    </div>
+	<div id="modal-signup" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<h4 id="kopf">Sign up</h4><br />
+				<form id="signup-form">
+					<div class="form-group">
+						<input type="email" id="signup-email" required />
+						<label for="signup-email">Email address</label>
+					</div>
+					<div class="form-group">
+						<input type="password" id="signup-password" required />
+						<label for="signup-password">Choose password (min. 6 Zeichen)</label>
+					</div>
+					<button class="btn btn-secondary">Sign up</button>
+					<p id="err"></p>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="modal-login" class="modal fade" role="dialog">
 
-    <div id="modal-account" class="modal fade">
-        <div class="modal-content center-align">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-            <h4>Account details</h4><br />
-            <div class="account-details"></div>
-        </div>
-    </div>
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<h4 id="kopf">Login</h4><br />
+				<form id="login-form">
+					<div class="gorm-group">
+						<input type="email" id="login-email" required />
+						<label for="login-email">Email address</label>
+					</div>
+					<div class="from-group">
+						<input type="password" id="login-password" required />
+						<label for="login-password">Your password</label>
+					</div>
+					<button class="btn btn-secondary">Login</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div id="modal-account" class="modal fade">
+		<div class="modal-content center-align">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+			<h4>Account details</h4><br />
+			<div class="account-details"></div>
+		</div>
+	</div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyAsjpbZDmUC7WCTUdmMEbP_TxMRCpd4nOI",
+            authDomain: "mps-2-bf005.firebaseapp.com",
+            projectId: "mps-2-bf005",
+            storageBucket: "mps-2-bf005.appspot.com",
+            messagingSenderId: "321436711423",
+            appId: "1:321436711423:web:40bf05c097ade8bca10fca",
+            measurementId: "G-K6Y58XLY9W"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+
+        //update firestore settings
+        db.settings({ timestampsInSnapshots: true })
+    </script>
+    <script src="Scripts/main.js"></script>
+    <script src="Scripts/fb_auth.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="bootstrap/js/vendor/jquery.slim.min.js"><\/script>')</script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS script for animations -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init()</script>
 </body>
-
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
-<script>
-    var firebaseConfig = {
-        apiKey: "AIzaSyAsjpbZDmUC7WCTUdmMEbP_TxMRCpd4nOI",
-        authDomain: "mps-2-bf005.firebaseapp.com",
-        projectId: "mps-2-bf005",
-        storageBucket: "mps-2-bf005.appspot.com",
-        messagingSenderId: "321436711423",
-        appId: "1:321436711423:web:40bf05c097ade8bca10fca",
-        measurementId: "G-K6Y58XLY9W"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-
-    const auth = firebase.auth();
-    const db = firebase.firestore();
-
-    //update firestore settings
-    db.settings({ timestampsInSnapshots: true })
-</script>
-<script src="Scripts/main.js"></script>
-<script src="Scripts/fb_auth.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="bootstrap/js/vendor/jquery.slim.min.js"><\/script>')</script>
-<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-
-<!-- AOS script for animations -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init()</script>
-
 </html>
