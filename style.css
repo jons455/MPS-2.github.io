@@ -122,3 +122,8 @@ min-width: 700px;
   width: device-width ;
   zoom: 1.0 ;
 }
+
+thead {
+    text-align: center;
+    vertical-align: middle;
+}

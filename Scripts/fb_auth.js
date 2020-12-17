@@ -137,3 +137,19 @@ createForm.addEventListener('submit', (e) => {
   })
 })
 
+/* Forum */
+const textForm = document.querySelector('#text-form');
+textForm.addEventListener('submit', (e) => {
+  console.log("submitted");
+  e.preventDefault();
+  const thema = textForm['thema'].value;  
+  const text = textForm['text'].value;
+  db.collection('Forum').doc("TEST").set({
+    thema: "testthema",
+    text: "testtext"
+  }).then(() => {
+
+  })
+})
+
+
