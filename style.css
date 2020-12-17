@@ -76,6 +76,9 @@ body {
 #mapid { 
   height: 600px; 
 }
+#mapid2{
+  height: 500px;
+}
 .flex-item{
   flex:auto;
   text-align: center;
@@ -103,11 +106,17 @@ h1{
   margin-top: 50px ;
   margin-bottom: 25px;
 }
+#Sonstige{
+  text-align: left;
+}
 
 #logo{
  right: 1%;
  position: absolute;
  
+}
+.jumbotron{
+min-width: 700px;
 }
 @viewport {
   width: device-width ;
