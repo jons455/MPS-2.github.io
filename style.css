@@ -3,11 +3,6 @@
 html {
   scroll-behavior: smooth;
 }
-  
-#buttons{
-  border-style: none;
-  padding-top: 10px;
-}
 
 .container{
   padding: 10px;
