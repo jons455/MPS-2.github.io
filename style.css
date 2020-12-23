@@ -6,8 +6,12 @@ html {
   
 #buttons{
   border-style: none;
+  padding-top: 10px;
 }
 
+.container{
+  padding: 10px;
+}
 body {
   padding-top: 0rem;
   margin-bottom: 40px;
