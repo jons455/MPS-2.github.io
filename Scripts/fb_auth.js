@@ -6,7 +6,9 @@ const loggedInLinks = document.querySelectorAll('#logged-in');
 const accountDetails = document.querySelector('.account-details');
 /* DB */
 const guideList = document.querySelector('#guides');
+/* Forum  */
 const createForm = document.querySelector('#create-form');
+const forumTable = document.querySelector('#forum-posts');
 console.log(guideList);
 
 //logged-in/logged-out (Admin berechtigungen möglich)
@@ -75,7 +77,6 @@ loginForm.addEventListener('submit', (e) => {
 
   auth.signInWithEmailAndPassword(email, password).then(cred => {
     //TODO closen
-
     loginForm.reset();
   });
 
@@ -125,31 +126,64 @@ const setupGuides = (data) => {
     guideList.innerHTML = "<li> Ausgeloggt </li>"
   }
 }
-/* Noch nicht funktional weil keine Inputform */
-createForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  /* Values hinzufügen zu coll */
-  db.collection('guides').add({
-    title: createForm.title.value,
-    content: createForm.content.value
-  }).then(() => {
-
-  })
-})
 
 /* Forum */
+
+// neues Thema
 const textForm = document.querySelector('#text-form');
 textForm.addEventListener('submit', (e) => {
-  console.log("submitted");
   e.preventDefault();
-  const thema = textForm['thema'].value;  
-  const text = textForm['text'].value;
-  db.collection('Forum').doc("TEST").set({
-    thema: "testthema",
-    text: "testtext"
+  db.collection('Forum').add({
+    thema: textForm['thema'].value,
+    text: textForm['text'].value,
+    time: firebase.firestore.Timestamp.fromMillis(Date.now()),
+    user: firebase.auth().currentUser.email,
+    answers: 0
   }).then(() => {
-
+    console.log("submitted");
+    setupForum(null);
   })
 })
 
+db.collection('Forum').orderBy("time", "desc").get().then(snapshot => {
+  setupForum(snapshot.docs);
+});
+
+/* Setup Forum UI-Handling*/
+const setupForum = (data) => {
+  let html = '';
+  data.forEach(doc => {
+    const post = doc.data();
+    const id = doc.id;
+    const tr = `
+      <tr>
+        <td style="text-align:center;">
+            <div>${post.thema}</div>
+        </td>
+        <td style="text-align:center;">
+            <div><a href="#0">${post.user}</a></div>
+            <div>${post.time.toDate().toLocaleDateString()}</div>
+            <div>${post.time.toDate().toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})}</div>
+        </td>
+        <td>
+            <div>${post.text}</div>
+            <div style="text-align: right; margin-right: 8em"><a href="#${id}" data-toggle="collapse">0 Antworten</a></div>
+            <table class="table table-borderless collapse" id="${id}">
+              <tr>
+                  <td>
+                      <form id="answer-form">
+                          <div style="margin-bottom:0.3em;" id="logged-in"><textarea type="text" class="form-control" placeholder="Hier kannst du eine Antwort schreiben" id="Beitrag" required></textarea></div>
+                          <div style="text-align:right;" id="logged-in"><button class="btn btn-secondary">Antworten</button></div>
+                      </form>
+                  </td>
+              </tr>
+            </table>
+        </td>
+      </tr>
+    `;
+    console.log(tr);
+    html += tr;
+    forumTable.innerHTML = html;
+  })
+}
 

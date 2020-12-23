@@ -94,160 +94,32 @@
     </div>
     <!--Forum-->
     <div class="container fluid">
-        <table class="table table-borderless table-striped">
+        <table class="table table-borderless table-striped" id="forum-table">
             <thead class="thead-light">
                 <tr>
-                    <th scope="col" style="min-width:8em; max-width:15em;">Betreff</th>
-                    <th scope="col" style="min-width:8em; max-width:15em;">Author & Datum</th>
+                    <th scope="col" style="width:10em;">Betreff</th>
+                    <th scope="col" style="width:10em; word-wrap: break-word;">Author & Datum</th>
                     <th scope="col" style="min-width:15em;">Text</th>
                 </tr>
             </thead>
             <tbody>
-                <tr id="text-form">
-                    <td colspan="2" style="text-align:center;">
-                        <div id="logged-in">
-                        <input type="text" class="form-control" placeholder="Gib ein Thema an" id="thema" required> </div>
-                    </td>
-                    <td>
-                        <div style="margin-bottom:0.5em;" id="logged-in"><textarea type="text" class="form-control" placeholder="Hier kannst du einen Text schreiben" id="text" required></textarea></div>
-                        <button class="btn btn-secondary" id="logged-in">Submit</button>
-                    </td>
-                </tr>
                 <tr>
-                    <td style="text-align:center;">
-                        <div>Betreff</div>
-                    </td>
-                    <td style="text-align:center;">
-                        <div><a href="#0">Andrea</a></div>
-                        <div>16. 12. 2020</div>
-                        <div>18:30</div>
-                    </td>
-                    <td>
-                        <div>
-                            Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text.
-                            Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text.
-                        </div>
-                        <div style="text-align: right; margin-right: 8em"><a href="#a1" data-toggle="collapse">4 Antworten</a></div>
-                        <table class="table table-borderless collapse" id="a1">
-                            <tr>
-                                <td style="width: 10em; text-align:center;">
-                                    <div><a href="#0">Andrea</a></div>
-                                    <div>16. 12. 2020</div>
-                                    <div>20:40</div>
-                                </td>
-                                <td>
-                                    <div>
-                                        Hier steht eine Antwort.
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="width: 10em; text-align:center;">
-                                    <div><a href="#0">Andrea</a></div>
-                                    <div>16. 12. 2020</div>
-                                    <div>20:40</div>
-                                </td>
-                                <td>
-                                    <div>
-                                        Hier steht eine Antwort.
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="width: 10em; text-align:center;">
-                                    <div><a href="#0">Andrea</a></div>
-                                    <div>16. 12. 2020</div>
-                                    <div>20:40</div>
-                                </td>
-                                <td>
-                                    <div>
-                                        Hier steht eine Antwort.
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="width: 10em; text-align:center;">
-                                    <div><a href="#0">Andrea</a></div>
-                                    <div>16. 12. 2020</div>
-                                    <div>20:40</div>
-                                </td>
-                                <td>
-                                    <div>
-                                        Hier steht eine Antwort.
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">
-                                    <div style="margin-bottom:0.3em;" id="logged-in"><textarea type="text" class="form-control" placeholder="Hier kannst du eine Antwort schreiben" id="Beitrag" required></textarea></div>
-                                    <div style="text-align:right;" id="logged-in"><button class="btn btn-secondary">Antworten</button></div>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
+                    <form id="text-form">
+                        <td colspan="2" style="text-align:center;">
+                            <div id="logged-in">
+                            <input type="text" class="form-control" placeholder="Gib ein Thema an" id="thema" required> </div>
+                        </td>
+                        <td>
+                            <div style="margin-bottom:0.5em;" id="logged-in">
+                                <textarea type="text" class="form-control" placeholder="Hier kannst du einen Text schreiben" id="text" required></textarea>
+                            </div>
+                            <button class="btn btn-secondary" id="logged-in">Submit</button>
+                        </td>
+                    </form>
                 </tr>
-                <tr>
-                    <td style="text-align:center;">
-                        <div>Betreff</div>
-                    </td>
-                    <td style="text-align:center;">
-                        <div><a href="#0">Andrea</a></div>
-                        <div>16. 12. 2020</div>
-                        <div>18:20</div>
-                    </td>
-                    <td>
-                        <div>
-                            Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text.
-                            Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text.
-                        </div>
-                        <div style="text-align: right; margin-right: 8em" id="logged-in"><a href="#a2" data-toggle="collapse">0 Antworten</a></div>
-                        <table class="table table-borderless collapse" id="a2">
-                            <tr>
-                                <td>
-                                    <div style="margin-bottom:0.3em;"><textarea type="text" class="form-control" placeholder="Hier kannst du eine Antwort schreiben" id="Beitrag" required></textarea></div>
-                                    <div style="text-align:right;"><button class="btn btn-secondary">Antworten</button></div>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="text-align:center;">
-                        <div>Betreff</div>
-                    </td>
-                    <td style="text-align:center;">
-                        <div><a href="#0">Andrea</a></div>
-                        <div>16. 12. 2020</div>
-                        <div>18:18</div>
-                    </td>
-                    <td>
-                        <div>
-                            Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text.
-                            Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text. Hier steht ein Text.
-                        </div>
-                        <div style="text-align: right; margin-right: 8em"><a href="#a3" data-toggle="collapse">1 Antwort</a></div>
-                        <table class="table table-borderless collapse" id="a3">
-                            <tr>
-                                <td style="width: 10em; text-align:center;">
-                                    <div><a href="#0">Andrea</a></div>
-                                    <div>16. 12. 2020</div>
-                                    <div>20:40</div>
-                                </td>
-                                <td>
-                                    <div>
-                                        Hier steht eine Antwort.
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">
-                                    <div style="margin-bottom:0.3em;" id="logged-in"><textarea type="text" class="form-control" placeholder="Hier kannst du eine Antwort schreiben" id="Beitrag" required></textarea></div>
-                                    <div style="text-align:right;" id="logged-in"><button class="btn btn-secondary">Antworten</button></div>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
+            </tbody>
+            <tbody id="forum-posts">
+                <!--From database 'Forum'-->
             </tbody>
         </table>
         <div class="mb-3 clearfix">
