@@ -9,6 +9,7 @@ const guideList = document.querySelector('#guides');
 /* Forum  */
 const createForm = document.querySelector('#create-form');
 const forumTable = document.querySelector('#forum-posts');
+const textForm = document.querySelector('#text-form');
 console.log(guideList);
 
 //logged-in/logged-out (Admin berechtigungen möglich)
@@ -130,7 +131,6 @@ const setupGuides = (data) => {
 /* Forum */
 
 // neues Thema
-const textForm = document.querySelector('#text-form');
 textForm.addEventListener('submit', (e) => {
   e.preventDefault();
   db.collection('Forum').add({
@@ -141,7 +141,10 @@ textForm.addEventListener('submit', (e) => {
     answers: 0
   }).then(() => {
     console.log("submitted");
-    setupForum(null);
+    textForm.reset();
+    db.collection('Forum').orderBy("time", "desc").get().then(snapshot => {
+      setupForum(snapshot.docs);
+    });
   })
 })
 
