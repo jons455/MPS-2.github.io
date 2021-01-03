@@ -138,9 +138,8 @@ textForm.addEventListener('submit', (e) => {
     text: textForm['text'].value,
     time: firebase.firestore.Timestamp.fromMillis(Date.now()),
     user: firebase.auth().currentUser.email,
-    answers: 0
+    answerNum: 0
   }).then(() => {
-    console.log("submitted");
     textForm.reset();
     db.collection('Forum').orderBy("time", "desc").get().then(snapshot => {
       setupForum(snapshot.docs);
@@ -148,16 +147,43 @@ textForm.addEventListener('submit', (e) => {
   })
 })
 
-db.collection('Forum').orderBy("time", "desc").get().then(snapshot => {
-  setupForum(snapshot.docs);
-});
+window.onload =
+  db.collection('Forum').orderBy("time", "desc").get().then(snapshot => {
+    setupForum(snapshot.docs);
+  });;
 
-/* Setup Forum UI-Handling*/
+/* Setup Forum & Antworten*/
 const setupForum = (data) => {
   let html = '';
   data.forEach(doc => {
     const post = doc.data();
     const id = doc.id;
+    let an = '';
+    let colspan = '';
+    if (post.answerNum!=0) {
+      post.answers.forEach(a => {
+        const tra = ` 
+          <tr>
+            <td style="width: 10em; text-align:center;">
+              <div><a href="#0">${a.auser}</a></div>
+              <div>${a.atime.toDate().toLocaleDateString()}</div>
+              <div>${a.atime.toDate().toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})}</div>
+            </td>
+            <td>
+              <div>
+                ${a.atext}
+              </div>
+            </td>
+          </tr>
+      `;
+        an += tra;
+      })
+      colspan += "colspan=2";
+    }
+    let answer = "Antworten";
+    if (post.answerNum==1) {
+      answer = "Antwort";
+    }
     const tr = `
       <tr>
         <td style="text-align:center;">
@@ -170,12 +196,13 @@ const setupForum = (data) => {
         </td>
         <td>
             <div>${post.text}</div>
-            <div style="text-align: right; margin-right: 8em"><a href="#${id}" data-toggle="collapse">0 Antworten</a></div>
+            <div style="text-align: right; margin-right: 8em"><a href="#${id}" data-toggle="collapse">${post.answerNum} ${answer}</a></div>
             <table class="table table-borderless collapse" id="${id}">
+              ${an}
               <tr>
-                  <td>
-                      <form id="answer-form">
-                          <div style="margin-bottom:0.3em;" id="logged-in"><textarea type="text" class="form-control" placeholder="Hier kannst du eine Antwort schreiben" id="Beitrag" required></textarea></div>
+                  <td ${colspan}>
+                      <form id="answer-form" name="${id}">
+                          <div style="margin-bottom:0.3em;" id="logged-in"><textarea type="text" class="form-control" placeholder="Hier kannst du eine Antwort schreiben" id="answer" required></textarea></div>
                           <div style="text-align:right;" id="logged-in"><button class="btn btn-secondary">Antworten</button></div>
                       </form>
                   </td>
@@ -184,9 +211,30 @@ const setupForum = (data) => {
         </td>
       </tr>
     `;
-    console.log(tr);
     html += tr;
-    forumTable.innerHTML = html;
-  })
+  });
+  forumTable.innerHTML = html;
+  answer(document.querySelectorAll('#answer-form'));
 }
 
+// neue Antwort
+function answer(forms) {
+  forms.forEach(form => 
+    form.addEventListener('submit', (el) => {
+      el.preventDefault();
+      db.collection('Forum').doc(form.getAttribute('name')).set({
+        answerNum: firebase.firestore.FieldValue.increment(1),
+        answers: firebase.firestore.FieldValue.arrayUnion({
+          atext: form['answer'].value,
+          atime: firebase.firestore.Timestamp.fromMillis(Date.now()),
+          auser: firebase.auth().currentUser.email
+        })
+      }, { merge: true }).then(() => {
+        form.reset();
+        db.collection('Forum').orderBy("time", "desc").get().then(snapshot => {
+          setupForum(snapshot.docs);
+        });
+      })
+    })
+  )
+}
