@@ -28,7 +28,7 @@
 
 <body>
 	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" width=device-width>
-		<a class="navbar-brand" src="#"><img src="IMG/favicon-256x256.png" width="20px">FAU</a>
+		<a class="navbar-brand" src="#" href="#top"><img src="IMG/favicon-256x256.png" width="20px" >FAU</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
 			aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -38,7 +38,7 @@
 		<div class="collapse navbar-collapse" id="navbarsExampleDefault">
 			<!-- Nav Links -->
 
-			<ul class="navbar-nav mr-auto">
+			<ul class="navbar-nav mr-auto" >
 				<li class="nav-item active">
 					<a class="nav-link" href="index.html">Home</a>
 				</li>
@@ -83,7 +83,7 @@
 		</div>
 	</nav>
 
-	<div class="jumbotron hero-image">
+	<div class="jumbotron hero-image" id="top">
 		<div id="logo">
 			<img src="IMG/FAU_Logo.png" alt="FauLogo">
 		</div>
@@ -128,14 +128,15 @@
 				<h4 id="kopf">Sign up</h4><br />
 				<form id="signup-form">
 					<div class="form-group">
+						<label for="signup-email">Email address</label><br>
 						<input type="email" id="signup-email" required />
-						<label for="signup-email">Email address</label>
-					</div>
+						</div>
 					<div class="form-group">
-						<input type="password" id="signup-password" required />
 						<label for="signup-password">Choose password (min. 6 Zeichen)</label>
+						<input type="password" id="signup-password" required />
+						
 					</div>
-					<button class="btn btn-secondary">Sign up</button>
+					<button type="button" class="btn btn-secondary" >Sign up</button>
 					<p id="err"></p>
 				</form>
 			</div>
@@ -234,6 +235,30 @@
 		markerMensa.bindPopup("Hier gehts zur Mensa");
 		markerFindel.bindPopup("Hier gehts zur Findelgasse");
 		markerLange.bindPopup("Hier gehts zur 'LangeGasse'");
+	</script>
+	<script>
+		$(document).ready(function(){
+	 		// Close modal on button click
+			$(".btn").click(function(){
+				var signup = document.getElementById("signup-password")
+				var lengt = signup.value.length;
+				if(lengt >= 6){
+				$("#modal-signup").modal('hide');
+				}
+			});
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+	 		// Close modal on button click
+			$(".btn").click(function(){
+				var login = document.getElementById("login-password")
+				var lengt = login.value.length;
+				if(lengt >= 6){
+				$("#modal-login").modal('hide');
+				}
+			});
+		});
 	</script>
 </body>
 
