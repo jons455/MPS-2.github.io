@@ -9,10 +9,6 @@ const accountDetails = document.querySelector('.account-details');
 //logged-in/logged-out (Admin berechtigungen möglich)
 auth.onAuthStateChanged(user => {
   if (user) {
-
-    db.collection('guides').onSnapshot(snapshot => {
-
-    });
     setupUI(user);
   } else {
     setupUI();
@@ -38,11 +34,10 @@ signupForm.addEventListener('submit', (e) => {
     console.log("1111")
     const modal = document.querySelector('#modal-signup');
     $('#modal-signup').modal('toggle');
-    
     signupForm.querySelector('#err').innerHTML = 'err.message';
     console.log("user signed in");
   }).catch((error) => {
-    signupForm.querySelector('#err').innerHTML = err.message;
+    signupForm.querySelector('#err').innerHTML = error.message;
     var errorCode = error.code;
     var errorMessage = error.message;
     console.log(errorCode, errorMessage)
