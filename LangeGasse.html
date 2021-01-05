@@ -510,9 +510,10 @@
 						</div>
 						<div class="form-group">
 							<input type="password" id="signup-password" required />
-							<label for="signup-password">Choose password (min. 6 Zeichen)</label>
-							<p id="err"></p>
+							<label for="signup-password">Choose password</label>
+							<p>(min. 6 Zeichen)</p>
 						</div>
+						<p id="err"></p>
 						<button class="btn btn-secondary" >Sign up</button>
 					</form>
 				</div>
@@ -526,14 +527,15 @@
 					</div>
 					<h4 id="kopf">Login</h4><br />
 					<form id="login-form">
-						<div class="gorm-group">
+						<div class="form-group">
 							<input type="email" id="login-email" required />
 							<label for="login-email">Email address</label>
 						</div>
-						<div class="from-group">
+						<div class="form-group">
 							<input type="password" id="login-password" required />
 							<label for="login-password">Your password</label>
 						</div>
+						<p id="log-err"></p>
 						<button class="btn btn-secondary" >Login</button>
 					</form>
 				</div>
