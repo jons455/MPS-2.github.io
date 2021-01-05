@@ -27,30 +27,25 @@ signupForm.addEventListener('submit', (e) => {
   const email = signupForm['signup-email'].value;
   mail = email;
   const passwort = signupForm['signup-password'].value;
-  const username = signupForm['signup-name'].value;
+  //const username = signupForm['signup-name'].value;
   //create User
   auth.createUserWithEmailAndPassword(email, passwort).then(cred => {
     //create Username in DB
-    console.log(username);
-    doc("Users").set({
-      name: username
-    }).then(function() {
-      console.log("successfull");
-    });
+    
   //check credentials
-    signupForm.reset();
-    console.log("1111")
-    const modal = document.querySelector('#modal-signup');
-    $('#modal-signup').modal('toggle');
-    signupForm.querySelector('#err').innerHTML = 'err.message';
-    console.log("user signed in");
-  }).catch((error) => {
-    signupForm.querySelector('#err').innerHTML = error.message;
-    signupForm.reset();
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    console.log(errorCode, errorMessage)
-  });
+  signupForm.reset();
+  console.log("1111")
+  const modal = document.querySelector('#modal-signup');
+  $('#modal-signup').modal('toggle');
+  signupForm.querySelector('#err').innerHTML = 'err.message';
+  console.log("user signed in");
+}).catch((error) => {
+  signupForm.querySelector('#err').innerHTML = error.message;
+  signupForm.reset();
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  console.log(errorCode, errorMessage)
+});
   //sychronität behalten
 })
 
@@ -73,12 +68,6 @@ loginForm.addEventListener('submit', (e) => {
   auth.signInWithEmailAndPassword(email, password).then(cred => {
     loginForm.reset();
     $('#modal-login').modal('toggle');
-  }).catch((error) => {
-    loginForm.querySelector('#log-err').innerHTML = error.message;
-    loginForm.reset();
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    console.log(errorCode, errorMessage)
   });
 
 })
