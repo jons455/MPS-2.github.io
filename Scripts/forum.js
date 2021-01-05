@@ -43,7 +43,7 @@ textForm.addEventListener('submit', (e) => {
           const tra = ` 
             <tr>
               <td style="width:9em; text-align:center;">
-                <div style="text-align:center; word-wrap: break-word; word-break:break-word;"><a href="#0">${a.auser}</a></div>
+                <div style="text-align:center; word-wrap: break-word; word-break:break-word;"><a href="#0" style="pointer-events:none;">${a.auser}</a></div>
                 <div>${a.atime.toDate().toLocaleDateString()}</div>
                 <div>${a.atime.toDate().toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})}</div>
               </td>
@@ -68,7 +68,7 @@ textForm.addEventListener('submit', (e) => {
               <div>${post.thema}</div>
           </td>
           <td style="text-align:center; word-wrap: break-word; word-break:break-word;">
-              <div><a href="#0">${post.user}</a></div>
+              <div><a href="#0" style="pointer-events:none;">${post.user}</a></div>
               <div>${post.time.toDate().toLocaleDateString()}</div>
               <div>${post.time.toDate().toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})}</div>
           </td>

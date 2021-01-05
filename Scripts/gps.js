@@ -9,5 +9,6 @@ if (navigator.geolocation) {
 function showPosition(position) {
   x.innerHTML = "Latitude: " + position.coords.latitude + 
   "<br>Longitude: " + position.coords.longitude;
-  var markerLange = L.marker([position.coords.latitude, position.coords.longitude]).addTo(mymap);
+  var markerMe = L.marker([position.coords.latitude, position.coords.longitude]).addTo(mymap);
+  markerMe.bindTooltip("Das bist du!");
 }
