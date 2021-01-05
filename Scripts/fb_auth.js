@@ -53,7 +53,6 @@ signupForm.addEventListener('submit', (e) => {
     console.log(errorCode, errorMessage)
   });
   //sychronität behalten
-  //TODO: fix automaticially closing 
 })
 
 //log out

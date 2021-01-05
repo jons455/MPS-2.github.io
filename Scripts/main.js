@@ -18,3 +18,25 @@ function openPage(pageName, elmnt, color) {
   elmnt.style.backgroundColor = color;
 }
 
+		$(document).ready(function(){
+	 		// Close modal on button click
+			$(".btn").click(function(){
+				var signup = document.getElementById("signup-password")
+				var lengt = signup.value.length;
+				if(lengt >= 6){
+				$("#modal-signup").modal('hide');
+				}
+			});
+		});
+	
+		$(document).ready(function(){
+	 		// Close modal on button click
+			$(".btn").click(function(){
+				var login = document.getElementById("login-password")
+				var lengt = login.value.length;
+				if(lengt >= 6){
+				$("#modal-login").modal('hide');
+				}
+			});
+		});
+	

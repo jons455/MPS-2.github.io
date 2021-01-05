@@ -584,29 +584,6 @@
 <!-- AOS script for animations -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script> AOS.init()</script>
-<script>
-	$(document).ready(function(){
-		 // Close modal on button click
-		$(".btn").click(function(){
-			var signup = document.getElementById("signup-password")
-			var lengt = signup.value.length;
-			if(lengt >= 6){
-			$("#modal-signup").modal('hide');
-			}
-		});
-	});
-</script>
-<script>
-	$(document).ready(function(){
-		 // Close modal on button click
-		$(".btn").click(function(){
-			var login = document.getElementById("login-password")
-			var lengt = login.value.length;
-			if(lengt >= 6){
-			$("#modal-login").modal('hide');
-			}
-		});
-	});
-</script>
+
 
 </html>
