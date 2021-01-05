@@ -27,9 +27,17 @@ signupForm.addEventListener('submit', (e) => {
   const email = signupForm['signup-email'].value;
   mail = email;
   const passwort = signupForm['signup-password'].value;
+  const username = signupForm['signup-name'].value;
   //create User
   auth.createUserWithEmailAndPassword(email, passwort).then(cred => {
-    //check credentials
+    //create Username in DB
+    console.log(username);
+    doc("Users").set({
+      name: username
+    }).then(function() {
+      console.log("successfull");
+    });
+  //check credentials
     signupForm.reset();
     console.log("1111")
     const modal = document.querySelector('#modal-signup');
