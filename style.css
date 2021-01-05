@@ -33,6 +33,12 @@ body {
   text-align: center;
   color: crimson;
 }
+#log-err{
+  align-self: center;
+  align-content: center;
+  text-align: center;
+  color: crimson;
+}
 .h4{
   margin-left: 50%;
 }

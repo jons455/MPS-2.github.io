@@ -46,6 +46,7 @@ signupForm.addEventListener('submit', (e) => {
     console.log("user signed in");
   }).catch((error) => {
     signupForm.querySelector('#err').innerHTML = error.message;
+    signupForm.reset();
     var errorCode = error.code;
     var errorMessage = error.message;
     console.log(errorCode, errorMessage)
@@ -72,6 +73,12 @@ loginForm.addEventListener('submit', (e) => {
   auth.signInWithEmailAndPassword(email, password).then(cred => {
     loginForm.reset();
     $('#modal-login').modal('toggle');
+  }).catch((error) => {
+    loginForm.querySelector('#log-err').innerHTML = error.message;
+    loginForm.reset();
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    console.log(errorCode, errorMessage)
   });
 
 })
