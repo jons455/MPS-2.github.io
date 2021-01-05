@@ -6,19 +6,23 @@ const textForm = document.querySelector('#text-form');
 // neues Thema
 textForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    var name = db.collection('Users').doc(firebase.auth().currentUser.uid).get().then(console.log(name));
-    db.collection('Forum').add({
-      thema: textForm['thema'].value,
-      text: textForm['text'].value,
-      time: firebase.firestore.Timestamp.fromMillis(Date.now()),
-      user: name.user,
-      answerNum: 0
-    }).then(() => {
-      textForm.reset();
-      db.collection('Forum').orderBy("time", "desc").get().then(snapshot => {
-        setupForum(snapshot.docs);
-      });
-    })
+    var ui = firebase.auth().currentUser.uid;
+    db.collection('Users').doc(ui).get().then(doc => {
+      var user = doc.data().user;
+      db.collection('Forum').add({
+        thema: textForm['thema'].value,
+        text: textForm['text'].value,
+        time: firebase.firestore.Timestamp.fromMillis(Date.now()),
+        user: user,
+        answerNum: 0
+      }).then(() => {
+        textForm.reset();
+        db.collection('Forum').orderBy("time", "desc").get().then(snapshot => {
+          setupForum(snapshot.docs);
+        });
+      })
+    });
+    
   })
   
   window.onload =
@@ -96,19 +100,23 @@ textForm.addEventListener('submit', (e) => {
     forms.forEach(form => 
       form.addEventListener('submit', (el) => {
         el.preventDefault();
-        db.collection('Forum').doc(form.getAttribute('name')).set({
-          answerNum: firebase.firestore.FieldValue.increment(1),
-          answers: firebase.firestore.FieldValue.arrayUnion({
-            atext: form['answer'].value,
-            atime: firebase.firestore.Timestamp.fromMillis(Date.now()),
-            auser: firebase.auth().currentUser.email
-          })
-        }, { merge: true }).then(() => {
-          form.reset();
-          db.collection('Forum').orderBy("time", "desc").get().then(snapshot => {
-            setupForum(snapshot.docs);
+        var ui = firebase.auth().currentUser.uid;
+        db.collection('Users').doc(ui).get().then(doc => {
+          var user = doc.data().user;
+          db.collection('Forum').doc(form.getAttribute('name')).set({
+            answerNum: firebase.firestore.FieldValue.increment(1),
+            answers: firebase.firestore.FieldValue.arrayUnion({
+              atext: form['answer'].value,
+              atime: firebase.firestore.Timestamp.fromMillis(Date.now()),
+              auser: user
+            })
+          }, { merge: true }).then(() => {
+            form.reset();
+            db.collection('Forum').orderBy("time", "desc").get().then(snapshot => {
+              setupForum(snapshot.docs);
+            });
           });
-        })
+        });
       })
     )
   }
