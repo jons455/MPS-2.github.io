@@ -1,9 +1,3 @@
-//Karte hallo test
-
-
-
-
-
 function openPage(pageName, elmnt, color) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -18,7 +12,7 @@ function openPage(pageName, elmnt, color) {
   elmnt.style.backgroundColor = color;
 }
 
-		$(document).ready(function(){
+		/*$(document).ready(function(){
 	 		// Close modal on button click
 			$(".btn").click(function(){
 				var signup = document.getElementById("signup-password")
@@ -39,4 +33,4 @@ function openPage(pageName, elmnt, color) {
 				}
 			});
 		});
-	
+	*/
