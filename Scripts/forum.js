@@ -37,8 +37,8 @@ textForm.addEventListener('submit', (e) => {
         post.answers.forEach(a => {
           const tra = ` 
             <tr>
-              <td style="width: 10em; text-align:center;">
-                <div><a href="#0">${a.auser}</a></div>
+              <td style="width:9em; text-align:center;">
+                <div style="text-align:center; word-wrap: break-word; word-break:break-word;"><a href="#0">${a.auser}</a></div>
                 <div>${a.atime.toDate().toLocaleDateString()}</div>
                 <div>${a.atime.toDate().toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})}</div>
               </td>
@@ -59,17 +59,17 @@ textForm.addEventListener('submit', (e) => {
       }
       const tr = `
         <tr>
-          <td style="text-align:center;">
+          <td style="text-align:center; word-wrap: break-word; word-break:break-word;">
               <div>${post.thema}</div>
           </td>
-          <td style="text-align:center;">
+          <td style="text-align:center; word-wrap: break-word; word-break:break-word;">
               <div><a href="#0">${post.user}</a></div>
               <div>${post.time.toDate().toLocaleDateString()}</div>
               <div>${post.time.toDate().toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})}</div>
           </td>
           <td>
-              <div>${post.text}</div>
-              <div style="text-align: right; margin-right: 8em"><a href="#${id}" data-toggle="collapse">${post.answerNum} ${answer}</a></div>
+              <div style="word-wrap: break-word; word-break: break-word;">${post.text}</div>
+              <div style="text-align:right; margin-right:25%"><a href="#${id}" data-toggle="collapse">${post.answerNum} ${answer}</a></div>
               <table class="table table-borderless collapse" id="${id}">
                 ${an}
                 <tr>
