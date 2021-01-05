@@ -27,9 +27,20 @@ signupForm.addEventListener('submit', (e) => {
   const email = signupForm['signup-email'].value;
   mail = email;
   const passwort = signupForm['signup-password'].value;
+  const username = signupForm['signup-username'].value;
+  
   //create User
   auth.createUserWithEmailAndPassword(email, passwort).then(cred => {
     //check credentials
+    console.log(username);
+    db.collection("Users").doc(cred.user.uid).set({
+      user:  username
+      
+  })
+  .then(function() {
+      console.log("Document successfully written!");
+  })
+  
     signupForm.reset();
     console.log("1111")
     const modal = document.querySelector('#modal-signup');
@@ -70,14 +81,25 @@ loginForm.addEventListener('submit', (e) => {
 
 //logged-in/logged-out (Admin berechtigungen möglich)
 const setupUI = (user) => {
+  var name;
   if (user) {
-    var mail = firebase.auth().currentUser.email;
+    var ui = firebase.auth().currentUser.uid;
+    console.log(ui)
+    
+    db.collection('Users').doc(ui).get().then(doc =>{
+      var test = doc.data().user;
+      console.log(test);
+      name = test;
+    
+    console.log("name: " + name);
     loggedInLinks.forEach(item => item.style.display = 'block');
     logouti.forEach(item => item.style.display = 'block');
     loggedOutLinks.forEach(item => item.style.display = 'none');
+      //check if empty if not then clear span
     span = document.getElementById("username");
-    txt = document.createTextNode(mail);
+    txt = document.createTextNode(name);
     span.appendChild(txt);
+  });
   } else {
     // toggle user elements
     loggedInLinks.forEach(item => item.style.display = 'none');
@@ -86,3 +108,11 @@ const setupUI = (user) => {
   }
 };
 
+const setupuser = (data, name) => {
+  data.forEach(doc => {
+    const post = doc.data();
+    if(post.user.equals(name)){
+      return name;
+    }
+  });
+}
