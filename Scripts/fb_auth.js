@@ -75,7 +75,12 @@ loginForm.addEventListener('submit', (e) => {
   auth.signInWithEmailAndPassword(email, password).then(cred => {
     loginForm.reset();
     $('#modal-login').modal('toggle');
-  });
+  }).catch((error) => {
+    loginForm.querySelector('#log-err').innerHTML = error.message;
+    loginForm.reset();
+  }
+
+  );
 
 })
 
@@ -103,7 +108,7 @@ const setupUI = (user) => {
         span.removeChild(span.childNodes[0]);
         txt = document.createTextNode(name);
         span.appendChild(txt);
-      }else {
+      } else {
         span = document.getElementById("username");
         txt = document.createTextNode(name);
         span.appendChild(txt);

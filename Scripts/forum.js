@@ -6,11 +6,12 @@ const textForm = document.querySelector('#text-form');
 // neues Thema
 textForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    var name = db.collection('Users').doc(firebase.auth().currentUser.uid).get().then(console.log(name));
     db.collection('Forum').add({
       thema: textForm['thema'].value,
       text: textForm['text'].value,
       time: firebase.firestore.Timestamp.fromMillis(Date.now()),
-      user: firebase.auth().currentUser.email,
+      user: name.user,
       answerNum: 0
     }).then(() => {
       textForm.reset();
