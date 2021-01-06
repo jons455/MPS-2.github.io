@@ -169,6 +169,17 @@ sortForm.addEventListener('submit', (e) => {
             })
           }
           break;
+          case 'thema':
+          if (sortForm['order'].value == 'desc') {
+            db.collection('Forum').orderBy("thema", "desc").get().then(snapshot => {
+              setupForum(snapshot.docs);
+            })
+          } else {
+            db.collection('Forum').orderBy("thema", "asc").get().then(snapshot => {
+              setupForum(snapshot.docs);
+            })
+          }
+          break;
     default:
   }
   

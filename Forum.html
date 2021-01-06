@@ -110,7 +110,7 @@
                     <form id="text-form">
                         <td colspan="2" style="text-align:center;">
                             <div id="logged-in">
-                            <input type="text" class="form-control" placeholder="Gib ein Thema an" id="thema" maxlength="5" required> </div>
+                            <input type="text" class="form-control" placeholder="Gib ein Thema an" id="thema" maxlength="50" required> </div>
                         </td>
                         <td>
                             <div style="margin-bottom:0.5em;" id="logged-in">
@@ -130,13 +130,13 @@
             <nav aria-label="Navigate post pages" class="float-lg-right">
                 <br>
                 <ul class="pagination pagionation-sm mb-lg-0">
-                    <li class="page-item active"><a href="0" class="page-link">1<span class="sr-only">(current)</span></a></li>
-                    <li class="page-item"><a href="0" class="page-link">2</a></li>
-                    <li class="page-item"><a href="0" class="page-link">3</a></li>
-                    <li class="page-item"><a href="0" class="page-link">4</a></li>
+                    <li class="page-item active"><a href="#" class="page-link">1<span class="sr-only">(current)</span></a></li>
+                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+                    <li class="page-item"><a href="#" class="page-link">3</a></li>
+                    <li class="page-item"><a href="#" class="page-link">4</a></li>
                     <li class="page-item"><a class="page-link" style="pointer-events:none;">&hellip;</a></li>
-                    <li class="page-item"><a href="0" class="page-link">31</a></li>
-                    <li class="page-item"><a href="0" class="page-link">next</a></li>
+                    <li class="page-item"><a href="#" class="page-link">31</a></li>
+                    <li class="page-item"><a href="#" class="page-link">next</a></li>
                     <li class="page-item"><a href="#top" class="page-link">Top</a></li>
                 </ul>
             </nav>
@@ -145,9 +145,9 @@
                     <div class="form-group mr-2">
                         <label class="sr-only" for="select"></label>
                         <select class="form-control form-control-sm" id="select">
+                            <option value="zeit">Datum</option>
                             <option value="thema">Thema</option>
                             <option value="author">Author</option>
-                            <option value="zeit">Datum</option>
                             <option value="text">Text</option>
                             <option value="antworten">Anzahl von Antworten</option>
                         </select>
@@ -155,8 +155,8 @@
                     <div class="form-group mr-2">
                         <label class="sr-only" for="order"></label>
                         <select class="form-control form-control-sm" id="order">
-                            <option value="asc">aufsteigend</option>
                             <option value="desc">absteigend</option>
+                            <option value="asc">aufsteigend</option>
                         </select>
                     </div>
                     <button type="submit" class="btn btn-sm btn-primary">Go</button>
