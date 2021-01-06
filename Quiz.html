@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>FAU Experience</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/jumbotron/">
+    <!-- custom stylesheet-->
+    <link rel="stylesheet" href="style.css">
+    <link href="quiz.css" rel="stylesheet">
+    <!-- css & bootstrap link-->
+	
+    <script defer src="Scripts/quiz.js"></script>
+    <title>Quiz App</title>
+</head>
+
+<body>
+
+    
+    <div class="container">
+        <div id="question-container" class="hide">
+            <div id="question">Question</div>
+            <div id="answer-buttons" class="btn-grid">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="start-btn" class="start-btn btn">Start</button>
+            <button id="next-btn" class="next-btn btn hide">Next</button>
+            <a id="home-btn" class="home-btn btn" href="index.html">Home</a>
+        </div>
+    </div>
+
+    
+    
+    <!-- All kinds of Scripts -->
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+	<script>
+		var firebaseConfig = {
+			apiKey: "AIzaSyAsjpbZDmUC7WCTUdmMEbP_TxMRCpd4nOI",
+			authDomain: "mps-2-bf005.firebaseapp.com",
+			projectId: "mps-2-bf005",
+			storageBucket: "mps-2-bf005.appspot.com",
+			messagingSenderId: "321436711423",
+			appId: "1:321436711423:web:40bf05c097ade8bca10fca",
+			measurementId: "G-K6Y58XLY9W"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+
+		const auth = firebase.auth();
+		const db = firebase.firestore();
+
+		//update firestore settings
+		db.settings({ timestampsInSnapshots: true })
+	</script>
+
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script>window.jQuery || document.write('<script src="bootstrap/js/vendor/jquery.slim.min.js"><\/script>')</script>
+	<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="Scripts/main.js"></script>
+	<script src="Scripts/fb_auth.js"></script>
+    <script src="Scripts/gps.js"></script>
+</body>
+
+</html>
