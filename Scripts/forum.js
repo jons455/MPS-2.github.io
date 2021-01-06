@@ -2,6 +2,7 @@
 const createForm = document.querySelector('#create-form');
 const forumTable = document.querySelector('#forum-posts');
 const textForm = document.querySelector('#text-form');
+const sortForm = document.querySelector('#sort');
 
 // neues Thema
 textForm.addEventListener('submit', (e) => {
@@ -80,7 +81,7 @@ textForm.addEventListener('submit', (e) => {
                 <tr>
                     <td ${colspan}>
                         <form id="answer-form" name="${id}">
-                            <div style="margin-bottom:0.3em;" id="logged-in"><textarea type="text" class="form-control" placeholder="Hier kannst du eine Antwort schreiben" id="answer" required></textarea></div>
+                            <div style="margin-bottom:0.3em;" id="logged-in"><textarea type="text" class="form-control" placeholder="Hier kannst du eine Antwort schreiben" id="answer" maxlength="800" required></textarea></div>
                             <div style="text-align:right;" id="logged-in"><button class="btn btn-secondary">Antworten</button></div>
                         </form>
                     </td>
@@ -119,4 +120,57 @@ textForm.addEventListener('submit', (e) => {
         });
       })
     )
+  } 
+
+sortForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  switch(sortForm['select'].value) {
+    case 'zeit':
+      if (sortForm['order'].value == 'desc') {
+        db.collection('Forum').orderBy("time", "desc").get().then(snapshot => {
+          setupForum(snapshot.docs);
+        })
+      } else {
+        db.collection('Forum').orderBy("time", "asc").get().then(snapshot => {
+          setupForum(snapshot.docs);
+        })
+      }
+      break;
+    case 'author':
+      if (sortForm['order'].value == 'desc') {
+        db.collection('Forum').orderBy("user", "desc").get().then(snapshot => {
+          setupForum(snapshot.docs);
+        })
+      } else {
+        db.collection('Forum').orderBy("user", "asc").get().then(snapshot => {
+          setupForum(snapshot.docs);
+        })
+      }
+      break;
+      case 'text':
+        if (sortForm['order'].value == 'desc') {
+          db.collection('Forum').orderBy("text", "desc").get().then(snapshot => {
+            setupForum(snapshot.docs);
+          })
+        } else {
+          db.collection('Forum').orderBy("text", "asc").get().then(snapshot => {
+            setupForum(snapshot.docs);
+          })
+        }
+        break;
+        case 'antworten':
+          if (sortForm['order'].value == 'desc') {
+            db.collection('Forum').orderBy("answerNum", "desc").get().then(snapshot => {
+              setupForum(snapshot.docs);
+            })
+          } else {
+            db.collection('Forum').orderBy("answerNum", "asc").get().then(snapshot => {
+              setupForum(snapshot.docs);
+            })
+          }
+          break;
+    default:
   }
+  
+})
+  

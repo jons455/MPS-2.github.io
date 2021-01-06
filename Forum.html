@@ -110,13 +110,14 @@
                     <form id="text-form">
                         <td colspan="2" style="text-align:center;">
                             <div id="logged-in">
-                            <input type="text" class="form-control" placeholder="Gib ein Thema an" id="thema" required> </div>
+                            <input type="text" class="form-control" placeholder="Gib ein Thema an" id="thema" maxlength="5" required> </div>
                         </td>
                         <td>
                             <div style="margin-bottom:0.5em;" id="logged-in">
-                                <textarea type="text" class="form-control" placeholder="Hier kannst du einen Text schreiben" id="text" required></textarea>
+                                <textarea type="text" class="form-control" placeholder="Hier kannst du einen Text schreiben" 
+                                id="text" maxlength="100" required></textarea>  
                             </div>
-                            <button class="btn btn-secondary" id="logged-in">Submit</button>
+                                <button class="btn btn-secondary" id="logged-in">Submit</button>
                         </td>
                     </form>
                 </tr>
@@ -137,9 +138,29 @@
                     <li class="page-item"><a href="0" class="page-link">31</a></li>
                     <li class="page-item"><a href="0" class="page-link">next</a></li>
                     <li class="page-item"><a href="#top" class="page-link">Top</a></li>
-
                 </ul>
             </nav>
+                <form class="form-inline float-lg-left d-block d-sm-flex" id="sort">
+                    <div class="mb-2 mb-sm-0 mr-2">Sortieren nach:</div>
+                    <div class="form-group mr-2">
+                        <label class="sr-only" for="select"></label>
+                        <select class="form-control form-control-sm" id="select">
+                            <option value="thema">Thema</option>
+                            <option value="author">Author</option>
+                            <option value="zeit">Datum</option>
+                            <option value="text">Text</option>
+                            <option value="antworten">Anzahl von Antworten</option>
+                        </select>
+                    </div> 
+                    <div class="form-group mr-2">
+                        <label class="sr-only" for="order"></label>
+                        <select class="form-control form-control-sm" id="order">
+                            <option value="asc">aufsteigend</option>
+                            <option value="desc">absteigend</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-sm btn-primary">Go</button>
+                </form>
         </div>
     </div>
 
@@ -241,6 +262,9 @@
     <!-- AOS script for animations -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init()</script>
+
+    
+
     
 </body>
 </html>
