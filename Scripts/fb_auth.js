@@ -97,12 +97,12 @@ const setupUI = (user) => {
     loggedOutLinks.forEach(item => item.style.display = 'none');
       //check if empty if not then clear span
       if(document.getElementById("username").childNodes.length != 0){
-        span = document.getElementById("username");
+    span = document.getElementById("username");
         console.log(span);
         console.log(span.childNodes[0]);
         span.removeChild(span.childNodes[0]);
-        txt = document.createTextNode(name);
-        span.appendChild(txt);
+    txt = document.createTextNode(name);
+    span.appendChild(txt);
       }else {
         span = document.getElementById("username");
         txt = document.createTextNode(name);
