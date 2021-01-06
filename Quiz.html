@@ -1,1 +1,207 @@
+<html>
+<html lang="en">
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>FAU Experience</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/jumbotron/">
+    <!-- custom stylesheet-->
+    <link rel="stylesheet" href="style.css">
+    <!-- css & bootstrap link-->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--Leaflet-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+    <link rel="icon" type="image/png" sizes="16x16" href="IMG/favicon-256x256.png">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" width=device-width>
+        <a class="navbar-brand" src="#" href="index.html"><img src="IMG/favicon-256x256.png" width="20px">FAU</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navigation Bar -->
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <!-- Nav Links -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="LangeGasse.html">Lange Gasse</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Findelgasse.html">Findelgasse</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="Mensa.html">Mensa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="SonstigePlacesToBe.html">Sonstige</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Forum.html">Forum<img src="IMG/icon_frm.svg" style="height:1.5em;"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Quiz.html">Quiz</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link disabled" id="logged-in" href="#">Logged in as <span id="username"></span></a>
+                </li>
+                <li class="nav-item" id="special">
+                    <a class="nav-link" id="logged-in" href="#" data-target="#modal-account"
+                        data-toggle="modal">Account</a>
+                </li>
+                <li class="nav-item" id="special">
+                    <a class="nav-link" id="logged-out" href="#" data-target="#modal-login"
+                        data-toggle="modal">Login</a>
+                </li>
+                <li class="nav-item" id="special">
+                    <a class="nav-link" id="logged-out" href="#" data-target="#modal-signup" data-toggle="modal">Sign
+                        up</a>
+                </li>
+                <!-- show/hide durch logged in/logged -->
+                <li class="nav-item" id="special">
+                    <a class="nav-link" href=" #" id="logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div id="question-container" class="hide">
+          <div id="question">Question</div>
+          <div id="answer-buttons" class="btn-grid">
+            <button class="btn">Answer 1</button>
+            <button class="btn">Answer 2</button>
+            <button class="btn">Answer 3</button>
+            <button class="btn">Answer 4</button>
+          </div>
+        </div>
+        <div class="controls">
+          <button id="start-btn" class="start-btn btn">Start</button>
+          <button id="next-btn" class="next-btn btn hide">Next</button>
+        </div>
+      </div>
+            
+    
+      
+
+
+
+<!-- Modals -->
+<div id="modal-signup" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <h4 id="kopf">Sign up</h4><br />
+            <form id="signup-form">
+                <div class="form-group">
+                    <input type="email" id="signup-email" required />
+                    <label for="signup-email">Email address</label>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="signup-password" required />
+                    <label for="signup-password">Choose password</label>
+                    <p>(min. 6 Zeichen)</p>
+                </div>
+                <p id="err"></p>
+                <button class="btn btn-secondary">Sign up</button>
+                <p id="err"></p>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="modal-login" class="modal fade" role="dialog">
+
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <h4 id="kopf">Login</h4><br />
+            <form id="login-form">
+                <div class="gorm-group">
+                    <input type="email" id="login-email" required />
+                    <label for="login-email">Email address</label>
+                </div>
+                <div class="from-group">
+                    <input type="password" id="login-password" required />
+                    <label for="login-password">Your password</label>
+                </div>
+                <p id="log-err"></p>
+                <button class="btn btn-secondary" >Login</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="modal-account" class="modal">
+    <div class="modal-content center-align">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <h4>Account details</h4><br />
+        <div class="account-details"></div>
+    </div>
+</div>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+<script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyAsjpbZDmUC7WCTUdmMEbP_TxMRCpd4nOI",
+        authDomain: "mps-2-bf005.firebaseapp.com",
+        projectId: "mps-2-bf005",
+        storageBucket: "mps-2-bf005.appspot.com",
+        messagingSenderId: "321436711423",
+        appId: "1:321436711423:web:40bf05c097ade8bca10fca",
+        measurementId: "G-K6Y58XLY9W"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+
+    //update firestore settings
+    db.settings({ timestampsInSnapshots: true })
+</script>
+<script src="Scripts/main.js"></script>
+<script src="Scripts/forum.js"></script>
+<script src="Scripts/fb_auth.js"></script>
+<script src="Scripts/quiz.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="bootstrap/js/vendor/jquery.slim.min.js"><\/script>')</script>
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- AOS script for animations -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init()</script>
+
+</body>
+</html>
+
+</body>
