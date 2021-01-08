@@ -21,15 +21,14 @@ textForm.addEventListener('submit', (e) => {
         db.collection('Forum').orderBy("time", "desc").get().then(snapshot => {
           setupForum(snapshot.docs);
         });
-      })
+      });
     });
-    
-  })
+  });
   
   window.onload =
     db.collection('Forum').orderBy("time", "desc").get().then(snapshot => {
       setupForum(snapshot.docs);
-    });;
+    });
   
   /* Setup Forum & Antworten*/
   const setupForum = (data) => {
@@ -98,7 +97,7 @@ textForm.addEventListener('submit', (e) => {
   
   // neue Antwort
   function answer(forms) {
-    forms.forEach(form => 
+    forms.forEach(form => {
       form.addEventListener('submit', (el) => {
         el.preventDefault();
         var ui = firebase.auth().currentUser.uid;
@@ -113,17 +112,19 @@ textForm.addEventListener('submit', (e) => {
             })
           }, { merge: true }).then(() => {
             form.reset();
-            db.collection('Forum').orderBy("time", "desc").get().then(snapshot => {
-              setupForum(snapshot.docs);
-            });
+            sorting();
           });
         });
       })
-    )
+    })
   } 
 
 sortForm.addEventListener('submit', (e) => {
   e.preventDefault();
+  sorting();
+});
+  
+function sorting() {
   switch(sortForm['select'].value) {
     case 'zeit':
       if (sortForm['order'].value == 'desc') {
@@ -182,6 +183,4 @@ sortForm.addEventListener('submit', (e) => {
           break;
     default:
   }
-  
-})
-  
+}
