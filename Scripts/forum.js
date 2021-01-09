@@ -92,6 +92,13 @@ textForm.addEventListener('submit', (e) => {
       html += tr;
     });
     forumTable.innerHTML = html;
+    auth.onAuthStateChanged(user => {
+      if (user) {
+        document.querySelectorAll('#logged-in').forEach(item => item.style.display = 'block');
+      } else {
+        document.querySelectorAll('#logged-in').forEach(item => item.style.display = 'none');
+      }
+    });
     answer(document.querySelectorAll('#answer-form'));
   }
 
