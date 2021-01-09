@@ -259,7 +259,11 @@
 			markerMe = L.marker(e.latlng, { icon: redIcon }).addTo(mymap).bindTooltip("Das bist du!");
 			circleMe = L.circle(e.latlng, radius, {color: 'red'}).addTo(mymap);
 		}
+		function onLocationError(e) {
+         alert(e.message);
+      	}
 		mymap.on('locationfound', onLocationFound);
+		mymap.on('locationerror', onLocationError);
 		mymap.locate({setView: false, watch: true});
 	</script>
 	

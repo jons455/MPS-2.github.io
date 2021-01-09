@@ -3,6 +3,8 @@ const createForm = document.querySelector('#create-form');
 const forumTable = document.querySelector('#forum-posts');
 const textForm = document.querySelector('#text-form');
 const sortForm = document.querySelector('#sort');
+/* Pagination */
+const pages = document.querySelector('#pagination');
 
 // neues Thema
 textForm.addEventListener('submit', (e) => {
@@ -33,7 +35,8 @@ textForm.addEventListener('submit', (e) => {
   /* Setup Forum & Antworten*/
   const setupForum = (data) => {
     let html = '';
-    data.forEach(doc => {
+    setupPagination(data);
+    data.forEach((doc, index) => {
       const post = doc.data();
       const id = doc.id;
       let an = '';
@@ -63,7 +66,7 @@ textForm.addEventListener('submit', (e) => {
         answer = "Antwort";
       }
       const tr = `
-        <tr>
+        <tr id="doc${index}">
           <td style="text-align:center; word-wrap: break-word; word-break:break-word;">
               <div>${post.thema}</div>
           </td>
@@ -190,4 +193,66 @@ function sorting() {
     break;
     default:
   }
+}
+
+function setupPagination(data) {
+  var al = data.length;
+  var html = '';
+  switch (al) {
+    case 0:
+      html += `
+      <li class="page-item"><a href="#top" class="page-link">Top</a></li>
+      `;
+      break;
+    case 1:
+      html += `
+      <li class="page-item active"><a href="#" class="page-link">1<span class="sr-only">(current)</span></a></li>
+      <li class="page-item"><a href="#top" class="page-link">Top</a></li>
+      `;
+      break;
+    case 2:
+      html += `
+      <li class="page-item active"><a href="#" class="page-link">1<span class="sr-only">(current)</span></a></li>
+      <li class="page-item"><a href="#" class="page-link">2</a></li>
+      <li class="page-item"><a href="#top" class="page-link">Top</a></li>
+      `;
+      break;
+    case 3:
+      html += `
+      <li class="page-item active"><a href="#" class="page-link">1<span class="sr-only">(current)</span></a></li>
+      <li class="page-item"><a href="#" class="page-link">2</a></li>      
+      <li class="page-item"><a href="#" class="page-link">3</a></li>
+      <li class="page-item"><a href="#top" class="page-link">Top</a></li>
+      `;
+      break;
+    case 4:
+      html += `
+      <li class="page-item active"><a href="#" class="page-link">1<span class="sr-only">(current)</span></a></li>
+      <li class="page-item"><a href="#" class="page-link">2</a></li>      
+      <li class="page-item"><a href="#" class="page-link">3</a></li>
+      <li class="page-item"><a href="#" class="page-link">4</a></li>
+      <li class="page-item"><a href="#top" class="page-link">Top</a></li>
+      `;
+      break;
+    case 5:
+      html += `
+      <li class="page-item active"><a href="#" class="page-link">1<span class="sr-only">(current)</span></a></li>
+      <li class="page-item"><a href="#" class="page-link">2</a></li>      
+      <li class="page-item"><a href="#" class="page-link">3</a></li>
+      <li class="page-item"><a href="#" class="page-link">4</a></li>
+      <li class="page-item"><a href="#" class="page-link">5</a></li>
+      <li class="page-item"><a href="#top" class="page-link">Top</a></li>
+      `;
+      break;
+    default:
+      html += `
+      <li class="page-item active"><a href="#" class="page-link">1<span class="sr-only">(current)</span></a></li>
+      <li class="page-item"><a href="#" class="page-link">2</a></li>
+      <li class="page-item"><a href="#" class="page-link">3</a></li>
+      <li class="page-item"><a class="page-link" style="pointer-events:none;">&hellip;</a></li>     
+      <li class="page-item"><a href="#" class="page-link">${al}</a></li>
+      <li class="page-item"><a href="#top" class="page-link">Top</a></li>
+      `;
+  }
+  pages.innerHTML = html;
 }
