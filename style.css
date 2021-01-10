@@ -121,6 +121,9 @@ h1{
 .jumb{
   min-width: 700px;
 }
+.jl {
+  min-width: 800px;
+}
 
 @viewport {
   width: device-width ;
@@ -130,6 +133,10 @@ h1{
 thead {
     text-align: center;
     vertical-align: middle;
+}
+
+.bb {
+  margin-bottom: 5px;
 }
 
 
