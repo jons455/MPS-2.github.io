@@ -258,7 +258,7 @@
         		mymap.removeLayer(circleMe);
     		}
 			var radius = e.accuracy;
-			markerMe = L.marker(e.latlng, { icon: redIcon }).addTo(mymap).bindTooltip("Das bist du!");
+			markerMe = L.marker(e.latlng, { icon: redIcon }).addTo(mymap).bindTooltip("Dein Standort");
 			circleMe = L.circle(e.latlng, radius, {color: 'red'}).addTo(mymap);
 		}
 		function onLocationError(e) {
