@@ -83,7 +83,7 @@ textForm.addEventListener('submit', (e) => {
                 <tr>
                     <td ${colspan}>
                         <form id="answer-form" name="${id}">
-                            <div style="margin-bottom:0.3em;" id="logged-in"><textarea type="text" class="form-control" placeholder="Hier kannst du eine Antwort schreiben" id="answer" maxlength="800" required></textarea></div>
+                            <div style="margin-bottom:0.3em;" id="logged-in"><textarea type="text" class="form-control" placeholder="Hier kannst du eine Antwort schreiben ..." id="answer" maxlength="800" required></textarea></div>
                             <div style="text-align:right;" id="logged-in"><button class="btn btn-secondary">Antworten</button></div>
                         </form>
                     </td>
