@@ -94,6 +94,7 @@ h1{
 }
 #Platzhalter {
   text-align: center;
+  align-content: center;
 }
 #LangeGasse{
   margin-top: 50px ;
@@ -117,11 +118,6 @@ h1{
   margin-bottom: 5%;
 }
 
-#logo{
- right: 1%;
- position: absolute;
- 
-}
 .jumb{
   min-width: 80%;
   min-height: 100%;
