@@ -76,25 +76,8 @@
     </div>
   </nav>
 
-
-  <div class="pos-f-t">
-    <div class="collapse" id="navbarToggleExternalContent">
-      <div class="bg-dark p-4">
-        <h4 class="text-white">Collapsed content</h4>
-        <span class="text-muted">Toggleable via the navbar brand.</span>
-      </div>
-    </div>
-    <nav class="navbar navbar-dark bg-dark">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
-        aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </nav>
-  </div>
-  </div>
-
   <div id="Platzhalter">
-    <div class="container" id="Mensa">
+    <div class="container" id="Mensa" style="margin-bottom:5px;">
       <h2 id="Mensa">Mensa</h2>
       <p>
         <img src=https://www.werkswelt.de/data/uploads/gastronomie/slideshows/Studentenhaus_NBG_052.jpg
@@ -139,9 +122,45 @@
           <div><a href="https://www.werkswelt.de/index.php?id=kartensystem">Weiter Infos dazu findest du hier.</a></div>
         </div>
       </div>
+    </div>
 
+    <!------Kommentare------>
+    <div class="container" style="text-align:center;">
+      <a href="#men" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="men">>> Kommentare anzeigen <<</a>
+    </div>
+    <div id="men" class="container collapse">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th colspan="5" style="text-align:left;">Fragen zu einem anderen Thema? Schau ins <a href="Forum.html">Forum</a>!</th>
+          </tr>
+        </thead>
+        <tbody id="men-comments">
+          <!--Comments to Mensa from firebase-->
+        </tbody>
+        <tbody>
+          <tr>
+            <form id="men-form">
+              <td colspan="4" style="width:80%;">
+                <span id="logged-in">
+                <textarea type="text" class="form-control" placeholder="Schreib deinen Kommentar hier ..." 
+                    id="men-text" maxlength="800" required></textarea>
+                </span>
+              </td>
+              <td style="vertical-align:bottom;">
+                <button id="logged-in" class="btn btn-secondary" style="width:100%;">Submit</button>
+              </td>
+            </form>
+          </tr>
+        </tbody>
+      </table>
+      <div class="btn btn-secondary" id="logged-out">
+        <div style="text-align: center;"><a class="nav-link" href="#" data-target="#modal-login"
+          data-toggle="modal" style="color: white;">Log dich ein und kommentiere auch!</a></div>
+      </div>
     </div>
   </div>
+
   <!-- Modals -->
   <div id="modal-signup" class="modal fade" role="dialog">
     <div class="modal-dialog">
@@ -230,7 +249,7 @@
 </script>
 <script src="Scripts/main.js"></script>
 <script src="Scripts/fb_auth.js"></script>
-
+<script src="Scripts/men_comments.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
   integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="bootstrap/js/vendor/jquery.slim.min.js"><\/script>')</script>

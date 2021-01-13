@@ -50,7 +50,7 @@ textForm.addEventListener('submit', (e) => {
                 <div>${a.atime.toDate().toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})}</div>
               </td>
               <td>
-                <div>
+                <div style="max-height:70px; overflow:auto;">
                   ${a.atext}
                 </div>
               </td>
@@ -75,14 +75,14 @@ textForm.addEventListener('submit', (e) => {
               <div>${post.time.toDate().toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})}</div>
           </td>
           <td>
-              <div style="word-wrap: break-word; word-break: break-word;">${post.text}</div>
+              <div style="word-wrap: break-word; word-break: break-word; max-height:150px; overflow:auto">${post.text}</div>
               <div style="text-align:right; margin-right:25%"><a href="#${id}" data-toggle="collapse">${post.answerNum} ${answer}</a></div>
               <table class="table table-borderless collapse" id="${id}">
                 ${an}
                 <tr>
                     <td ${colspan}>
                         <form id="answer-form" name="${id}">
-                            <div style="margin-bottom:0.3em;" id="logged-in"><textarea type="text" class="form-control" placeholder="Hier kannst du eine Antwort schreiben ..." id="answer" maxlength="800" required></textarea></div>
+                            <div style="margin-bottom:0.3em;" id="logged-in"><textarea type="text" class="form-control" placeholder="Hier kannst du eine Antwort schreiben ..." id="answer" required></textarea></div>
                             <div style="text-align:right;" id="logged-in"><button class="btn btn-secondary">Antworten</button></div>
                         </form>
                     </td>
