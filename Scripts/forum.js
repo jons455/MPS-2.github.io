@@ -50,7 +50,7 @@ textForm.addEventListener('submit', (e) => {
                 <div>${a.atime.toDate().toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})}</div>
               </td>
               <td>
-                <div>
+                <div style="max-height:70px; overflow:auto;">
                   ${a.atext}
                 </div>
               </td>
@@ -75,7 +75,7 @@ textForm.addEventListener('submit', (e) => {
               <div>${post.time.toDate().toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})}</div>
           </td>
           <td>
-              <div style="word-wrap: break-word; word-break: break-word;">${post.text}</div>
+              <div style="word-wrap: break-word; word-break: break-word; max-height:150px; overflow:auto">${post.text}</div>
               <div style="text-align:right; margin-right:25%"><a href="#${id}" data-toggle="collapse">${post.answerNum} ${answer}</a></div>
               <table class="table table-borderless collapse" id="${id}">
                 ${an}
