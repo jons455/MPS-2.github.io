@@ -118,7 +118,7 @@ h1{
  
 }
 .jumb{
-  min-width: 700px;
+  min-width: 80%;
 }
 .jl {
   min-width: 800px;
@@ -137,6 +137,4 @@ thead {
 .bb {
   margin-bottom: 5px;
 }
-
-
 

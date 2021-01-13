@@ -27,7 +27,7 @@
 
 <body>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" width=device-width>
-    <a class="navbar-brand" src="#" href="index.html"><img src="IMG/Logo FAU Experience Navbar.png" width="20px">FAU</a>
+    <a class="navbar-brand" src="#" href="index.html"><img src="IMG/Logo FAU Experience Navbar.png" width="20px"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
       aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -93,15 +93,14 @@
   </div>
   </div>
 
-  <div id="Platzhalter" style="text-align: center; margin-top: 10px;">
-    <iframe src="https://www.google.com/maps/d/embed?mid=1vEON1aYTrjzRr9ylBl6HuCBZiCjlIbDf&hl=de" width="60%" height="40%"></iframe>
-  </div>
+  
 
   <div class="container" id="Platzhalter">
     <h2 id="Sonstige">Sonstige Places to be</h2>
-    <div id="mapid2" class="container py-5"></div>
 
-
+    <div id="Platzhalter" style="text-align: center; margin-top: 10px;">
+      <iframe src="https://www.google.com/maps/d/embed?mid=1vEON1aYTrjzRr9ylBl6HuCBZiCjlIbDf&hl=de" width="80%" height="60%"></iframe>
+    </div>
     <div class="container" id="sg">
 
       <div class="row">
@@ -144,8 +143,8 @@
       <h3 align-self="center">Finca & Bar Celona Nürnberg</h3>
 
       <div class="jumbotron jumb" data-aos="fade-right">
-        <p> <img src=https://media-cdn.tripadvisor.com/media/photo-s/03/35/1d/ba/cafe-bar-celona-finca.jpg width="550"
-            height="366" alt="LangeGasse" style="border: 4px solid #6c757d">
+        <p> <img src=https://media-cdn.tripadvisor.com/media/photo-s/03/35/1d/ba/cafe-bar-celona-finca.jpg width="60%"
+            height="50%" alt="LangeGasse" style="border: 4px solid #6c757d">
         </p>
         Frühstücken, Cocktails und mehr auf der Vorderen Insel Schütt in Nürnberg
         <div><a href="https://celona.de/mein-celona/details/finca-bar-celona-nuernberg">Zur Website</a></div>
@@ -155,7 +154,7 @@
         <div class="jumbotron jumb">
           <p> <img
               src=https://images.nordbayern.de/image/contentid/policy:1.78737:1505486612/1685002412.jpg?f=16%3A9&h=320&m=FIT&w=600&%24p%24f%24h%24m%24w=5dad004
-              width="550" height="366" alt="LangeGasse" style="border: 4px solid #6c757d"></p>
+              width="60%" height="50%" alt="LangeGasse" style="border: 4px solid #6c757d"></p>
           O'Sheas - Bar, Gaststätte / Restaurant, Kneipe, Pub, Biergarten / Bierkeller
           <div><a href="https://osheas.de/">Zur Website</a></div>
 
@@ -741,90 +740,7 @@
     <!-- AOS script for animations -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script> AOS.init()</script>
-    <script>
-      var mymap2 = L.map('mapid2').setView([49.45628683646989, 11.084298255384772], 15);
-      var greenIcon = new L.Icon({
-        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
-        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-        iconSize: [25, 41],
-        iconAnchor: [12, 41],
-        popupAnchor: [1, -34],
-        shadowSize: [41, 41]
-      });
-      var yellowIcon = new L.Icon({
-        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-gold.png',
-        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-        iconSize: [25, 41],
-        iconAnchor: [12, 41],
-        popupAnchor: [1, -34],
-        shadowSize: [41, 41]
-      });
-      var redIcon = new L.Icon({
-        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png',
-        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-        iconSize: [25, 41],
-        iconAnchor: [12, 41],
-        popupAnchor: [1, -34],
-        shadowSize: [41, 41]
-      });
-      L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>,' +
-          'contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>,' +
-          'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-        maxZoom: 18,
-        id: 'mapbox/streets-v11',
-        tileSize: 512,
-        zoomOffset: -1,
-        accessToken: 'pk.eyJ1IjoibXBzbXBzIiwiYSI6ImNraHhnN3loZjBqYWUyem1wN3E2Y2d6aGEifQ.JxQvh-p5rjVXc_gtXcwu2w',
-      }).addTo(mymap2);
 
-      var markerBarCelona = L.marker([49.45271259981609, 11.081056842655986], { icon: greenIcon }).addTo(mymap2);
-      var oSheas = L.marker([49.45225442835144, 11.081844835175241], { icon: greenIcon }).addTo(mymap2);
-      var kleinePauseNürnberg = L.marker([49.45748746128853, 11.086706859908547], { icon: greenIcon }).addTo(mymap2);
-      var namste = L.marker([49.45739378563762, 11.083628579015253], { icon: greenIcon }).addTo(mymap2);
-      var chongsDiner = L.marker([49.45563407921212, 11.084631913795503], { icon: greenIcon }).addTo(mymap2);
-      var australienBar = L.marker([49.4584, 11.1859], { icon: greenIcon }).addTo(mymap2);
-      var codung = L.marker([49.4584, 11.1859], { icon: greenIcon }).addTo(mymap2);
-      var sausalitos = L.marker([49.4584, 11.1859], { icon: greenIcon }).addTo(mymap2);
-      var hansImGlück = L.marker([49.4584, 11.1859], { icon: greenIcon }).addTo(mymap2);
-      var pizzaAmici = L.marker([49.4566692195421, 11.084395349629558], { icon: greenIcon }).addTo(mymap2);
-      var horapa = L.marker([49.45672706319557, 11.085614675072799], { icon: greenIcon }).addTo(mymap2);
-      var hongKong = L.marker([48.114026404667136, 11.476662227336874], { icon: greenIcon }).addTo(mymap2);
-      var derBeck = L.marker([49.456782296424976, 11.084790788055935], { icon: greenIcon }).addTo(mymap2);
-      var brezenKolb = L.marker([49.457738508008966, 11.087758589867567], { icon: greenIcon }).addTo(mymap2);
-      var surrito = L.marker([49.457332759907345, 11.087414635175271], { icon: greenIcon }).addTo(mymap2);
-      var osteria = L.marker([49.456165862045786, 11.083256856168227], { icon: greenIcon }).addTo(mymap2);
-      var pimpMyPizza = L.marker([49.456381671257354, 11.08437444635166], { icon: greenIcon }).addTo(mymap2);
-      var beckschlager = L.marker([49.4558697356351, 11.08447914271213], { icon: greenIcon }).addTo(mymap2);
-      var missVietnam = L.marker([49.456106186749956, 11.082746958055733], { icon: greenIcon }).addTo(mymap2);
-      var goldThaiImbiss = L.marker([49.45609798313784, 11.082560456204368], { icon: greenIcon }).addTo(mymap2);
-      var mamMamBurger = L.marker([49.45600235987446, 11.082457196571829], { icon: greenIcon }).addTo(mymap2);
-      var batDat = L.marker([49.45608657645653, 11.082186524655247], { icon: greenIcon }).addTo(mymap2);
-      var zeitUndRaum = L.marker([49.45216652275204, 11.082082407789304], { icon: greenIcon }).addTo(mymap2);
-      var enchilada = L.marker([49.45434968885957, 11.079308138476641], { icon: greenIcon }).addTo(mymap2);
-
-      var rösttrommel = L.marker([49.45804459037288, 11.088706508168716], { icon: yellowIcon }).addTo(mymap2);
-      var whiteBulldog = L.marker([49.45743928314578, 11.083847624984442], { icon: yellowIcon }).addTo(mymap2);
-      var basement11 = L.marker([49.45607059048068, 11.082211107789357], { icon: yellowIcon }).addTo(mymap2);
-      var cafeOpaHelmut = L.marker([49.4571088925059, 11.083373296148475], { icon: yellowIcon }).addTo(mymap2);
-      var ludwigs = L.marker([49.456421118467496, 11.084373356236604], { icon: yellowIcon }).addTo(mymap2);
-      var barEuropa = L.marker([49.456031753331985, 11.082986998532581], { icon: yellowIcon }).addTo(mymap2);
-      var streetArtCafe = L.marker([49.45572455337564, 11.081506156204403], { icon: yellowIcon }).addTo(mymap2);
-      var dieRoteBar = L.marker([49.45205007784526, 11.081407069696565], { icon: yellowIcon }).addTo(mymap2);
-      var cafeBarKatz = L.marker([49.4536403536721, 11.080631998532503], { icon: yellowIcon }).addTo(mymap2);
-
-      var copyland = L.marker([49.45753507472391, 11.086499398532565], { icon: redIcon }).addTo(mymap2);
-      var rewe = L.marker([49.456930627781595, 11.087774104480745], { icon: redIcon }).addTo(mymap2);
-      var penny = L.marker([49.45708667277481, 11.087961587460454], { icon: redIcon }).addTo(mymap2);
-      var dm = L.marker([49.457306418541975, 11.088026782168281], { icon: redIcon }).addTo(mymap2);
-      var post = L.marker([49.45734595635734, 11.087906643183294], { icon: redIcon }).addTo(mymap2);
-      var apotheke = L.marker([49.45730772038998, 11.087494952116359], { icon: redIcon }).addTo(mymap2);
-      var cinecitta = L.marker([49.452027590526185, 11.083263484088933], { icon: redIcon }).addTo(mymap2);
-
-      markerMensa.bindPopup("Hier gehts zur Mensa");
-      markerFindel.bindPopup("Hier gehts zur Findelgasse");
-      markerLange.bindPopup("Hier gehts zur 'LangeGasse'");
-    </script>
 </body>
 
 
