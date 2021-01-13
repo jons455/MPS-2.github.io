@@ -1,5 +1,4 @@
 /* Forum  */
-const createForm = document.querySelector('#create-form');
 const forumTable = document.querySelector('#forum-posts');
 const textForm = document.querySelector('#text-form');
 const sortForm = document.querySelector('#sort');
