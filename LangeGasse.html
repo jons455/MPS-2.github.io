@@ -124,7 +124,6 @@
 					aria-expanded="false" aria-controls="Lehr"> Lehrstühle</button>
 
 			</div>
-			<p>
 			<div class="collapse" id="Bib" data-parent="#LG">
 				<div class="jumbotron">
 					In der Universitätsbibliothek kann man Bücher ausleihen. Es gibt hier auch Gruppenarbeitsplätze und
@@ -491,16 +490,19 @@
 					</table>
 				</div>
 			</div>
-			</p>
 		</div>
+		<!------Kommentare------>
 		<div class="container">
+			<a href="#lgc" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="lgc">Kommentare anzeigen</a>
+		</div>
+		<div id="lgc" class="container collapse">
 			<table class="table table-striped">
 				<thead>
 					<tr>
-						<th colspan="5" style="text-align:left;">Kommentare:</th>
+						<th colspan="5" style="text-align:left;">Fragen zu einem anderen Thema? Schau ins <a href="Forum.html">Forum</a>!</th>
 					</tr>
 				</thead>
-				<tbody id="LG-comments">
+				<tbody id="lg-comments">
 					<!--Comments to LG from firebase-->
 				</tbody>
 				<tbody>
@@ -519,8 +521,6 @@
 					</tr>
 				</tbody>
 			</table>
-		</div>
-		<div class="container fluid">
 			<div class="btn btn-secondary" id="logged-out">
 				<div style="text-align: center;"><a class="nav-link" href="#" data-target="#modal-login"
 					data-toggle="modal" style="color: white;">Log dich ein und kommentiere auch!</a></div>

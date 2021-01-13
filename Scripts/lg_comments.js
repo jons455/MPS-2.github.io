@@ -1,4 +1,4 @@
-const lg = document.querySelector('#LG-comments');
+const lg = document.querySelector('#lg-comments');
 const lgform = document.querySelector('#lg-form');
 
 window.onload =
