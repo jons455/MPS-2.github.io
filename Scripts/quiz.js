@@ -158,15 +158,6 @@ const questions = [
     question: 'Welches Café ist am nächsten zur Langen Gasse?',
     answers: [
       { text: 'Café Opa Helmut', correct: false },
-      { text: 'White Bulldog ', correct: true },
-      { text: 'Basement 11', correct: false },
-      { text: 'Ludwigs Bar & Café', correct: false }
-    ]
-  },
-  {
-    question: 'Welches Café ist am nächsten zur Langen Gasse?',
-    answers: [
-      { text: 'Café Opa Helmut', correct: false },
       { text: 'Basement 11', correct: false },
       { text: 'White Bulldog', correct: true },
       { text: 'Ludwigs Bar & Café', correct: false }
