@@ -83,35 +83,102 @@ function clearStatusClass(element) {
 
 const questions = [
   {
-    question: 'What is 2 + 2?',
+    question: 'Welche Einrichtung findet man in der Mensa',
     answers: [
-      { text: '4', correct: true },
-      { text: '22', correct: false }
+      { text: 'Career Service', correct: false },
+      { text: 'Infothek', correct: false },
+      { text: 'Studentenwerk', correct: true },
+      { text: 'Prüfungsamt', correct: false }
     ]
   },
   {
-    question: 'Who is the best YouTuber?',
+    question: 'Wieviele Lehstühle befinden sich in der Langen Gasse?',
     answers: [
-      { text: 'Web Dev Simplified', correct: true },
-      { text: 'Traversy Media', correct: true },
-      { text: 'Dev Ed', correct: true },
-      { text: 'Fun Fun Function', correct: true }
+      { text: '36', correct: true },
+      { text: '42', correct: false },
+      { text: '30', correct: false },
+      { text: '9', correct: false }
     ]
   },
   {
-    question: 'Is web development fun?',
+    question: 'Welcher ist der größte Hörsaal in der Langen Gasse? ',
     answers: [
-      { text: 'Kinda', correct: false },
-      { text: 'YES!!!', correct: true },
-      { text: 'Um no', correct: false },
-      { text: 'IDK', correct: false }
+      { text: 'H1', correct: false },
+      { text: 'H2', correct: false },
+      { text: 'H6', correct: false },
+      { text: 'H4', correct: true }
     ]
   },
   {
-    question: 'What is 4 * 2?',
+    question: 'Welche Farbe haben die Tische und Stühle im H4? ',
     answers: [
-      { text: '6', correct: false },
-      { text: '8', correct: true }
+      { text: 'rot', correct: false },
+      { text: 'gelb', correct: true },
+      { text: 'weiß', correct: false },
+      { text: 'braun', correct: false }
     ]
-  }
+  },
+  {
+    question: 'Wo befindet sich das Studierendencafe "der Trichter?"',
+    answers: [
+      { text: 'Lange Gasse', correct: false },
+      { text: 'Mensa', correct: false },
+      { text: 'Findelgasse', correct: true },
+      { text: 'Innenstadt', correct: false }
+    ]
+  },
+  {
+    question: 'Wieviele CIP-Pools befinden sich in der Langen Gasse?',
+    answers: [
+      { text: 'vier', correct: true },
+      { text: 'zwei', correct: false },
+      { text: 'drei', correct: false },
+      { text: 'fünf', correct: false }
+    ]
+  },
+  {
+    question: 'Wo befindet sich die Mensa?',
+    answers: [
+      { text: 'Hans-Sachs Platz', correct: false },
+      { text: 'Andrej-Sacharow Platzer', correct: true },
+      { text: 'Albrecht-Dürer Platz', correct: false },
+      { text: 'Aufseßplatz', correct: false }
+    ]
+  },
+  {
+    question: 'Was kann man in der Mensa NICHT machen?',
+    answers: [
+      { text: 'Zu Mittag essen', correct: false },
+      { text: 'Prüfungen schreiben', correct: false },
+      { text: 'Fau-Card aufladen', correct: false },
+      { text: 'Fau-Card validieren', correct: true}
+    ]
+  },
+  {
+    question: 'Welches Café ist am nächsten zur Langen Gasse?',
+    answers: [
+      { text: 'Café Opa Helmut', correct: false },
+      { text: 'White Bulldog ', correct: true },
+      { text: 'Basement 11', correct: false },
+      { text: 'Ludwigs Bar & Café', correct: false }
+    ]
+  },
+  {
+    question: 'Welches Café ist am nächsten zur Langen Gasse?',
+    answers: [
+      { text: 'Café Opa Helmut', correct: false },
+      { text: 'Basement 11', correct: false },
+      { text: 'White Bulldog', correct: true },
+      { text: 'Ludwigs Bar & Café', correct: false }
+    ]
+  },
+  {
+    question: 'Welcher dieser Lehrstühle befindet sich NICHT an der Findelgasse?',
+    answers: [
+      { text: 'Juniorprofessur für Wirtschaftspsychologie', correct: true },
+      { text: 'Professur für Wirtschaftspädagogik', correct: false },
+      { text: 'Professur für Gesundheitsökonomie', correct: false },
+      { text: 'Lehrstuhl für Kommunikationswissenschaften', correct: false }
+    ]
+  },
 ]
