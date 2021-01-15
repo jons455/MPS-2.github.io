@@ -29,7 +29,7 @@
 <body>
 	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" width=device-width>
 		<a class="navbar-brand" src="#" href="index.html">
-			<img src="IMG/Logo FAU Experience Navbar.png" width="20px" >
+			<img src="IMG/Logo FAU Experience Navbar.png" width="20px">
 		</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
 			aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +40,7 @@
 		<div class="collapse navbar-collapse" id="navbarsExampleDefault">
 			<!-- Nav Links -->
 
-			<ul class="navbar-nav mr-auto" >
+			<ul class="navbar-nav mr-auto">
 				<li class="nav-item">
 					<a class="nav-link" href="LangeGasse.html">Lange Gasse</a>
 				</li>
@@ -55,7 +55,7 @@
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="Forum.html">Forum<img src="IMG/icon_frm.svg" style="height:1.5em;"></a>
-                </li>
+				</li>
 			</ul>
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
@@ -137,7 +137,6 @@
 		</div>
 	</div>
 	<div id="modal-login" class="modal fade" role="dialog">
-
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -160,13 +159,17 @@
 		</div>
 	</div>
 
-	<div id="modal-account" class="modal">
-		<div class="modal-content center-align">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
+	<div id="modal-account" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<h4 id="kopf">Account details</h4><br />
+				<div class="account-details">
+					<p>Username: <span id="username"></span></p>
+				</div>
 			</div>
-			<h4>Account details</h4><br />
-			<div class="account-details"></div>
 		</div>
 	</div>
 
@@ -232,7 +235,7 @@
 		markerLange.bindPopup("Hier gehts zur 'LangeGasse'");
 
 		//user's position
-		window.onload = function() {
+		window.onload = function () {
 			if (!navigator.geolocation) {
 				alert("Geolocation is not supported by this browser.");
 			}
@@ -247,22 +250,22 @@
 			shadowSize: [41, 41]
 		});
 		function onLocationFound(e) {
-			if (markerMe)  { 
-        		mymap.removeLayer(markerMe);
-        		mymap.removeLayer(circleMe);
-    		}
+			if (markerMe) {
+				mymap.removeLayer(markerMe);
+				mymap.removeLayer(circleMe);
+			}
 			var radius = e.accuracy / 2;
 			markerMe = L.marker(e.latlng, { icon: redIcon }).addTo(mymap).bindTooltip("Dein Standort");
-			circleMe = L.circle(e.latlng, radius, {color: 'red'}).addTo(mymap);
+			circleMe = L.circle(e.latlng, radius, { color: 'red' }).addTo(mymap);
 		}
 		function onLocationError(e) {
-         alert(e.message);
-      	}
+			alert(e.message);
+		}
 		mymap.on('locationfound', onLocationFound);
 		mymap.on('locationerror', onLocationError);
-		mymap.locate({setView: false, watch: true});
+		mymap.locate({ setView: false, watch: true });
 	</script>
-	
+
 </body>
 
 </html>
