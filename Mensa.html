@@ -126,13 +126,14 @@
 
     <!------Kommentare------>
     <div class="container" style="text-align:center;">
-      <a href="#men" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="men">>> Kommentare anzeigen <<</a>
+      <a href="#men" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="men">&raquo Kommentare anzeigen &laquo</a>
     </div>
     <div id="men" class="container collapse">
       <table class="table table-striped">
         <thead>
           <tr>
-            <th colspan="5" style="text-align:left;">Fragen zu einem anderen Thema? Schau ins <a href="Forum.html">Forum</a>!</th>
+            <th colspan="4" style="text-align:left; vertical-align:middle;">Fragen zu einem anderen Thema? Schau ins <a href="Forum.html">Forum</a>!</th>
+						<th><button id="bottom" class="btn btn-outline-secondary btn-sm float-lg-right" onclick="location.href='#men-text'">&darr;&darr;&darr;</button></th>
           </tr>
         </thead>
         <tbody id="men-comments">
@@ -141,7 +142,7 @@
         <tbody>
           <tr>
             <form id="men-form">
-              <td colspan="4" style="width:80%;">
+              <td colspan="3" style="width:80%;">
                 <span id="logged-in">
                 <textarea type="text" class="form-control" placeholder="Schreib deinen Kommentar hier ..." 
                     id="men-text" maxlength="800" required></textarea>
@@ -151,6 +152,9 @@
                 <button id="logged-in" class="btn btn-secondary" style="width:100%;">Submit</button>
               </td>
             </form>
+            <td style="align-content:center; vertical-align:bottom;">      
+              <button id="bottom" class="btn btn-outline-secondary btn-sm" onclick="location.href='#top'">&uarr;&uarr;&uarr;</button>
+            </td>
           </tr>
         </tbody>
       </table>

@@ -222,13 +222,14 @@
 
 		<!------Kommentare------>
 		<div class="container" style="text-align:center;">
-			<a href="#fgc" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="fgc">>> Kommentare anzeigen <<</a>
+			<a href="#fgc" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="fgc">&raquo Kommentare anzeigen &laquo</a>
 		</div>
 		<div id="fgc" class="container collapse">
 			<table class="table table-striped">
 				<thead>
 					<tr>
-						<th colspan="5" style="text-align:left;">Fragen zu einem anderen Thema? Schau ins <a href="Forum.html">Forum</a>!</th>
+						<th colspan="4" style="text-align:left; vertical-align:middle;">Fragen zu einem anderen Thema? Schau ins <a href="Forum.html">Forum</a>!</th>
+						<th><button id="bottom" class="btn btn-outline-secondary btn-sm" onclick="location.href='#fg-text'">&#8595;&#8595;&#8595;</button></th>
 					</tr>
 				</thead>
 				<tbody id="fg-comments">
@@ -237,7 +238,7 @@
 				<tbody>
 					<tr>
 						<form id="fg-form">
-							<td colspan="4" style="width:80%;">
+							<td colspan="3" style="width:80%;">
 								<span id="logged-in">
 								<textarea type="text" class="form-control" placeholder="Schreib deinen Kommentar hier ..." 
 										id="fg-text" maxlength="800" required></textarea>
@@ -247,6 +248,9 @@
 								<button id="logged-in" class="btn btn-secondary" style="width:100%;">Submit</button>
 							</td>
 						</form>
+						<td style="align-content:center; vertical-align:bottom;">      
+							<button id="bottom" class="btn btn-outline-secondary btn-sm" onclick="location.href='#top'">&uarr;&uarr;&uarr;</button>
+						</td>
 					</tr>
 				</tbody>
 			</table>
