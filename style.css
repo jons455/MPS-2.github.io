@@ -120,8 +120,9 @@ h1{
 
 .jumb{
   min-width: 80%;
-  min-height: 100%;
+  
 }
+
 .jl {
   min-width: 670px;
 }
@@ -146,8 +147,15 @@ thead {
   margin-bottom: 10px;
 }
 #SoD{
-  margin-top: 30px;
+  margin-bottom: 80px;
 }
 #SoS{
-  margin-top: 30px;
+  margin-bottom: 80px;
+}
+#So{
+  margin-bottom: 80px;
+}
+#account-details{
+  text-align: center;
+  align-content: center;
 }
