@@ -4,6 +4,10 @@ html {
   scroll-behavior: smooth;
 }
 
+#zumSeitenanfang{
+  margin-right: 8%;
+}
+
 .container{
   padding: 10px;
 }
@@ -49,6 +53,7 @@ body {
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
  /*background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("ressources/headimage_anim.gif"); */
+ 
  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.wiso.rw.fau.de/files/2016/03/presse2.jpg");
   
   /* Set a specific height */
@@ -62,6 +67,15 @@ body {
   background-attachment: fixed;
 }
 
+#logo {
+ 
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin-left: 5%;
+  
+}
+
 /* Place text in the middle of the image */
 .hero-text {
   text-align: center;
@@ -71,6 +85,7 @@ body {
   transform: translate(-50%, -50%);
   color: white;
 }
+
 #rundgang {
   width: 100%;
   text-align: center;
