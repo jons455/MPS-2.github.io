@@ -112,7 +112,12 @@ const setupUI = (user) => {
         span = document.getElementById("username");
         txt = document.createTextNode(name);
         span.appendChild(txt);
-  }
+    }
+  }).then( amy =>{
+    const html = `
+      <div>Logged in as ${name}</div>
+    `;
+    accountDetails.innerHTML = html;
   });
   } else {
     // toggle user elements
