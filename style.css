@@ -122,9 +122,6 @@ h1{
   min-width: 80%;
   min-height: 100%;
 }
-.jl {
-  min-width: 670px;
-}
 
 @viewport {
   width: device-width ;
