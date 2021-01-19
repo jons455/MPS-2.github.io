@@ -4,6 +4,10 @@ html {
   scroll-behavior: smooth;
 }
 
+#zumSeitenanfang{
+  margin-right: 8%;
+}
+
 .container{
   padding: 10px;
 }
@@ -46,10 +50,27 @@ body {
   margin-left: 3%;
 }
 /* The hero image */
+@media screen and (max-width: 900px) {
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
  /*background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("ressources/headimage_anim.gif"); */
- background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.wiso.rw.fau.de/files/2016/03/presse2.jpg");
+ background-image:  url("https://raw.githubusercontent.com/MPS-2/MPS-2.github.io/main/IMG/background_k1.jpg");
+  /* Set a specific height */
+  height: 100vh;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+}
+}
+@media screen and (min-width: 901px) {
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+ /*background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("ressources/headimage_anim.gif"); */
+ background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://raw.githubusercontent.com/MPS-2/MPS-2.github.io/main/IMG/background.jpg");
   
   /* Set a specific height */
   height: 100vh;
@@ -61,16 +82,17 @@ body {
   position: relative;
   background-attachment: fixed;
 }
-
+}
 /* Place text in the middle of the image */
 .hero-text {
   text-align: center;
-  position: relative;
+  position:absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: rgb(255, 255, 255);
 }
+
 #rundgang {
   width: 100%;
   text-align: center;
@@ -154,4 +176,13 @@ thead {
 #account-details{
   text-align: center;
   align-content: center;
+}
+#navlogo{
+  width: 35px;
+  height: 35px;
+}
+#logo{
+  width: 100px;
+  height: 100px;
+
 }
