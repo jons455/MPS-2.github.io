@@ -88,13 +88,13 @@
 					style="border: 4px solid #6c757d" class="img-fluid"></p>
 			<div class="container">
 				<button class="btn btn-secondary bb" data-toggle="collapse" data-target="#SaalFG" role="button" width="20%"
-					aria-expanded="false" aria-controls="SaalFG"> Hörsäle</button>
+					aria-expanded="false" aria-controls="SaalFG" onclick="setTimeout(toSaalFG, 400)"> Hörsäle</button>
 				<button class="btn btn-secondary bb" data-toggle="collapse" data-target="#Raum" role="button" width="20%"
-					aria-expanded="false" aria-controls="Raum"> Gruppenräume</button>
+					aria-expanded="false" aria-controls="Raum" onclick="setTimeout(toRaum, 400)"> Gruppenräume</button>
 				<button class="btn btn-secondary bb" data-toggle="collapse" data-target="#Lehre" role="button" width="20%"
-					aria-expanded="false" aria-controls="Lehre"> Lehrstühle</button>
+					aria-expanded="false" aria-controls="Lehre" onclick="setTimeout(toLehre, 400)"> Lehrstühle</button>
 				<button class="btn btn-secondary bb" data-toggle="collapse" data-target="#Trichter" role="button"
-					width="20%" aria-expanded="false" aria-controls="Trichter"> Trichter</button>
+					width="20%" aria-expanded="false" aria-controls="Trichter" onclick="setTimeout(toTrichter, 400)"> Trichter</button>
 			</div>
 
 			<div class="collapse" id="SaalFG" data-parent="#FG">
@@ -225,7 +225,7 @@
 
 		<!------Kommentare------>
 		<div class="container" style="text-align:center;">
-			<a href="#fgc" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="fgc">&raquo; Kommentare anzeigen &laquo;</a>
+			<a href="#fgc" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="fgc" onclick="setTimeout(toComments, 400)">&raquo; Kommentare anzeigen &laquo;</a>
 		</div>
 		<div id="fgc" class="container collapse">
 			<table class="table table-striped">

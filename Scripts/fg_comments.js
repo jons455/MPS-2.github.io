@@ -46,3 +46,20 @@ fgform.addEventListener('submit', (e) => {
       });
     });
   });
+
+function toSaalFG() {
+  window.location.href = "#SaalFG";
+}
+function toRaum() {
+  window.location.href = "#Raum";
+}
+function toLehre() {
+  window.location.href = "#Lehre";
+}
+function toTrichter() {
+  window.location.href = "#Trichter";
+}
+
+function toComments() {
+  window.location.href = "#fgc";
+}
