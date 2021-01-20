@@ -88,21 +88,21 @@
 					style="border: 4px solid #6c757d; width:60%;" class="img-fluid"></p>
 			<div class="container">
 				<button class="btn btn-secondary bb" data-toggle="collapse" data-target="#Bib" role="button" width="20%"
-					aria-expanded="false" aria-controls="Bib"> Bibliothek</button>
+					aria-expanded="false" aria-controls="Bib" onclick="setTimeout(toBib, 400)"> Bibliothek</button>
 				<button class="btn btn-secondary bb" data-toggle="collapse" data-target="#Cafeteria" role="button"
-					width="20%" aria-expanded="false" aria-controls="Cafeteria"> Cafeteria</button>
+					width="20%" aria-expanded="false" aria-controls="Cafeteria" onclick="setTimeout(toCaf, 400)"> Cafeteria</button>
 				<button class="btn btn-secondary bb" data-toggle="collapse" data-target="#CIP" role="button" width="20%"
-					aria-expanded="false" aria-controls="CIP"> CIP-Pools</button>
+					aria-expanded="false" aria-controls="CIP" onclick="setTimeout(toCip, 400)"> CIP-Pools</button>
 				<button class="btn btn-secondary bb" data-toggle="collapse" data-target="#Saal" role="button" width="20%"
-					aria-expanded="false" aria-controls="Saal"> Hörsäle</button>
+					aria-expanded="false" aria-controls="Saal" onclick="setTimeout(toSaal, 400)"> Hörsäle</button>
 				<button class="btn btn-secondary bb" data-toggle="collapse" data-target="#Seminar" role="button"
-					width="20%" aria-expanded="false" aria-controls="Seminar"> Seminar- & Übungsräume</button>
+					width="20%" aria-expanded="false" aria-controls="Seminar" onclick="setTimeout(toSem, 400)"> Seminar- & Übungsräume</button>
 				<button class="btn btn-secondary bb" data-toggle="collapse" data-target="#Info" role="button" width="20%"
-					aria-expanded="false" aria-controls="Info"> Infothek</button>
+					aria-expanded="false" aria-controls="Info" onclick="setTimeout(toInfo, 400)"> Infothek</button>
 				<button class="btn btn-secondary bb" data-toggle="collapse" data-target="#Druck" role="button" width="20%"
-					aria-expanded="false" aria-controls="Druck"> Druck Zentrum</button>
+					aria-expanded="false" aria-controls="Druck" onclick="setTimeout(toDruck, 400)"> Druck Zentrum</button>
 				<button class="btn btn-secondary bb" data-toggle="collapse" data-target="#Lehr" role="button" width="20%"
-					aria-expanded="false" aria-controls="Lehr"> Lehrstühle</button>
+					aria-expanded="false" aria-controls="Lehr" onclick="setTimeout(toLehr, 400)"> Lehrstühle</button>
 
 			</div>
 			<div class="collapse" id="Bib" data-parent="#LG">
@@ -502,7 +502,7 @@
 
 		<!------Kommentare------>
 		<div class="container">
-			<a href="#lgc" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="lgc" onclick="location.href='#t'">&raquo; Kommentare anzeigen &laquo;</a>
+			<a href="#lgc" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="lgc" onclick="setTimeout(toComments, 400)">&raquo; Kommentare anzeigen &laquo;</a>
 		</div>
 		<div id="lgc" class="container collapse">
 			<table class="table table-striped">
