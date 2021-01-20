@@ -504,7 +504,7 @@
 		<div class="container">
 			<a href="#lgc" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="lgc" onclick="setTimeout(toComments, 400)">&raquo; Kommentare anzeigen &laquo;</a>
 		</div>
-		<div id="lgc" class="container collapse">
+		<div id="lgc" class="container collapse" style="overflow-x:auto;">
 			<table class="table table-striped">
 				<thead>
 					<tr>
@@ -518,7 +518,7 @@
 				<tbody>
 					<tr>
 						<form id="lg-form">
-							<td colspan="3" style="width:80%;">
+							<td colspan="3" style="width:90%;">
 								<span id="logged-in">
 								<textarea type="text" class="form-control" placeholder="Schreib deinen Kommentar hier ..." 
 										id="lg-text" maxlength="800" required></textarea>

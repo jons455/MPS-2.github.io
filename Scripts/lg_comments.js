@@ -13,7 +13,7 @@ const setupLG = (data) => {
         const post = doc.data();
         const tr = `
         <tr>
-            <td style="text-align:center; word-wrap: break-word; word-break:break-word; width:20%;">
+            <td style="text-align:center;width:20%;">
                 <div style="color:blue;">${post.user}</div>
                 <div>${post.time.toDate().toLocaleDateString()}</div>
                 <div>${post.time.toDate().toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})}</div>
