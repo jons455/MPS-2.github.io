@@ -84,7 +84,7 @@ function clearStatusClass(element) {
 
 const questions = [
   {
-    question: 'Welche Einrichtung findet man in der Mensa',
+    question: 'Welche Einrichtung findet man in der Mensa?',
     answers: [
       { text: 'Career Service', correct: false },
       { text: 'Infothek', correct: false },
@@ -93,7 +93,7 @@ const questions = [
     ]
   },
   {
-    question: 'Wieviele Lehstühle befinden sich in der Langen Gasse?',
+    question: 'Wie viele Lehstühle befinden sich in der Langen Gasse?',
     answers: [
       { text: '36', correct: true },
       { text: '42', correct: false },
