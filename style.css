@@ -65,6 +65,10 @@ body {
   position: relative;
   background-attachment: fixed;
 }
+.col-md-6{
+  margin-top: 15%;
+  margin-bottom: 15%;
+}
 }
 @media screen and (min-width: 901px) {
 .hero-image {
@@ -81,6 +85,10 @@ body {
   background-size: cover;
   position: relative;
   background-attachment: fixed;
+}
+.col-md-6{
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 }
 /* Place text in the middle of the image */
@@ -135,10 +143,7 @@ h1{
   margin-bottom: 25px;
   
 }
-.col-md-6{
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
+
 
 .jumb{
   min-width: 80%;
@@ -184,5 +189,4 @@ thead {
 #logo{
   width: 100px;
   height: 100px;
-
 }
