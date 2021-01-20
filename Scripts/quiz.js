@@ -1,6 +1,7 @@
 const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
 const homeButton = document.getElementById('home-btn')
+const congratsButton = document.getElementById ('congrat-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
@@ -9,10 +10,19 @@ let shuffledQuestions, currentQuestionIndex
 
 startButton.addEventListener('click', startGame)
 
+congratsButton.addEventListener('click', gif)
+
 nextButton.addEventListener('click', () => {
   currentQuestionIndex++
   setNextQuestion()
 })
+
+function gif(){
+  $("#congratgif").fadeIn().center();
+        setTimeout(function(){
+          $("#congratgif").fadeOut()
+        }, 1000);
+      };
 
 function startGame() {
   startButton.classList.add('hide')
@@ -62,8 +72,10 @@ function selectAnswer(e) {
     homeButton.classList.remove('hide')
   } else {
     startButton.innerText = 'Restart'
+    congratsButton.innerText = 'Geschafft!'
     homeButton.innerText = 'Home'
     startButton.classList.remove('hide')
+    congratsButton.classList.remove('hide')
     homeButton.classList.remove('hide')
   }
 }
