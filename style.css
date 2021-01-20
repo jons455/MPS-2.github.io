@@ -4,6 +4,10 @@ html {
   scroll-behavior: smooth;
 }
 
+#zumSeitenanfang{
+  margin-right: 8%;
+}
+
 .container{
   padding: 10px;
 }
@@ -90,12 +94,13 @@ body {
 /* Place text in the middle of the image */
 .hero-text {
   text-align: center;
-  position: relative;
+  position:absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: rgb(255, 255, 255);
 }
+
 #rundgang {
   width: 100%;
   text-align: center;
@@ -184,4 +189,8 @@ thead {
 #navlogo{
   width: 35px;
   height: 35px;
+}
+#logo{
+  width: 100px;
+  height: 100px;
 }
