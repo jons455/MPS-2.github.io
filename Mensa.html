@@ -89,13 +89,13 @@
           alt="Mensa Insel Schütt" style="border: 4px solid #6c757d;" class="img-fluid"></p>
       <div class="container">
         <button class="btn btn-secondary bb" data-toggle="collapse" data-target="#Oeffnung" role="button" width="20%"
-          aria-expanded="false" aria-controls="Oeffnung"> Öffnungszeiten</button>
+          aria-expanded="false" aria-controls="Oeffnung" onclick="setTimeout(toOeffnung, 400)"> Öffnungszeiten</button>
         <button class="btn btn-secondary bb" data-toggle="collapse" data-target="#Speise" role="button" width="20%"
-          aria-expanded="false" aria-controls="Speise"> Speiseplan</button>
+          aria-expanded="false" aria-controls="Speise" onclick="setTimeout(toSpeise, 400)"> Speiseplan</button>
         <button class="btn btn-secondary bb" data-toggle="collapse" data-target="#Werk" role="button" width="20%"
-          aria-expanded="false" aria-controls="Werk"> Studentenwerk</button>
+          aria-expanded="false" aria-controls="Werk" onclick="setTimeout(toWerk, 400)"> Studentenwerk</button>
         <button class="btn btn-secondary bb" data-toggle="collapse" data-target="#Zahlen" role="button" width="20%"
-          aria-expanded="false" aria-controls="Zahlen"> Bargeldloses Zahlungssystem</button>
+          aria-expanded="false" aria-controls="Zahlen" onclick="setTimeout(toZahlen, 400)"> Bargeldloses Zahlungssystem</button>
       </div>
 
       <div class="collapse" id="Oeffnung" data-parent="#Mensa">
@@ -131,7 +131,7 @@
 
     <!------Kommentare------>
     <div class="container" style="text-align:center;">
-      <a href="#men" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="men">&raquo; Kommentare anzeigen &laquo;</a>
+      <a href="#men" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="men" onclick="setTimeout(toComments, 400)">&raquo; Kommentare anzeigen &laquo;</a>
     </div>
     <div id="men" class="container collapse">
       <table class="table table-striped">
