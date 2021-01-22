@@ -129,6 +129,7 @@
     <div class="container" style="text-align:center;">
       <a href="#men" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="men">&raquo; Kommentare
         anzeigen &laquo;</a>
+      <a href="#men" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="men" onclick="setTimeout(toComments, 400)">&raquo; Kommentare anzeigen &laquo;</a>
     </div>
     <div id="men" class="container collapse">
       <table class="table table-striped">
@@ -138,6 +139,8 @@
                 href="Forum.html">Forum</a>!</th>
             <th style="text-align:right;"><button id="t" class="btn btn-outline-secondary btn-sm float-lg-right"
                 onclick="location.href='#bottom'">&darr;&darr;&darr;</button></th>
+            <th colspan="4" style="text-align:left; vertical-align:middle;">Fragen zu einem anderen Thema? Schau ins <a href="Forum.html">Forum</a>!</th>
+						<th style="text-align:right;"><button id="t" class="btn btn-outline-secondary btn-sm float-lg-right" onclick="location.href='#bottom'" style="writing-mode:vertical-rl;transform: rotate(90deg);">&Gt;</button></th>
           </tr>
         </thead>
         <tbody id="men-comments">
@@ -146,7 +149,7 @@
         <tbody>
           <tr>
             <form id="men-form">
-              <td colspan="3" style="width:80%;">
+              <td colspan="3" style="width:90%;">
                 <span id="logged-in">
                   <textarea type="text" class="form-control" placeholder="Schreib deinen Kommentar hier ..."
                     id="men-text" maxlength="800" required></textarea>
@@ -159,6 +162,8 @@
             <td style="text-align:right; vertical-align:bottom;">
               <button id="bottom" class="btn btn-outline-secondary btn-sm"
                 onclick="location.href='#t'">&uarr;&uarr;&uarr;</button>
+            <td style="text-align:right; vertical-align:bottom;">      
+              <button id="bottom" class="btn btn-outline-secondary btn-sm" onclick="location.href='#t'" style="writing-mode:vertical-rl;transform: rotate(90deg);">&Lt;</button>
             </td>
           </tr>
         </tbody>
@@ -221,15 +226,19 @@
     </div>
   </div>
 
-  <div id="modal-account" class="modal">
-    <div class="modal-content center-align">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
-      <h4>Account details</h4><br />
-      <div class="account-details"></div>
-    </div>
-  </div>
+  <div id="modal-account" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<h4 id="kopf">Account details</h4><br />
+				<div class="account-details">
+					<p>Username: <span id="username"></span></p>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
 </body>

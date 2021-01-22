@@ -102,19 +102,29 @@
 				möglich ist). <br>
 				Viel Spaß :)</p>
 			<br><br>-->
-			<a class="btn btn-secondary" role="button" href="Quiz.html">Start Quiz</a>
+			<a class="btn btn-secondary" role="button" href="Quiz.html">Start Quiz</a><br><br><br>
+			<a href="#dropdown" style="color: white;font-size: 4vh;" onmouseover="this.style.color = 'grey'" onmouseout="this.style.color='white'">
+				<span style="writing-mode:vertical-lr;transform:rotate(180deg);">&Lang;&Lang;&Lang;</span>
+			</a>
 		</div>
-	</div>
+	</div><br id="dropdown">
 	<div id="mapid" class="container py-5"></div>
 
 	<!--data-aos="fade-up" data-aos-duration="3000" -->
 
-	<div class="container-fluid" id="Tour">
-		<div class="mx-auto" style="width: 100%;" id="rundgang">
-			<a class="btn btn-secondary" role="button" target="_blank"
-				href="https://www.youtube.com/watch?v=Ec2yPWzVHe8">virtueller
-				Rundgang starten <img src="https://www.youtube.com/s/desktop/d743f786/img/favicon.ico"></a>
-		</div><br>
+	<div class="container" id="Tour">
+		<div class="row">
+			<div class="col-lg-6" style="min-height:50vh;">
+				<h4 style="text-align:center;">Virtueller Rundgang</h4>
+				<iframe src="https://www.youtube.com/embed/Ec2yPWzVHe8?autoplay=1&mute=1" 
+				title="Virtueller Rundgang" style="width:100%; min-width:270px; min-height:40vh;"></iframe>
+			</div>
+			<div class="col-lg-6">
+				<h4 style="text-align:center;">News</h4>
+				<iframe src="https://www.fau.de/fau/aktuelles/#droppoint" 
+				title="News" style="width:100%; min-width:270px; min-height:40vh;"></iframe>
+			</div>
+		</div>
 	</div>
 	<!-- Modals -->
 	<div id="modal-signup" class="modal fade" role="dialog">
