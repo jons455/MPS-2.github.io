@@ -13,7 +13,7 @@ const setupLG = (data) => {
         const post = doc.data();
         const tr = `
         <tr>
-            <td style="text-align:center; word-wrap: break-word; word-break:break-word; width:20%;">
+            <td style="text-align:center;width:20%;">
                 <div style="color:blue;">${post.user}</div>
                 <div>${post.time.toDate().toLocaleDateString()}</div>
                 <div>${post.time.toDate().toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})}</div>
@@ -46,3 +46,32 @@ lgform.addEventListener('submit', (e) => {
       });
     });
   });
+
+function toBib() {
+  window.location.href = "#Bib";
+}
+function toCaf() {
+  window.location.href = "#Cafeteria";
+}
+function toCip() {
+  window.location.href = "#CIP";
+}
+function toSaal() {
+  window.location.href = "#Saal";
+}
+function toSem() {
+  window.location.href = "#Seminar";
+}
+function toInfo() {
+  window.location.href = "#Info";
+}
+function toDruck() {
+  window.location.href = "#Druck";
+}
+function toLehr() {
+  window.location.href = "#Lehr";
+}
+
+function toComments() {
+  window.location.href = "#lgc";
+}
