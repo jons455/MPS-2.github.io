@@ -3,7 +3,14 @@
 html {
   scroll-behavior: smooth;
 }
-
+body {
+  padding-top: 0rem;
+  margin-bottom: 40px;
+  background-image: url("https://https://raw.githubusercontent.com/MPS-2/MPS-2.github.io/main/IMG/Logo%20FAU%20Experience.png.githubusercontent.com/MPS-2/MPS-2.github.io/main/IMG/Logo%20FAU%20Experience%20Navbar.png");
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+}
 #zumSeitenanfang{
   margin-right: 8%;
 }
@@ -11,10 +18,7 @@ html {
 .container{
   padding: 10px;
 }
-body {
-  padding-top: 0rem;
-  margin-bottom: 40px;
-}
+
 #Tour{
   margin-top: 30px;
   margin-bottom: 30px;
@@ -54,7 +58,7 @@ body {
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
  /*background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("ressources/headimage_anim.gif"); */
- background-image:  url("https://raw.githubusercontent.com/MPS-2/MPS-2.github.io/main/IMG/background_k1.jpg");
+ background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://raw.githubusercontent.com/MPS-2/MPS-2.github.io/main/IMG/background_k1.jpg");
   /* Set a specific height */
   height: 100vh;
 
@@ -194,3 +198,4 @@ thead {
   width: 100px;
   height: 100px;
 }
+
