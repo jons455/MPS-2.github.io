@@ -29,116 +29,115 @@
 
 <body>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" width=device-width>
-		<a class="navbar-brand" src="#" href="index.html">
-			<img src="IMG/Logo FAU Experience Navbar.png" id="navlogo">
+    <a class="navbar-brand" src="#" href="index.html">
+      <img src="IMG/Logo FAU Experience Navbar.png" id="navlogo">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-			aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"><span
-				class="navbar-toggler-icon"></span></button>
-		<!-- Navigation Bar -->
-		<div class="collapse navbar-collapse" id="navbarsExampleDefault">
-			<!-- Nav Links -->
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"><span
+        class="navbar-toggler-icon"></span></button>
+    <!-- Navigation Bar -->
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <!-- Nav Links -->
 
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item">
-					<a class="nav-link" href="LangeGasse.html">Lange Gasse</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="Findelgasse.html">Findelgasse</a>
-				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="Mensa.html">Mensa</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="SonstigePlacesToBe.html">Sonstige</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="Forum.html">Forum</a>
-				</li>
-			</ul>
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item">
-					<a class="nav-link disabled" id="logged-in" href="#">Logged in as <span id="username"></span></a>
-				</li>
-				<li class="nav-item" id="special">
-					<a class="nav-link" id="logged-in" href="#" data-target="#modal-account"
-						data-toggle="modal">Account</a>
-				</li>
-				<li class="nav-item" id="special">
-					<a class="nav-link" id="logged-out" href="#" data-target="#modal-login"
-						data-toggle="modal">Login</a>
-				</li>
-				<li class="nav-item" id="special">
-					<a class="nav-link" id="logged-out" href="#" data-target="#modal-signup" data-toggle="modal">Sign
-						up</a>
-				</li>
-				<!-- show/hide durch logged in/logged -->
-				<li class="nav-item" id="special">
-					<a class="nav-link" href=" #" id="logout">Logout</a>
-				</li>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="LangeGasse.html">Lange Gasse</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Findelgasse.html">Findelgasse</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="Mensa.html">Mensa</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="SonstigePlacesToBe.html">Sonstige</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Forum.html">Forum</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link disabled" id="logged-in" href="#">Logged in as <span id="username"></span></a>
+        </li>
+        <li class="nav-item" id="special">
+          <a class="nav-link" id="logged-in" href="#" data-target="#modal-account" data-toggle="modal">Account</a>
+        </li>
+        <li class="nav-item" id="special">
+          <a class="nav-link" id="logged-out" href="#" data-target="#modal-login" data-toggle="modal">Login</a>
+        </li>
+        <li class="nav-item" id="special">
+          <a class="nav-link" id="logged-out" href="#" data-target="#modal-signup" data-toggle="modal">Sign
+            up</a>
+        </li>
+        <!-- show/hide durch logged in/logged -->
+        <li class="nav-item" id="special">
+          <a class="nav-link" href=" #" id="logout">Logout</a>
+        </li>
 
-			</ul>
-		</div>
-	</nav>
+      </ul>
+    </div>
+  </nav>
 
   <div id="Platzhalter">
     <div class="container" id="Mensa">
       <h2 id="Mensa">Mensa</h2>
       <p>
         <img src=https://www.werkswelt.de/data/uploads/gastronomie/slideshows/Studentenhaus_NBG_052.jpg
-          alt="Mensa Insel Schütt" style="border: 4px solid #6c757d;" class="img-fluid"></p>
-      <div class="container">
-        <button class="btn btn-secondary bb" data-toggle="collapse" data-target="#Oeffnung" role="button" width="20%"
-          aria-expanded="false" aria-controls="Oeffnung"> Öffnungszeiten</button>
-        <button class="btn btn-secondary bb" data-toggle="collapse" data-target="#Speise" role="button" width="20%"
-          aria-expanded="false" aria-controls="Speise"> Speiseplan</button>
-        <button class="btn btn-secondary bb" data-toggle="collapse" data-target="#Werk" role="button" width="20%"
-          aria-expanded="false" aria-controls="Werk"> Studentenwerk</button>
-        <button class="btn btn-secondary bb" data-toggle="collapse" data-target="#Zahlen" role="button" width="20%"
-          aria-expanded="false" aria-controls="Zahlen"> Bargeldloses Zahlungssystem</button>
-      </div>
+          alt="Mensa Insel Schütt" style="border: 4px solid #6c757d;" class="img-fluid">
+      </p>
 
-      <div class="collapse" id="Oeffnung" data-parent="#Mensa">
-        <div class="jumbotron">
+
+      <div class="row">
+        <div class="col-md-6" id="Oeffnung">
+          <h2>Öffnungszeiten</h2>
           Die Mensa Insel Schütt ist unter dem Semester von Montag bis Freitag von 11:30 Uhr bis 14:00 Uhr geöffnet.
           Außerhalb der Semesterzeiträume ist die Mensa von 11:30 Uhr bis 13:45 Uhr geöffnet.
         </div>
-      </div>
 
 
-      <div class="collapse" id="Speise" data-parent="#Mensa">
-        <div class="jumbotron">
-          <div><a href="https://www.werkswelt.de/index.php?id=isch">Hier findest du den aktuellen Speiseplan.</a></div>
+
+
+        <div class="col-md-6" id="Speise">
+          <h2>Speiseplan</h2>
+          <div><a href="https://www.werkswelt.de/index.php?id=isch" target="_blank">Hier findest du den aktuellen
+              Speiseplan.</a></div>
         </div>
       </div>
 
-      <div class="collapse" id="Werk" data-parent="#Mensa">
-        <div class="jumbotron">
+      <div class="row">
+        <div class="col-md-6" id="Werk">
+          <h2>Studentenwerk</h2>
           Das Studentenwerk kümmert sich um alle Angelegenheiten außerhalb des Studiums.
-          <div><a href="https://www.werkswelt.de/?php%20get_site_url();%20?">Mehr Infos</a></div>
+          <div><a href="https://www.werkswelt.de/?php%20get_site_url();%20?" target="_blank">Mehr Infos</a></div>
         </div>
-      </div>
 
-      <div class="collapse" id="Zahlen" data-parent="#Mensa">
-        <div class="jumbotron">
+
+
+        <div class="col-md-6" id="Zahlen">
+          <h2>Bargeldloses Zahlungssystem</h2>
           In der Mensa und der Cafeteria kannst du bargeldlos mit deiner Fau-Card (Studentenausweis) bezahlen.
           Hier hast du auch die Möglichkeit dein Guthaben an den Aufladeautomaten aufzuladen - dies ist auch mit
           EC-Karte möglich.
-          <div><a href="https://www.werkswelt.de/index.php?id=kartensystem">Weiter Infos dazu findest du hier.</a></div>
+          <div><a href="https://www.werkswelt.de/index.php?id=kartensystem" target="_blank">Weiter Infos dazu findest du
+              hier.</a></div>
         </div>
       </div>
     </div>
 
     <!------Kommentare------>
     <div class="container" style="text-align:center;">
-      <a href="#men" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="men">&raquo; Kommentare anzeigen &laquo;</a>
+      <a href="#men" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="men">&raquo; Kommentare
+        anzeigen &laquo;</a>
     </div>
     <div id="men" class="container collapse">
       <table class="table table-striped">
         <thead>
           <tr>
-            <th colspan="4" style="text-align:left; vertical-align:middle;">Fragen zu einem anderen Thema? Schau ins <a href="Forum.html">Forum</a>!</th>
-						<th style="text-align:right;"><button id="t" class="btn btn-outline-secondary btn-sm float-lg-right" onclick="location.href='#bottom'">&darr;&darr;&darr;</button></th>
+            <th colspan="4" style="text-align:left; vertical-align:middle;">Fragen zu einem anderen Thema? Schau ins <a
+                href="Forum.html">Forum</a>!</th>
+            <th style="text-align:right;"><button id="t" class="btn btn-outline-secondary btn-sm float-lg-right"
+                onclick="location.href='#bottom'">&darr;&darr;&darr;</button></th>
           </tr>
         </thead>
         <tbody id="men-comments">
@@ -149,7 +148,7 @@
             <form id="men-form">
               <td colspan="3" style="width:80%;">
                 <span id="logged-in">
-                <textarea type="text" class="form-control" placeholder="Schreib deinen Kommentar hier ..." 
+                  <textarea type="text" class="form-control" placeholder="Schreib deinen Kommentar hier ..."
                     id="men-text" maxlength="800" required></textarea>
                 </span>
               </td>
@@ -157,69 +156,70 @@
                 <button id="logged-in" class="btn btn-secondary" style="width:100%;">Submit</button>
               </td>
             </form>
-            <td style="text-align:right; vertical-align:bottom;">      
-              <button id="bottom" class="btn btn-outline-secondary btn-sm" onclick="location.href='#t'">&uarr;&uarr;&uarr;</button>
+            <td style="text-align:right; vertical-align:bottom;">
+              <button id="bottom" class="btn btn-outline-secondary btn-sm"
+                onclick="location.href='#t'">&uarr;&uarr;&uarr;</button>
             </td>
           </tr>
         </tbody>
       </table>
       <div class="btn btn-secondary" id="logged-out">
-        <div style="text-align: center;"><a class="nav-link" href="#" data-target="#modal-login"
-          data-toggle="modal" style="color: white;">Log dich ein und kommentiere auch!</a></div>
+        <div style="text-align: center;"><a class="nav-link" href="#" data-target="#modal-login" data-toggle="modal"
+            style="color: white;">Log dich ein und kommentiere auch!</a></div>
       </div>
     </div>
   </div>
 
   <!-- Modals -->
   <div id="modal-signup" class="modal fade" role="dialog">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-				</div>
-				<h4 id="kopf">Sign up</h4><br>
-				<form id="signup-form">
-					<div class="form-group">
-						<input type="email" id="signup-email" placeholder="Enter Email" required /><br>
-						<label for="signup-email">Email address</label>
-					</div>
-					<div class="form-group">
-						<input type="password" id="signup-password" placeholder="Enter Password" required /><br>
-						<label for="signup-password">Choose password</label>
-						<p>(min. 6 Zeichen)</p>
-					</div>
-					<div class="form-group">
-						<input type="text" id="signup-username" placeholder="Enter Name" required /><br>
-						<label for="signup-username">Choose Name</label>
-					</div>
-					<p id="err"></p>
-					<button class="btn btn-secondary">Sign up</button>
-				</form>
-			</div>
-		</div>
-	</div>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <h4 id="kopf">Sign up</h4><br>
+        <form id="signup-form">
+          <div class="form-group">
+            <input type="email" id="signup-email" placeholder="Enter Email" required /><br>
+            <label for="signup-email">Email address</label>
+          </div>
+          <div class="form-group">
+            <input type="password" id="signup-password" placeholder="Enter Password" required /><br>
+            <label for="signup-password">Choose password</label>
+            <p>(min. 6 Zeichen)</p>
+          </div>
+          <div class="form-group">
+            <input type="text" id="signup-username" placeholder="Enter Name" required /><br>
+            <label for="signup-username">Choose Name</label>
+          </div>
+          <p id="err"></p>
+          <button class="btn btn-secondary">Sign up</button>
+        </form>
+      </div>
+    </div>
+  </div>
   <div id="modal-login" class="modal fade" role="dialog">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-				</div>
-				<h4 id="kopf">Login</h4><br />
-				<form id="login-form">
-					<div class="gorm-group">
-						<input type="email" id="login-email" required />
-						<label for="login-email">Email address</label>
-					</div>
-					<div class="from-group">
-						<input type="password" id="login-password" required />
-						<label for="login-password">Your password</label>
-					</div>
-					<p id="log-err"></p>
-					<button class="btn btn-secondary">Login</button>
-				</form>
-			</div>
-		</div>
-	</div>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <h4 id="kopf">Login</h4><br />
+        <form id="login-form">
+          <div class="gorm-group">
+            <input type="email" id="login-email" required />
+            <label for="login-email">Email address</label>
+          </div>
+          <div class="from-group">
+            <input type="password" id="login-password" required />
+            <label for="login-password">Your password</label>
+          </div>
+          <p id="log-err"></p>
+          <button class="btn btn-secondary">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <div id="modal-account" class="modal">
     <div class="modal-content center-align">

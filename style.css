@@ -6,7 +6,7 @@ html {
 body {
   padding-top: 0rem;
   margin-bottom: 40px;
-  background-image: url("https://https://raw.githubusercontent.com/MPS-2/MPS-2.github.io/main/IMG/Logo%20FAU%20Experience.png.githubusercontent.com/MPS-2/MPS-2.github.io/main/IMG/Logo%20FAU%20Experience%20Navbar.png");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url("https://https://raw.githubusercontent.com/MPS-2/MPS-2.github.io/main/IMG/Logo%20FAU%20Experience.png.githubusercontent.com/MPS-2/MPS-2.github.io/main/IMG/Logo%20FAU%20Experience%20Navbar.png");
   position: relative;
   background-attachment: fixed;
   background-position: center;
