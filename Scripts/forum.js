@@ -195,7 +195,7 @@ function sorting() {
 }
 
 function setupPagination(data) {
-  var al = data.length;
+  var al = Math.floor((data.length + 7) / 8);
   var html = '';
   switch (al) {
     case 0:
