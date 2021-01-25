@@ -195,63 +195,21 @@ function sorting() {
 }
 
 function setupPagination(data) {
-  var al = data.length;
+  var al = Math.floor((data.length+4)/5);
   var html = '';
-  switch (al) {
-    case 0:
+  for (i = 1; i <= al; i++) {
+    if (i == 1) {
       html += `
-      <li class="page-item"><a href="#top" class="page-link">Top</a></li>
+        <li class="page-item active"><a href="#" class="page-link">1<span class="sr-only">(current)</span></a></li>
       `;
-      break;
-    case 1:
+    } else {
       html += `
-      <li class="page-item active"><a href="#" class="page-link">1<span class="sr-only">(current)</span></a></li>
-      <li class="page-item"><a href="#top" class="page-link">Top</a></li>
+        <li class="page-item"><a href="#" class="page-link">${i}</a></li>
       `;
-      break;
-    case 2:
-      html += `
-      <li class="page-item active"><a href="#" class="page-link">1<span class="sr-only">(current)</span></a></li>
-      <li class="page-item"><a href="#" class="page-link">2</a></li>
-      <li class="page-item"><a href="#top" class="page-link">Top</a></li>
-      `;
-      break;
-    case 3:
-      html += `
-      <li class="page-item active"><a href="#" class="page-link">1<span class="sr-only">(current)</span></a></li>
-      <li class="page-item"><a href="#" class="page-link">2</a></li>      
-      <li class="page-item"><a href="#" class="page-link">3</a></li>
-      <li class="page-item"><a href="#top" class="page-link">Top</a></li>
-      `;
-      break;
-    case 4:
-      html += `
-      <li class="page-item active"><a href="#" class="page-link">1<span class="sr-only">(current)</span></a></li>
-      <li class="page-item"><a href="#" class="page-link">2</a></li>      
-      <li class="page-item"><a href="#" class="page-link">3</a></li>
-      <li class="page-item"><a href="#" class="page-link">4</a></li>
-      <li class="page-item"><a href="#top" class="page-link">Top</a></li>
-      `;
-      break;
-    case 5:
-      html += `
-      <li class="page-item active"><a href="#" class="page-link">1<span class="sr-only">(current)</span></a></li>
-      <li class="page-item"><a href="#" class="page-link">2</a></li>      
-      <li class="page-item"><a href="#" class="page-link">3</a></li>
-      <li class="page-item"><a href="#" class="page-link">4</a></li>
-      <li class="page-item"><a href="#" class="page-link">5</a></li>
-      <li class="page-item"><a href="#top" class="page-link">Top</a></li>
-      `;
-      break;
-    default:
-      html += `
-      <li class="page-item active"><a href="#" class="page-link">1<span class="sr-only">(current)</span></a></li>
-      <li class="page-item"><a href="#" class="page-link">2</a></li>
-      <li class="page-item"><a href="#" class="page-link">3</a></li>
-      <li class="page-item"><a class="page-link" style="pointer-events:none;">&hellip;</a></li>     
-      <li class="page-item"><a href="#" class="page-link">${al}</a></li>
-      <li class="page-item"><a href="#top" class="page-link">Top</a></li>
-      `;
+    }
   }
+  html += `
+    <li class="page-item"><a href="#top" class="page-link">Top</a></li>
+  `;
   pages.innerHTML = html;
 }
