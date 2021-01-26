@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,7 +7,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 	<meta name="generator" content="Jekyll v4.1.1">
-	<title>FAU Experience</title>
+	<title>ExperienceFAU</title>
 
 	<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/jumbotron/">
 	<!-- custom stylesheet-->
@@ -16,15 +16,7 @@
 	<!-- css & bootstrap link-->
 	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-	<!--Leaflet-->
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-		integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-		crossorigin="" />
-	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-		integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-		crossorigin=""></script>
 	<link rel="icon" type="image/png" sizes="16x16" href="IMG/Logo FAU Experience.png">
-
 </head>
 
 <body>
@@ -81,424 +73,436 @@
 		</div>
 	</nav><br>
 
-	<div id="Platzhalter">
-		<div class="container" id="LG">
-			<h2 id="LangeGasse">Lange Gasse</h2>
-			<p> <img src=https://nuernberg.digital/fileadmin/blog/20200210_fit_fuer_die_digitale_zukunft/uni_gebauude_fau_erlangen.jpg alt="LangeGasse"
-					style="border: 4px solid #6c757d; width:60%;" class="img-fluid"></p>
-			<div class="container">
-				<button class="btn btn-secondary bb" data-toggle="collapse" data-target="#Bib" role="button" width="20%"
-					aria-expanded="false" aria-controls="Bib" onclick="setTimeout(toBib, 400)"> Bibliothek</button>
-				<button class="btn btn-secondary bb" data-toggle="collapse" data-target="#Cafeteria" role="button"
-					width="20%" aria-expanded="false" aria-controls="Cafeteria" onclick="setTimeout(toCaf, 400)"> Cafeteria</button>
-				<button class="btn btn-secondary bb" data-toggle="collapse" data-target="#CIP" role="button" width="20%"
-					aria-expanded="false" aria-controls="CIP" onclick="setTimeout(toCip, 400)"> CIP-Pools</button>
-				<button class="btn btn-secondary bb" data-toggle="collapse" data-target="#Saal" role="button" width="20%"
-					aria-expanded="false" aria-controls="Saal" onclick="setTimeout(toSaal, 400)"> Hörsäle</button>
-				<button class="btn btn-secondary bb" data-toggle="collapse" data-target="#Seminar" role="button"
-					width="20%" aria-expanded="false" aria-controls="Seminar" onclick="setTimeout(toSem, 400)"> Seminar- & Übungsräume</button>
-				<button class="btn btn-secondary bb" data-toggle="collapse" data-target="#Info" role="button" width="20%"
-					aria-expanded="false" aria-controls="Info" onclick="setTimeout(toInfo, 400)"> Infothek</button>
-				<button class="btn btn-secondary bb" data-toggle="collapse" data-target="#Druck" role="button" width="20%"
-					aria-expanded="false" aria-controls="Druck" onclick="setTimeout(toDruck, 400)"> Druck Zentrum</button>
-				<button class="btn btn-secondary bb" data-toggle="collapse" data-target="#Lehr" role="button" width="20%"
-					aria-expanded="false" aria-controls="Lehr" onclick="setTimeout(toLehr, 400)"> Lehrstühle</button>
+	<div class="container" id="Platzhalter">
 
+		<div class="container" id="LangeGasse">
+			<h2 >Lange Gasse</h2>
+			<p id="pic"> <img src=https://nuernberg.digital/fileadmin/blog/20200210_fit_fuer_die_digitale_zukunft/uni_gebauude_fau_erlangen.jpg
+					alt="LangeGasse" style="border: 4px solid #6c757d; width:60%;" class="img-fluid"></p>
+		<div class="row" >
+			<div class="col-md-12"  >
+				<p id="back"><img src="IMG/Logo FAU Experience.png" ></p>
 			</div>
-			<div class="collapse" id="Bib" data-parent="#LG">
-				<div class="jumbotron">
-					In der Universitätsbibliothek kann man Bücher ausleihen. Es gibt hier auch Gruppenarbeitsplätze und
-					Lernräume, in denen du ungestört studieren kannst!
-					<div><a href="https://ub.fau.de/ueber-uns/standorte-oeffnungszeiten/wszb/">Weitere Infos über die
-							Unibib</a></div>
-				</div>
+		</div>
+		<div class="row" id="LG">
+			<div class="col-md-6">
+				<h2 id="LangeGasse">Bibliothek</h2>
+				<p>In der Unibibliothek kannst du dir Bücher aus dem Bereich Wirtschafts- und Sozialwissenschaften ausleihen. 
+					Hier hast du auch die Möglichkeit Gruppenarbeitsräume und Lernplätze zu nutzen, um Vorlesungen vor- und nachzubereiten und dich auf deine Prüfungen vorzubereiten. 
+					Es stehen neben Computer und WLAN auch Multifunktionsdrucker und Buchscanner zur Verfügung.
+					Vor der Bibliothek befinden sich Schließfächer in denen du Rucksack und Wertsachen verstauen kannst, der Zugang ist nämlich nur mit transpareter Tasche möglich.</p>
+				<div><a href="https://ub.fau.de/ueber-uns/standorte-oeffnungszeiten/wszb/" target="_blank">Weitere Infos über die
+						Unibib</a></div>
 			</div>
-			<div class="collapse" id="Cafeteria" data-parent="#LG">
-				<div class="jumbotron">
-					In der Cafeteria kannst du dir ein Snacks holen: ein Kuchen oder liber ein belegtes Brötchen? Hier
-					findest du alles!
-					In den hochmodernen Kaffeevollautomaten kannst du dir noch köstliche Kaffespezialitäten besorgen.
-					Verschiedene Aktionsessen stehen im Wechsel zur Auswahl.
-					<div><a href="https://www.werkswelt.de/index.php?id=cafeteria-langegasse">Weitere Infos über die
-							Cafeteria</a></div>
-				</div>
+
+			<div class="col-md-6">
+				<h2 id="LangeGasse">Cafeteria</h2>
+				<p>Die Cafeteria bietet eine reichhaltige Auswahl an Snacks: belegte Brötchen, Getränke und frisches Obst stehen zur Verfügung. 
+					Zwischen 9 und 13:30 Uhr Uhr kannst du hier eine kleine Zwischenpause einzulegen oder deine Mittagspause genießen. 
+					Es stehen wöchentlich wechselnde Aktionsessen zur Auswahl.
+					Ausreichende Sitzmöglichkeiten bieten dir die Möglichkeit die Pause mit deinen Kommilitonen zu verbringen. </p>
+				<div><a href="https://www.werkswelt.de/index.php?id=cafeteria-langegasse" target="_blank">Weitere Infos über die
+						Cafeteria</a></div>
 			</div>
-			<div class="collapse" id="CIP" data-parent="#LG">
-				<div class="jumbotron">
-					In der Langen Gasse befinden sich die Räume des Rechenzentrums auf Ebene 0 im Neubau des Gebäudes
-					(0.420 bis 0.422)
-					PC-Pool 2 sowie im Altbau neben der Cafeteria (0.215) PC-Pool 1. Für Kurse werden bevorzugt die
-					Räume (LG) 0.420
-					bis 0.422 genutzt PC-Pool 2. In kursfreien Zeiten steht dieser PC-Pool ebenfalls den studentischen
-					Benutzern
-					zur Verfügung.
-					<div><a href="https://www.izn.rrze.fau.de/cip-pools/raeume/">Webseite des RRZE</a></div>
-				</div>
+		</div>
+
+		<div class="row" id="LG">
+			<div class="col-md-6">
+				<h2 id="LangeGasse">CIP-Pools</h2>
+				<p>In der Langen Gasse befinden sich die Räume des Rechenzentrums auf Ebene 0 im Neubau des Gebäudes
+					(0.420 bis 0.422). Neben der Cafeteria befindet sich ein weiterer PC-Pool (0.215).
+					In der kursfreien Zeit stehen dir die CIP-Pools für Lehr- und Forschungszwecke zur Verfügung.</p>
+				<div><a href="https://www.izn.rrze.fau.de/cip-pools/raeume/" target="_blank">Webseite des RRZE</a></div>
 			</div>
-			<div class="collapse" id="Saal" data-parent="#LG">
-				<div class="jumbotron">
-					In der Langen Gasse gibt es insgesamt 6 Hörsäle. Diese sind immer mit H und einer Zahl bezeichnet.
-					<div>
-						<a
-							href="https://www.univis.fau.de/form?__s=2&dsc=anew/room:&dir=rw/serw/wirau&anonymous=1&ref=room&rooms=rw/serw/wirau/lgh6&sem=2020w&__e=598">
-							Übersicht aller Räumlichkeiten der WiSo</a>
-					</div>
-				</div>
-			</div>
-			<div class="collapse" id="Seminar" data-parent="#LG">
-				<div class="jumbotron">
-					<div>
-						<a
-							href="https://www.univis.fau.de/form?__s=2&dsc=anew/room:&dir=rw/serw/wirau&anonymous=1&ref=room&rooms=rw/serw/wirau/lgh6&sem=2020w&__e=598">
-							Übersicht aller Räumlichkeiten der WiSo
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="collapse" id="Info" data-parent="#LG">
-				<div class="jumbotron">
-					In der Infothek in der Langen Gasse stehen den Studierenden Fachbereichslotsen zur Verfügung, die
-					ihnen Fragen
-					rund ums Studium am Fachbereich Wirtschafts- und Sozialwissenschaften beantworten. Neben schneller
-					und
-					kompetenter Hilfe gibt es dort auch die neuesten Broschüren und Publikationen des Fachbereichs.
-					Darunter
-					auch den jährlich erscheinenden Bachelor-Studienführer „Studieren“, in dem alle Studiengänge
-					inklusive den
-					dazugehörigen Modulen aufgeführt und viele wissenswerte Hintergrundinformationen über den
-					Fachbereich,
-					Möglichkeiten zum Studium im Ausland oder zum Leben in Nürnberg enthalten sind. Die durch
-					Studienbeiträge,
-					jetzt Studienzuschüsse, ermöglichte Infothek befindet sich in der Langen Gasse 20 auf Ebene 1,
-					gegenüber
-					der Poststelle.
-					<div><a href="https://www.infothek.rw.fau.de/">Webseite der Infothek</a></div>
-				</div>
-			</div>
-			<div class="collapse" id="Druck" data-parent="#LG">
-				<div class="jumbotron">
-					Copy-Shop
-				</div>
-			</div>
-			<div class="collapse" id="Lehr" data-parent="#LG">
-				<div class="jumbotron" style="overflow:auto;">
-					<table class="table">
-						<thead>
-							<tr>
-								<th scope="col">Lehrstuhl</th>
-								<th scope="col">Internetseite</th>
-								<th scope="col">Professor</th>
-								<th scope="col">Ort</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<th scope="row">Lehrstuhl für Psychologie, insbes. Wirtschafts- und Sozialpsychologie
-								</th>
-								<td style="word-break:break-word;"><a
-										href="https://www.psychologie.wiso.uni-erlangen.de/">https://www.psychologie.wiso.uni-erlangen.de/</a>
-								</td>
-								<td>Prof. Dr. Moser, Klaus</td>
-								<td>Raum 5.230</td>
-								<td></td>
-							</tr>
-							<tr>
-								<th scope="row">Juniorprofessur für Wirtschaftspsychologie</th>
-								<td style="word-break:break-word;"><a href="https://www.wipsy.wiso.rw.fau.de/">https://www.wipsy.wiso.rw.fau.de/</a>
-								</td>
-								<td>Prof. Dr. Debus, Maike</td>
-								<td>Raum 5.254</td>
-							</tr>
-							<tr>
-								<th scope="row">Lehrstuhl für Betriebswirtschaftslehre, insb. Finanzierung und Banken
-								</th>
-								<td style="word-break:break-word;"><a href="https://www.lfb.rw.fau.de/">https://www.lfb.rw.fau.de/</a></td>
-								<td>Prof. Dr. Scholz, Hendrik</td>
-								<td>Raum 4.425</td>
-								<td></td>
-							</tr>
-							<tr>
-								<th scope="row">Lehrstuhl für Betriebswirtschaftslehre, insb. Rechnungswesen und
-									Controlling</th>
-								<td style="word-break:break-word;"><a href="https://www.controlling.rw.fau.de/">https://www.controlling.rw.fau.de/</a>
-								</td>
-								<td>Prof. Dr. Fischer, Thomas M.</td>
-								<td>Raum 6.119</td>
-								<td></td>
-							</tr>
-							<tr>
-								<th scope="row">Lehrstuhl für Betriebswirtschaftslehre, insb. Rechnungswesen und
-									Prüfungswesen</th>
-								<td style="word-break:break-word;"><a href="https://www.pw.rw.fau.de/">https://www.pw.rw.fau.de/</a></td>
-								<td>Prof. Dr. Henselmann, Klaus</td>
-								<td>Raum 5.450</td>
-								<td></td>
-							</tr>
-							<tr>
-								<th scope="row">Lehrstuhl für Betriebswirtschaftslehre, insb. Steuerlehre</th>
-								<td style="word-break:break-word;"><a href="https://www.steuerlehre.rw.fau.de/">https://www.steuerlehre.rw.fau.de/</a>
-								</td>
-								<td>Prof. Dr. Hechtner, Frank</td>
-								<td>Raum 3.218</td>
-								<td></td>
-							</tr>
-							<tr>
-								<th scope="row">Lehrstuhl für Betriebswirtschaftslehre, insb. Versicherungswirtschaft
-									und Risikomanagement</th>
-								<td style="word-break:break-word;"><a href="https://www.vwrm.rw.fau.de/">https://www.vwrm.rw.fau.de/</a></td>
-								<td>Prof. Dr. Gatzert, Nadine</td>
-								<td>Raum 6.235</td>
-								<td></td>
-							</tr>
-							<tr>
-								<th scope="row">Lehrstuhl für Steuerrecht und Öffentliches Recht</th>
-								<td style="word-break:break-word;"><a href="https://www.steuerrecht.rw.fau.de/">https://www.steuerrecht.rw.fau.de/</a>
-								</td>
-								<td>Prof. Dr. Ismer, Roland</td>
-								<td>Raum 3.232</td>
-								<td></td>
-							</tr>
-							<tr>
-								<th scope="row">Professur für Personalmanagement und Arbeitsorganisation
-									technologieorientierter Unternehmen</th>
-								<td style="word-break:break-word;"><a href="https://www.pm.rw.fau.de/">https://www.pm.rw.fau.de/</a></td>
-								<td>Prof. Dr. Widuckel, Werner</td>
-								<td>Raum 3.224b</td>
-								<td></td>
-							</tr>
-							<tr>
-								<th scope="row">Juniorprofessur für Internationales Personalmanagement</th>
-								<td style="word-break:break-word;"><a href="https://www.ihrm.rw.fau.de/">https://www.ihrm.rw.fau.de/</a></td>
-								<td>Prof. Dr. Sarabi, Almasa</td>
-								<td>Raum 5.252b</td>
-								<td></td>
-							</tr>
-							<tr>
-								<th scope="row">Lehrstuhl für Betriebswirtschaftslehre, insbes. Gesundheitsmanagement
-								</th>
-								<td style="word-break:break-word;"><a href="http://www.gm.wiso.fau.de/">http://www.gm.wiso.fau.de/</a></td>
-								<td>Prof. Dr. Schöffski, Oliver</td>
-								<td>Raum 4.211</td>
-								<td></td>
-							</tr>
-							<tr>
-								<th scope="row">Lehrstuhl für Betriebswirtschaftslehre, insbes. Industrielles Management
-								</th>
-								<td style="word-break:break-word;"><a
-										href="http://www.industrial-management.rw.fau.de/">http://www.industrial-management.rw.fau.de/</a>
-								</td>
-								<td>Prof. Dr. Voigt, Kai-Ingo</td>
-								<td>Raum 5.169</td>
-								<td></td>
-							</tr>
-							<tr>
-								<th scope="row">Lehrstuhl für Betriebswirtschaftslehre, insbes. Internationales
-									Managementt</th>
-								<td style="word-break:break-word;"><a href="http://www.im.wiso.fau.de/">http://www.im.wiso.fau.de/</a></td>
-								<td>Prof. Dr. Holtbrügge, Dirk</td>
-								<td>Raum 5.164</td>
-								<td></td>
-							</tr>
-							<tr>
-								<th scope="row">Lehrstuhl für Betriebswirtschaftslehre, insbes. Supply Chain Management
-								</th>
-								<td><a href="http://www.scm.rw.fau.de/">http://www.scm.rw.fau.de/</a></td>
-								<td>Prof. Dr. Hartmann, Evi</td>
-								<td>Raum 4.432</td>
-								<td></td>
-							</tr>
-							<tr>
-								<th scope="row">Lehrstuhl für Betriebswirtschaftslehre, insbes. Unternehmensführung</th>
-								<td style="word-break:break-word;"><a
-										href="https://www.unternehmensfuehrung.rw.fau.de/">https://www.unternehmensfuehrung.rw.fau.de/</a>
-								</td>
-								<td>Prof. Dr. Hungenberg, Harald</td>
-								<td>Raum 4.323</td>
-								<td></td>
-							</tr>
-							<tr>
-								<th scope="row">GfK-Lehrstuhl für Marketing Intelligence</th>
-								<td style="word-break:break-word;"><a
-										href="http://marketing-intelligence.wiso.fau.de/">http://marketing-intelligence.wiso.fau.de/</a>
-								</td>
-								<td>Prof. Dr. Koschate-Fischer, Nicole</td>
-								<td>Raum 6.217</td>
-								<td></td>
-							</tr>
-							<tr>
-								<th scope="row">Lehrstuhl für Betriebswirtschaftslehre, insbes. Marketing</th>
-								<td style="word-break:break-word;"><a
-										href="http://www.marketing.wiso.uni-erlangen.de/">http://www.marketing.wiso.uni-erlangen.de/</a>
-								</td>
-								<td>Prof. Dr. Fürst, Andreas</td>
-								<td>Raum 6.225</td>
-								<td></td>
-							</tr>
-							<tr>
-								<th scope="row">Lehrstuhl für Betriebswirtschaftslehre, insbes. Versicherungsmarketing
-								</th>
-								<td style="word-break:break-word;"><a
-										href="http://www.versicherungsmarketing.rw.uni-erlangen.de/">http://www.versicherungsmarketing.rw.uni-erlangen.de/</a>
-								</td>
-								<td>Prof. Dr. Steul-Fischer, Martina</td>
-								<td>Raum 5.225</td>
-								<td></td>
-							</tr>
-							<tr>
-								<th scope="row">Juniorprofessur für Digitales Marketing</th>
-								<td style="word-break:break-word;"><a
-										href="http://www.digitalmarketing.rw.fau.de/">http://www.digitalmarketing.rw.fau.de/</a>
-								</td>
-								<td>Prof. Dr. Pescher, Christian</td>
-								<td>Raum 5.252a</td>
-								<td></td>
-							</tr>
-							<tr>
-								<th scope="row">Lehrstuhl für Quantitative Arbeitsökonomik</th>
-								<td style="word-break:break-word;">Lehrstuhl für Quantitative Arbeitsökonomik</td>
-								<td>Prof. Fitzenberger, Bernd, Ph.D.</td>
-								<td>Raum 4.256</td>
-								<td></td>
-							</tr>
-							<tr>
-								<th scope="row">Lehrstuhl für Statistik und empirische Wirtschaftsforschung</th>
-								<td style="word-break:break-word;"><a href="http://www.lsw.wiso.fau.de/">http://www.lsw.wiso.fau.de/</a></td>
-								<td>Prof. Riphahn, Regina T., Ph.D.</td>
-								<td>Raum 4.118</td>
-								<td></td>
-							</tr>
-							<tr>
-								<th scope="row">Lehrstuhl für Statistik und Ökonometrie</th>
-								<td style="word-break:break-word;"><a href="http://www.statistik.wiso.fau.de/">http://www.statistik.wiso.fau.de/</a>
-								</td>
-								<td>Prof. Dr. Dovern, Jonas</td>
-								<td>Raum 4.173</td>
-								<td></td>
-							</tr>
-							<tr>
-								<th scope="row">Lehrstuhl für Volkswirtschaftslehre, insbes. Arbeitsmarkt- und
-									Regionalpolitik</th>
-								<td style="word-break:break-word;"><a
-										href="http://www.arbeitsmarkt.wiso.uni-erlangen.de/">http://www.arbeitsmarkt.wiso.uni-erlangen.de/</a>
-								</td>
-								<td>Prof. Dr. Schnabel, Claus</td>
-								<td>Raum 3.115</td>
-								<td></td>
-							</tr>
-							<tr>
-								<th scope="row">Lehrstuhl für Volkswirtschaftslehre, insbes. Empirische Mikroökonomie
-								</th>
-								<td style="word-break:break-word;"><a
-										href="http://www.emmi.rw.uni-erlangen.de/">http://www.emmi.rw.uni-erlangen.de/</a>
-								</td>
-								<td>Prof. Dr. Stephan, Gesine</td>
-								<td>Raum 6.117</td>
-								<td></td>
-							</tr>
-							<tr>
-								<th scope="row">Lehrstuhl für Volkswirtschaftslehre, insbes. Finanzwissenschaft</th>
-								<td style="word-break:break-word;"><a
-										href="http://www.finanzwissenschaft.wiso.fau.de/">http://www.finanzwissenschaft.wiso.fau.de/</a>
-								</td>
-								<td>Prof. Dr. Büttner, Thiess</td>
-								<td>Raum 6.120</td>
-								<td></td>
-							</tr>
-							<tr>
-								<th scope="row">Lehrstuhl für Volkswirtschaftslehre, insbes. Makroökonomie</th>
-								<td style="word-break:break-word;"><a href="http://www.makro.wiso.fau.de/">http://www.makro.wiso.fau.de/</a></td>
-								<td>Prof. Dr. Merkl, Christian</td>
-								<td>Raum 3.160</td>
-								<td></td>
-							</tr>
-							<tr>
-								<th scope="row">Lehrstuhl für Volkswirtschaftslehre, insbes. Wirtschaftspolitik</th>
-								<td style="word-break:break-word;"><a href="http://www.wettbewerb.wiso.fau.de/">http://www.wettbewerb.wiso.fau.de/</a>
-								</td>
-								<td>Prof. Dr. Rincke, Johannes</td>
-								<td>Raum 5.157</td>
-								<td></td>
-							</tr>
-							<tr>
-								<th scope="row">Lehrstuhl für Volkswirtschaftslehre, insbes. Wirtschaftstheorie</th>
-								<td style="word-break:break-word;"><a
-										href="http://www.wirtschaftstheorie.wiso.fau.de/">http://www.wirtschaftstheorie.wiso.fau.de/</a>
-								</td>
-								<td>Prof. Dr. Grimm, Veronika</td>
-								<td>Raum 5.118</td>
-								<td></td>
-							</tr>
-							<tr>
-								<th scope="row">Professur für Volkswirtschaftslehre, insbes. Industrieökonomik und
-									Energiemärkte</th>
-								<td style="word-break:break-word;"><a
-										href="http://www.energiewirtschaft.rw.fau.de/">http://www.energiewirtschaft.rw.fau.de/</a>
-								</td>
-								<td>Prof. Dr. Zöttl, Gregor</td>
-								<td>Raum 2.112</td>
-								<td></td>
-							</tr>
-							<tr>
-								<th scope="row">Juniorprofessur für Quantitative Labor Economics</th>
-								<td style="word-break:break-word;"><a href="https://www.labor.rw.fau.de/">https://www.labor.rw.fau.de/</a></td>
-								<td>Prof. Dr. Nagler, Markus</td>
-								<td>Raum 4.122b</td>
-								<td></td>
-							</tr>
-							<tr>
-								<th scope="row">Juniorprofessur für Energiemärkte und Energiesystemanalyse</th>
-								<td style="word-break:break-word;"><a
-										href="https://www.energymarkets.wiso.rw.fau.de/">https://www.energymarkets.wiso.rw.fau.de/</a>
-								</td>
-								<td>Prof. Dr. Liebensteiner, Mario</td>
-								<td>Raum 4.121a</td>
-								<td></td>
-							</tr>
-							<tr>
-								<th scope="row">Lehrstuhl für Wirtschaftsinformatik, insb. im Dienstleistungsbereich
-								</th>
-								<td style="word-break:break-word;"><a href="http://www.wi2.fau.de/">http://www.wi2.fau.de/</a></td>
-								<td>Prof. Dr. Bodendorf, Freimut</td>
-								<td>Raum 4.437</td>
-								<td></td>
-							</tr>
-							<tr>
-								<th scope="row">Lehrstuhl für Wirtschaftsinformatik, insb. Innovation und Wertschöpfung
-								</th>
-								<td style="word-break:break-word;"><a href="http://www.wi1.fau.de/">http://www.wi1.fau.de/</a></td>
-								<td>Prof. Dr. Möslein, Kathrin M.</td>
-								<td>Raum 4.254</td>
-								<td></td>
-							</tr>
-							<tr>
-								<th scope="row">Lehrstuhl für Wirtschaftsinformatik, insb. IT-Management</th>
-								<td style="word-break:break-word;"><a href="http://www.itm.rw.fau.de/">http://www.itm.rw.fau.de/</a></td>
-								<td>Prof. Dr. Amberg, Michael</td>
-								<td>Raum 5.433</td>
-								<td></td>
-							</tr>
-							<tr>
-								<th scope="row">Lehrstuhl für Wirtschaftsinformatik, insb. Technische
-									Informationssysteme</th>
-								<td style="word-break:break-word;"><a href="https://www.ti.rw.fau.de/">https://www.ti.rw.fau.de/</a></td>
-								<td>Prof. Dr. Harth, Andreas</td>
-								<td>Raum 5.257</td>
-								<td></td>
-							</tr>
-							<tr>
-								<th scope="row">Lehrstuhl für Wirtschaftspädagogik und Personalentwicklung</th>
-								<td style="word-break:break-word;"><a
-										href="http://www.wirtschaftspaedagogik.de/">http://www.wirtschaftspaedagogik.de/</a>
-								</td>
-								<td>Prof. Dr. Wilbers, Karl</td>
-								<td>Raum 4.159</td>
-								<td></td>
-							</tr>
-						</tbody>
-					</table>
+			<div class="col-md-6">
+				<h2 id="LangeGasse">Hörsäle</h2>
+				<p>Der H5 und H6 befinden sich im Neubau, während die restlichen Hörsäle im Altbau zu finden sind. 
+					Hier werden Vorlesungen gehalten und Prüfungen geschrieben.
+					Mit einem Fassungsvermögen für über 800 Studenten stellt der H4 den größten Hörssal dar.</p>
+				<div>
+					<a
+						href="https://www.univis.fau.de/form?__s=2&dsc=anew/room:&dir=rw/serw/wirau&anonymous=1&ref=room&rooms=rw/serw/wirau/h4&sem=2020w&__e=649" target="_blank">
+						Übersicht aller Räumlichkeiten der WiSo</a>
 				</div>
 			</div>
 		</div>
+		<div class="row" id="LG">
+			<div class="col-md-6">
+				<h2 id="LangeGasse">Seminar- und Gruppenräume</h2>
+				<p>Die Lange Gasse bietet eine Vielzahl an Übungs- und Seminarräumen, in denen Übungen, Tutorien etc. stattfinden.
+					Die vordere Zahl steht dabei immer für das Stockwerk, in dem sich der Raum befindet (Bsp.: Raum 3.155 - befindet sich im 3. Stockwerk).</p>
+				<div><a href="https://www.univis.fau.de/form?__s=2&dsc=anew/room:&dir=rw/serw/wirau&anonymous=1&ref=room&rooms=rw/serw/wirau/h4&sem=2020w&__e=650" target="_blank">Übersicht aller Räumlichkeiten der Wiso</a></div>
+			</div>
+			<div class="col-md-6">
+				<h2 id="LangeGasse">Copy-Shop</h2>
+				<p>In der Langen Gasse findest du gegenüber von Raum 0.141 einen Copy-Shop. 
+					Dieser bietet dir die Möglichkeit deine Unterlagen oder beispielsweise deine Bachelorarbeit drucken zu lassen.
+					 Außerdem kannst du hier eine transparente Tasche für die Bibliothek erwerben.</p>
+					 <div><a href="https://www.infothek.rw.fau.de/oeffnungszeiten-am-fachbereich/#collapse_7920005">Öffnungszeiten Copyshop</a></div>
+			</div>
+		</div>
+		<div class="row" id="LG">
+			<div class="col-md-12" id="Info">
+				<h2 id="LangeGasse">Infothek</h2>
+				<p>Die Infothek in der Langen Gasse befindet sich auf Ebene 1 neben dem Eingang zum Neubau.
+					Sie bietet Studierenden bei Fragen rund um Studiums eine erste Anlaufstelle. 
+					Neben schneller und kompetenter Hilfe findest du dort auch die neuesten Broschüren und Publikationen des Fachbereichs.
+				</p>
+				<div><a href="https://www.infothek.rw.fau.de/" target="_blank">Webseite der Infothek</a></div>
+			</div>
+		</div>
+		
+		<div class="conatiner" id="Lehr" >
+			<h2 id="LangeGasse">Lehrstühle </h2>
+			<div class="jumbotron" style="overflow:auto;">
+				<table class="table">
+					<thead>
+						<tr>
+							<th scope="col">Lehrstuhl</th>
+							<th scope="col">Internetseite</th>
+							<th scope="col">Professor</th>
+							<th scope="col">Ort</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">Lehrstuhl für Psychologie, insbes. Wirtschafts- und
+								Sozialpsychologie
+							</th>
+							<td style="word-break:break-word;"><a
+									href="https://www.psychologie.wiso.uni-erlangen.de/" target="_blank">https://www.psychologie.wiso.uni-erlangen.de/</a>
+							</td>
+							<td>Prof. Dr. Moser, Klaus</td>
+							<td>Raum 5.230</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">Juniorprofessur für Wirtschaftspsychologie</th>
+							<td style="word-break:break-word;"><a
+									href="https://www.wipsy.wiso.rw.fau.de/" target="_blank">https://www.wipsy.wiso.rw.fau.de/</a>
+							</td>
+							<td>Prof. Dr. Debus, Maike</td>
+							<td>Raum 5.254</td>
+						</tr>
+						<tr>
+							<th scope="row">Lehrstuhl für Betriebswirtschaftslehre, insb. Finanzierung und
+								Banken
+							</th>
+							<td style="word-break:break-word;"><a
+									href="https://www.lfb.rw.fau.de/" target="_blank">https://www.lfb.rw.fau.de/</a></td>
+							<td>Prof. Dr. Scholz, Hendrik</td>
+							<td>Raum 4.425</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">Lehrstuhl für Betriebswirtschaftslehre, insb. Rechnungswesen und
+								Controlling</th>
+							<td style="word-break:break-word;"><a
+									href="https://www.controlling.rw.fau.de/" target="_blank">https://www.controlling.rw.fau.de/</a>
+							</td>
+							<td>Prof. Dr. Fischer, Thomas M.</td>
+							<td>Raum 6.119</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">Lehrstuhl für Betriebswirtschaftslehre, insb. Rechnungswesen und
+								Prüfungswesen</th>
+							<td style="word-break:break-word;"><a
+									href="https://www.pw.rw.fau.de/" target="_blank">https://www.pw.rw.fau.de/</a></td>
+							<td>Prof. Dr. Henselmann, Klaus</td>
+							<td>Raum 5.450</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">Lehrstuhl für Betriebswirtschaftslehre, insb. Steuerlehre</th>
+							<td style="word-break:break-word;"><a
+									href="https://www.steuerlehre.rw.fau.de/" target="_blank">https://www.steuerlehre.rw.fau.de/</a>
+							</td>
+							<td>Prof. Dr. Hechtner, Frank</td>
+							<td>Raum 3.218</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">Lehrstuhl für Betriebswirtschaftslehre, insb.
+								Versicherungswirtschaft
+								und Risikomanagement</th>
+							<td style="word-break:break-word;"><a
+									href="https://www.vwrm.rw.fau.de/" target="_blank">https://www.vwrm.rw.fau.de/</a></td>
+							<td>Prof. Dr. Gatzert, Nadine</td>
+							<td>Raum 6.235</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">Lehrstuhl für Steuerrecht und Öffentliches Recht</th>
+							<td style="word-break:break-word;"><a
+									href="https://www.steuerrecht.rw.fau.de/" target="_blank">https://www.steuerrecht.rw.fau.de/</a>
+							</td>
+							<td>Prof. Dr. Ismer, Roland</td>
+							<td>Raum 3.232</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">Professur für Personalmanagement und Arbeitsorganisation
+								technologieorientierter Unternehmen</th>
+							<td style="word-break:break-word;"><a
+									href="https://www.pm.rw.fau.de/" target="_blank">https://www.pm.rw.fau.de/</a></td>
+							<td>Prof. Dr. Widuckel, Werner</td>
+							<td>Raum 3.224b</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">Juniorprofessur für Internationales Personalmanagement</th>
+							<td style="word-break:break-word;"><a
+									href="https://www.ihrm.rw.fau.de/" target="_blank">https://www.ihrm.rw.fau.de/</a></td>
+							<td>Prof. Dr. Sarabi, Almasa</td>
+							<td>Raum 5.252b</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">Lehrstuhl für Betriebswirtschaftslehre, insbes.
+								Gesundheitsmanagement
+							</th>
+							<td style="word-break:break-word;"><a
+									href="http://www.gm.wiso.fau.de/" target="_blank">http://www.gm.wiso.fau.de/</a></td>
+							<td>Prof. Dr. Schöffski, Oliver</td>
+							<td>Raum 4.211</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">Lehrstuhl für Betriebswirtschaftslehre, insbes. Industrielles
+								Management
+							</th>
+							<td style="word-break:break-word;"><a
+									href="http://www.industrial-management.rw.fau.de/" target="_blank">http://www.industrial-management.rw.fau.de/</a>
+							</td>
+							<td>Prof. Dr. Voigt, Kai-Ingo</td>
+							<td>Raum 5.169</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">Lehrstuhl für Betriebswirtschaftslehre, insbes. Internationales
+								Managementt</th>
+							<td style="word-break:break-word;"><a
+									href="http://www.im.wiso.fau.de/" target="_blank">http://www.im.wiso.fau.de/</a></td>
+							<td>Prof. Dr. Holtbrügge, Dirk</td>
+							<td>Raum 5.164</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">Lehrstuhl für Betriebswirtschaftslehre, insbes. Supply Chain
+								Management
+							</th>
+							<td><a href="http://www.scm.rw.fau.de/" target="_blank">http://www.scm.rw.fau.de/</a></td>
+							<td>Prof. Dr. Hartmann, Evi</td>
+							<td>Raum 4.432</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">Lehrstuhl für Betriebswirtschaftslehre, insbes. Unternehmensführung
+							</th>
+							<td style="word-break:break-word;"><a
+									href="https://www.unternehmensfuehrung.rw.fau.de/" target="_blank">https://www.unternehmensfuehrung.rw.fau.de/</a>
+							</td>
+							<td>Prof. Dr. Hungenberg, Harald</td>
+							<td>Raum 4.323</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">GfK-Lehrstuhl für Marketing Intelligence</th>
+							<td style="word-break:break-word;"><a
+									href="http://marketing-intelligence.wiso.fau.de/" target="_blank">http://marketing-intelligence.wiso.fau.de/</a>
+							</td>
+							<td>Prof. Dr. Koschate-Fischer, Nicole</td>
+							<td>Raum 6.217</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">Lehrstuhl für Betriebswirtschaftslehre, insbes. Marketing</th>
+							<td style="word-break:break-word;"><a
+									href="http://www.marketing.wiso.uni-erlangen.de/" target="_blank">http://www.marketing.wiso.uni-erlangen.de/</a>
+							</td>
+							<td>Prof. Dr. Fürst, Andreas</td>
+							<td>Raum 6.225</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">Lehrstuhl für Betriebswirtschaftslehre, insbes.
+								Versicherungsmarketing
+							</th>
+							<td style="word-break:break-word;"><a
+									href="http://www.versicherungsmarketing.rw.uni-erlangen.de/" target="_blank">http://www.versicherungsmarketing.rw.uni-erlangen.de/</a>
+							</td>
+							<td>Prof. Dr. Steul-Fischer, Martina</td>
+							<td>Raum 5.225</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">Juniorprofessur für Digitales Marketing</th>
+							<td style="word-break:break-word;"><a
+									href="http://www.digitalmarketing.rw.fau.de/" target="_blank">http://www.digitalmarketing.rw.fau.de/</a>
+							</td>
+							<td>Prof. Dr. Pescher, Christian</td>
+							<td>Raum 5.252a</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">Lehrstuhl für Quantitative Arbeitsökonomik</th>
+							<td style="word-break:break-word;"><a
+								href="https://www.wiso.rw.fau.de/forschung/forschungsprofil/professorenschaft/prof-bernd-fitzenberger-ph-d/#collapse_0" target="_blank">https://www.wiso.rw.fau.de/forschung/forschungsprofil/professorenschaft/prof-bernd-fitzenberger-ph-d/#collapse_0</a></td>
+							<td>Prof. Fitzenberger, Bernd, Ph.D.</td>
+							<td>Raum 4.256</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">Lehrstuhl für Statistik und empirische Wirtschaftsforschung</th>
+							<td style="word-break:break-word;"><a
+									href="http://www.lsw.wiso.fau.de/" target="_blank">http://www.lsw.wiso.fau.de/</a></td>
+							<td>Prof. Riphahn, Regina T., Ph.D.</td>
+							<td>Raum 4.118</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">Lehrstuhl für Statistik und Ökonometrie</th>
+							<td style="word-break:break-word;"><a
+									href="http://www.statistik.wiso.fau.de/" target="_blank">http://www.statistik.wiso.fau.de/</a>
+							</td>
+							<td>Prof. Dr. Dovern, Jonas</td>
+							<td>Raum 4.173</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">Lehrstuhl für Volkswirtschaftslehre, insbes. Arbeitsmarkt- und
+								Regionalpolitik</th>
+							<td style="word-break:break-word;"><a
+									href="http://www.arbeitsmarkt.wiso.uni-erlangen.de/" target="_blank">http://www.arbeitsmarkt.wiso.uni-erlangen.de/</a>
+							</td>
+							<td>Prof. Dr. Schnabel, Claus</td>
+							<td>Raum 3.115</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">Lehrstuhl für Volkswirtschaftslehre, insbes. Empirische
+								Mikroökonomie
+							</th>
+							<td style="word-break:break-word;"><a
+									href="http://www.emmi.rw.uni-erlangen.de/" target="_blank">http://www.emmi.rw.uni-erlangen.de/</a>
+							</td>
+							<td>Prof. Dr. Stephan, Gesine</td>
+							<td>Raum 6.117</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">Lehrstuhl für Volkswirtschaftslehre, insbes. Finanzwissenschaft</th>
+							<td style="word-break:break-word;"><a
+									href="http://www.finanzwissenschaft.wiso.fau.de/" target="_blank">http://www.finanzwissenschaft.wiso.fau.de/</a>
+							</td>
+							<td>Prof. Dr. Büttner, Thiess</td>
+							<td>Raum 6.120</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">Lehrstuhl für Volkswirtschaftslehre, insbes. Makroökonomie</th>
+							<td style="word-break:break-word;"><a
+									href="http://www.makro.wiso.fau.de/" target="_blank">http://www.makro.wiso.fau.de/</a></td>
+							<td>Prof. Dr. Merkl, Christian</td>
+							<td>Raum 3.160</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">Lehrstuhl für Volkswirtschaftslehre, insbes. Wirtschaftspolitik</th>
+							<td style="word-break:break-word;"><a
+									href="http://www.wettbewerb.wiso.fau.de/" target="_blank">http://www.wettbewerb.wiso.fau.de/</a>
+							</td>
+							<td>Prof. Dr. Rincke, Johannes</td>
+							<td>Raum 5.157</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">Lehrstuhl für Volkswirtschaftslehre, insbes. Wirtschaftstheorie</th>
+							<td style="word-break:break-word;"><a
+									href="http://www.wirtschaftstheorie.wiso.fau.de/"target="_blank">http://www.wirtschaftstheorie.wiso.fau.de/</a>
+							</td>
+							<td>Prof. Dr. Grimm, Veronika</td>
+							<td>Raum 5.118</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">Professur für Volkswirtschaftslehre, insbes. Industrieökonomik und
+								Energiemärkte</th>
+							<td style="word-break:break-word;"><a
+									href="http://www.energiewirtschaft.rw.fau.de/" target="_blank">http://www.energiewirtschaft.rw.fau.de/</a>
+							</td>
+							<td>Prof. Dr. Zöttl, Gregor</td>
+							<td>Raum 2.112</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">Juniorprofessur für Quantitative Labor Economics</th>
+							<td style="word-break:break-word;"><a
+									href="https://www.labor.rw.fau.de/" target="_blank">https://www.labor.rw.fau.de/</a></td>
+							<td>Prof. Dr. Nagler, Markus</td>
+							<td>Raum 4.122b</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">Juniorprofessur für Energiemärkte und Energiesystemanalyse</th>
+							<td style="word-break:break-word;"><a
+									href="https://www.energymarkets.wiso.rw.fau.de/" target="_blank">https://www.energymarkets.wiso.rw.fau.de/</a>
+							</td>
+							<td>Prof. Dr. Liebensteiner, Mario</td>
+							<td>Raum 4.121a</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">Lehrstuhl für Wirtschaftsinformatik, insb. im Dienstleistungsbereich
+							</th>
+							<td style="word-break:break-word;"><a
+									href="http://www.wi2.fau.de/" target="_blank">http://www.wi2.fau.de/</a></td>
+							<td>Prof. Dr. Bodendorf, Freimut</td>
+							<td>Raum 4.437</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">Lehrstuhl für Wirtschaftsinformatik, insb. Innovation und
+								Wertschöpfung
+							</th>
+							<td style="word-break:break-word;"><a
+									href="http://www.wi1.fau.de/" target="_blank">http://www.wi1.fau.de/</a></td>
+							<td>Prof. Dr. Möslein, Kathrin M.</td>
+							<td>Raum 4.254</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">Lehrstuhl für Wirtschaftsinformatik, insb. IT-Management</th>
+							<td style="word-break:break-word;"><a
+									href="http://www.itm.rw.fau.de/" target="_blank">http://www.itm.rw.fau.de/</a></td>
+							<td>Prof. Dr. Amberg, Michael</td>
+							<td>Raum 5.433</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">Lehrstuhl für Wirtschaftsinformatik, insb. Technische
+								Informationssysteme</th>
+							<td style="word-break:break-word;"><a
+									href="https://www.ti.rw.fau.de/" target="_blank">https://www.ti.rw.fau.de/</a></td>
+							<td>Prof. Dr. Harth, Andreas</td>
+							<td>Raum 5.257</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">Lehrstuhl für Wirtschaftspädagogik und Personalentwicklung</th>
+							<td style="word-break:break-word;"><a
+									href="http://www.wirtschaftspaedagogik.de/" target="_blank">http://www.wirtschaftspaedagogik.de/</a>
+							</td>
+							<td>Prof. Dr. Wilbers, Karl</td>
+							<td>Raum 4.159</td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
 
 		<!------Kommentare------>
 		<div class="container">
@@ -509,7 +513,7 @@
 				<thead>
 					<tr>
 						<th colspan="4" style="text-align:left; vertical-align:middle;">Fragen zu einem anderen Thema? Schau ins <a href="Forum.html">Forum</a>!</th>
-						<th style="text-align:right;"><button id="t" class="btn btn-outline-secondary btn-sm" onclick="location.href='#bottom'" style="writing-mode:vertical-rl;transform: rotate(90deg);">&Gt;</button></th>
+						<th style="text-align:right;"><button id="t" class="btn btn-outline-secondary btn-sm" onclick="location.href='#bottom'">&#x2B9F;</button></th>
 					</tr>
 				</thead>
 				<tbody id="lg-comments">
@@ -520,8 +524,9 @@
 						<form id="lg-form">
 							<td colspan="3" style="width:90%;">
 								<span id="logged-in">
-								<textarea type="text" class="form-control" placeholder="Schreib deinen Kommentar hier ..." 
-										id="lg-text" maxlength="800" required></textarea>
+									<textarea type="text" class="form-control"
+										placeholder="Schreib deinen Kommentar hier ..." id="lg-text" maxlength="800"
+										required></textarea>
 								</span>
 							</td>
 							<td style="vertical-align:bottom;">
@@ -529,14 +534,14 @@
 							</td>
 						</form>
 						<td style="text-align:right; vertical-align:bottom;">      
-							<button id="bottom" class="btn btn-outline-secondary btn-sm" onclick="location.href='#t'" style="writing-mode:vertical-rl;transform: rotate(90deg);">&Lt;</button>
+							<button id="bottom" class="btn btn-outline-secondary btn-sm" onclick="location.href='#t'">&#x2B9D;</button>
 						</td>
 					</tr>
 				</tbody>
 			</table>
 			<div class="btn btn-secondary" id="logged-out">
 				<div style="text-align: center;"><a class="nav-link" href="#" data-target="#modal-login"
-					data-toggle="modal" style="color: white;">Log dich ein und kommentiere auch!</a></div>
+						data-toggle="modal" style="color: white;">Log dich ein und kommentiere auch!</a></div>
 			</div>
 		</div>
 	</div>
@@ -598,12 +603,14 @@
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 				</div>
 				<h4 id="kopf">Account details</h4><br />
-				<div class="account-details">
+				<div class="account-details" style="margin: 5%;">
 					<p>Username: <span id="username"></span></p>
 				</div>
 			</div>
 		</div>
 	</div>
+
+
 </body>
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
