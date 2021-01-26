@@ -1,7 +1,7 @@
 /* Style for index.html*/
 /* Move down content because we have a fixed navbar that is 3.5rem tall */
 html {
-  margin-top: 40px;
+  
   scroll-behavior: smooth;
 }
 body {
