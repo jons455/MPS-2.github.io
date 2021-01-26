@@ -1,13 +1,13 @@
-﻿<html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" contents="ie=edge">
 	<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 	<meta name="generator" content="Jekyll v4.1.1">
-	<title>FAU Experience</title>
+	<title>ExperienceFAU</title>
 
 	<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/jumbotron/">
 	<!-- custom stylesheet-->
@@ -16,15 +16,7 @@
 	<!-- css & bootstrap link-->
 	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-	<!--Leaflet-->
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-		integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-		crossorigin="" />
-	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-		integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-		crossorigin=""></script>
 	<link rel="icon" type="image/png" sizes="16x16" href="IMG/Logo FAU Experience.png">
-
 </head>
 
 <body>
@@ -79,18 +71,18 @@
 
 			</ul>
 		</div>
-	</nav><br>
+	</nav>
 
 	<div class="container" id="Platzhalter">
-		<div class="container" id="FG">
-			<h2 id="FindelGasse">Findelgasse</h2>
-			<p> <img src=https://www.wiso.rw.fau.de/files/2017/08/presse12-704x470.jpg alt="LangeGasse"
+		<div class="container" id="Findelgasse">
+			<h2 >Findelgasse</h2>
+			<p id="pic"> <img src=https://www.wiso.rw.fau.de/files/2017/08/presse12-704x470.jpg alt="LangeGasse"
 					style="border: 4px solid #6c757d" class="img-fluid"></p>
-
+		</div>
 			<div class="container">
 				<div class="row" id="SaalFG" data-parent="#FG">
 					<div class="col-md-6">
-						<h2>Hörsäle</h2>
+						<h2 id="Findelgasse">Hörsäle</h2>
 						In der Findelgasse befinden sich im Erdgeschoss der Kurt-Glässer Hörsaal und ein Seminarraum in
 						denen Vorlesungen, übungen und Seminare gehalten werden.
 						<div>
@@ -100,7 +92,7 @@
 						</div>
 					</div>
 					<div class="col-md-6" id="Raum">
-						<h2>Gruppenräume</h2>
+						<h2 id="Findelgasse">Gruppenräume</h2>
 						Im Gebäude Findelgasse befinden sich im Untergeschoss vier multifunktionale Kleingruppenräume,
 						die insbesondere für studentische Gruppenarbeiten etc. gebucht werden können.
 						<div><a href="https://www.infothek.rw.fau.de/2020/07/22/lernraeume-in-der-findelgasse/"
@@ -110,7 +102,7 @@
 				</div>
 				<div class="row" id="SaalFG" data-parent="#FG"></div>
 					<div class="col-md-12" id="Trichter">
-						<h2>Trichter</h2>
+						<h2 id="Findelgasse">Trichter</h2>
 						Im Kellergewölbe der Findelgasse befindet sich das Studentencafé „Der Trichter“, das von
 						Studierenden der WISO bereits seit 1986 ehrenamtlich neben dem Studium betrieben wird.
 						Zusätzlich
@@ -126,8 +118,8 @@
 	
 
 
-		<div class="container" id="Lehre">
-			<h2 align="center">Lehrstühle</h2>
+		<div class="container" id="Platzhalter">
+			<h2  id="Findelgasse">Lehrstühle</h2>
 			<div class="jumbotron jl" >
 				<table class="table">
 					<thead>
@@ -283,70 +275,72 @@
 
 
 
-	<!-- Modals -->
-	<div id="modal-signup" class="modal fade" role="dialog">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-				</div>
-				<h4 id="kopf">Sign up</h4><br>
-				<form id="signup-form">
-					<div class="form-group">
-						<input type="email" id="signup-email" placeholder="Enter Email" required /><br>
-						<label for="signup-email">Email address</label>
+		<!-- Modals -->
+		<div id="modal-signup" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
 					</div>
-					<div class="form-group">
-						<input type="password" id="signup-password" placeholder="Enter Password" required /><br>
-						<label for="signup-password">Choose password</label>
-						<p>(min. 6 Zeichen)</p>
-					</div>
-					<div class="form-group">
-						<input type="text" id="signup-username" placeholder="Enter Name" required /><br>
-						<label for="signup-username">Choose Name</label>
-					</div>
-					<p id="err"></p>
-					<button class="btn btn-secondary">Sign up</button>
-				</form>
-			</div>
-		</div>
-	</div>
-	<div id="modal-login" class="modal fade" role="dialog">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-				</div>
-				<h4 id="kopf">Login</h4><br />
-				<form id="login-form">
-					<div class="gorm-group">
-						<input type="email" id="login-email" required />
-						<label for="login-email">Email address</label>
-					</div>
-					<div class="from-group">
-						<input type="password" id="login-password" required />
-						<label for="login-password">Your password</label>
-					</div>
-					<p id="log-err"></p>
-					<button class="btn btn-secondary">Login</button>
-				</form>
-			</div>
-		</div>
-	</div>
-
-	<div id="modal-account" class="modal fade" role="dialog">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-				</div>
-				<h4 id="kopf">Account details</h4><br />
-				<div class="account-details">
-					<p>Username: <span id="username"></span></p>
+					<h4 id="kopf">Sign up</h4><br>
+					<form id="signup-form">
+						<div class="form-group">
+							<input type="email" id="signup-email" placeholder="Enter Email" required /><br>
+							<label for="signup-email">Email address</label>
+						</div>
+						<div class="form-group">
+							<input type="password" id="signup-password" placeholder="Enter Password" required /><br>
+							<label for="signup-password">Choose password</label>
+							<p>(min. 6 Zeichen)</p>
+						</div>
+						<div class="form-group">
+							<input type="text" id="signup-username" placeholder="Enter Name" required /><br>
+							<label for="signup-username">Choose Name</label>
+						</div>
+						<p id="err"></p>
+						<button class="btn btn-secondary">Sign up</button>
+					</form>
 				</div>
 			</div>
 		</div>
-	</div>
+		<div id="modal-login" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+					<h4 id="kopf">Login</h4><br />
+					<form id="login-form">
+						<div class="gorm-group">
+							<input type="email" id="login-email" required />
+							<label for="login-email">Email address</label>
+						</div>
+						<div class="from-group">
+							<input type="password" id="login-password" required />
+							<label for="login-password">Your password</label>
+						</div>
+						<p id="log-err"></p>
+						<button class="btn btn-secondary">Login</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	
+		<div id="modal-account" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+					<h4 id="kopf">Account details</h4><br />
+					<div class="account-details" style="margin: 5%;">
+						<p>Username: <span id="username"></span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	
 
 </body>
 <!-- The core Firebase JS SDK is always required and must be listed first -->

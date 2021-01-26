@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,7 +7,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 	<meta name="generator" content="Jekyll v4.1.1">
-	<title>FAU Experience</title>
+	<title>ExperienceFAU</title>
 
 	<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/jumbotron/">
 	<!-- custom stylesheet-->
@@ -16,15 +16,7 @@
 	<!-- css & bootstrap link-->
 	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-	<!--Leaflet-->
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-		integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-		crossorigin="" />
-	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-		integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-		crossorigin=""></script>
 	<link rel="icon" type="image/png" sizes="16x16" href="IMG/Logo FAU Experience.png">
-
 </head>
 
 <body>
@@ -83,10 +75,14 @@
 
 	<div class="container" id="Platzhalter">
 
-		<div class="container" id="LG">
-			<h2 id="LangeGasse">Lange Gasse</h2>
-			<p> <img src=https://nuernberg.digital/fileadmin/blog/20200210_fit_fuer_die_digitale_zukunft/uni_gebauude_fau_erlangen.jpg
+		<div class="container" id="LangeGasse">
+			<h2 >Lange Gasse</h2>
+			<p id="pic"> <img src=https://nuernberg.digital/fileadmin/blog/20200210_fit_fuer_die_digitale_zukunft/uni_gebauude_fau_erlangen.jpg
 					alt="LangeGasse" style="border: 4px solid #6c757d; width:60%;" class="img-fluid"></p>
+		<div class="row" >
+			<div class="col-md-12"  >
+				<p id="back"><img src="IMG/Logo FAU Experience.png" ></p>
+			</div>
 		</div>
 		<div class="row" id="LG">
 			<div class="col-md-6">
@@ -607,12 +603,14 @@
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 				</div>
 				<h4 id="kopf">Account details</h4><br />
-				<div class="account-details">
+				<div class="account-details" style="margin: 5%;">
 					<p>Username: <span id="username"></span></p>
 				</div>
 			</div>
 		</div>
 	</div>
+
+
 </body>
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>

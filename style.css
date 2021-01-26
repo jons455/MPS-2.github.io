@@ -4,7 +4,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  padding-top: 0rem;
+  padding-top: 3.5rem;
   margin-bottom: 40px;
   background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url("https://https://raw.githubusercontent.com/MPS-2/MPS-2.github.io/main/IMG/Logo%20FAU%20Experience.png.githubusercontent.com/MPS-2/MPS-2.github.io/main/IMG/Logo%20FAU%20Experience%20Navbar.png");
   position: relative;
@@ -90,10 +90,7 @@ body {
   position: relative;
   background-attachment: fixed;
 }
-.col-md-6{
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
+
 }
 /* Place text in the middle of the image */
 .hero-text {
@@ -136,22 +133,22 @@ h1{
 }
 #Findelgasse{
   margin-top: 50px ;
-  margin-bottom: 25px;
+
 }
 #Mensa{
   margin-top: 50px ;
-  margin-bottom: 25px;
+ 
 }
 #Sonstige{
   margin-top: 50px ;
-  margin-bottom: 25px;
+  
   
 }
 
 
 .jumb{
-  min-width: 80%;
   
+  min-height: 100px;
 }
 
 @viewport {
@@ -168,10 +165,13 @@ thead {
   margin-bottom: 5px;
 }
 
-#Karte{
-  text-align: center; 
+#Karte{ 
+  text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
+  height: 500px;
+  width: 100%;
+
 }
 #SoD{
   margin-bottom: 80px;
@@ -194,4 +194,8 @@ thead {
   width: 100px;
   height: 100px;
 }
-
+#back{
+  position:fixed;;
+  align-items: center;
+  margin-left: 65%;
+}
