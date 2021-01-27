@@ -18,7 +18,7 @@ const setupLG = (data) => {
                 <div>${post.time.toDate().toLocaleDateString()}</div>
                 <div>${post.time.toDate().toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})}</div>
             </td>
-            <td colspan="4">
+            <td colspan="4" style="text-align:left;">
                 <div style="word-wrap: break-word; word-break: break-word;">${post.text}</div>    
             </td>
         </tr>
