@@ -46,19 +46,6 @@ menform.addEventListener('submit', (e) => {
       });
     });
   });
-  
-function toOeffnung() {
-  window.location.href = "#Oeffnung";
-}
-function toSpeise() {
-  window.location.href = "#Speise";
-}
-function toWerk() {
-  window.location.href = "#Werk";
-}
-function toZahlen() {
-  window.location.href = "#Zahlen";
-}
 
 function toComments() {
   window.location.href = "#men";
