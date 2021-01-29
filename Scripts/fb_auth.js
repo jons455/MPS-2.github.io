@@ -118,10 +118,9 @@ const setupUI = (user) => {
       <div>Logged in as ${name}</div>
     
     <br>
-    <div class="w3-light-grey w3-round">
-    <div class="w3-container w3-round w3-blue" style="width:25%">25%</div>
   </div> `;
   accountDetails.innerHTML = html;
+  
   });
   } else {
     // toggle user elements

@@ -9,6 +9,7 @@ class ProgressBar {
     }
     init(){
         const context = this;   // Reference to the instantiated object.
+       
         this.targets.forEach(function(target){
            
           // Loop through each target element and add a click 
@@ -67,4 +68,4 @@ class ProgressBar {
     // passing in an array of all the steps (targets) to listen on
     document.querySelectorAll('.btn-secondary')
   );
-  progressBar.init();
+  progressBar.init()
