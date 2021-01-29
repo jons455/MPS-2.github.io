@@ -12,7 +12,7 @@
 	<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/jumbotron/">
 	<!-- custom stylesheet-->
 	<link rel="stylesheet" href="style.css">
-	
+
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<!-- css & bootstrap link-->
 	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -109,8 +109,8 @@
 		<div id="mapid" class="container py-5"></div>
 	</div>
 	<div class="container">
-	
-</div>
+
+	</div>
 
 	<!--data-aos="fade-up" data-aos-duration="3000" -->
 
@@ -192,14 +192,17 @@
 				<div class="account-details" style="margin: 5%;">
 					<p>Username: <span id="username"></span></p>
 				</div>
+
 				<div class="progress">
-					<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-				  </div>
-				
-				<a href="#" class="btn btn-secondary" data-progress="0">LangeGasse</a>
+
+					<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="background-color: brown;"></div>
+
+				</div>
+
+				<a id="lange" href="#" class="btn btn-secondary" data-progress="0">LangeGasse</a>
 				<a href="#" class="btn btn-secondary" data-progress="33">FindelGasse</a>
 				<a href="#" class="btn btn-secondary" data-progress="66">Mensa</a>
-		  
+
 			</div>
 		</div>
 
@@ -299,7 +302,7 @@
 		mymap.on('locationerror', onLocationError);
 		mymap.locate({ setView: false, watch: true });
 	</script>
-	
+
 </body>
 
 </html>

@@ -94,4 +94,13 @@
   .hide {
     display: none;
   }
+  .progress{
+    margin-bottom: 30%;
+  }
+ 
+  .progress-bar{
+    width: 300px;
+    margin-bottom: 20%;
+    color: chartreuse;
+  }
   
