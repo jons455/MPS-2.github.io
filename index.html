@@ -12,6 +12,7 @@
 	<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/jumbotron/">
 	<!-- custom stylesheet-->
 	<link rel="stylesheet" href="style.css">
+	
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<!-- css & bootstrap link-->
 	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -96,8 +97,8 @@
 				<h2>just like you were there</h2>
 				<br>
 				<a class="btn btn-secondary" role="button" href="Quiz.html">Start Quiz</a><br><br><br>
-				<a href="#dropdown" style="color: white;font-size:4vh; text-decoration:none;" onmouseover="this.style.color = 'grey'"
-					onmouseout="this.style.color='white'">
+				<a href="#dropdown" style="color: white;font-size:4vh; text-decoration:none;"
+					onmouseover="this.style.color = 'grey'" onmouseout="this.style.color='white'">
 					<span style="writing-mode:vertical-lr;transform:rotate(180deg);">&Lang;&Lang;&Lang;</span>&nbsp;
 				</a>
 			</div>
@@ -107,7 +108,9 @@
 		<h4>Die Standorte der WISO im Überblick...</h4>
 		<div id="mapid" class="container py-5"></div>
 	</div>
-
+	<div class="container">
+	
+</div>
 
 	<!--data-aos="fade-up" data-aos-duration="3000" -->
 
@@ -115,16 +118,19 @@
 		<div class="row">
 			<div class="col-lg-6" style="min-height:50vh;">
 				<h4 style="text-align:center;">Virtueller Rundgang durch die Lange Gasse</h4>
-				<iframe src="https://www.youtube.com/embed/Ec2yPWzVHe8?autoplay=1&mute=1" 
-				title="Virtueller Rundgang" style="width:100%; min-width:270px; min-height:40vh;"></iframe>
+				<iframe src="https://www.youtube.com/embed/Ec2yPWzVHe8?autoplay=1&mute=1" title="Virtueller Rundgang"
+					style="width:100%; min-width:270px; min-height:40vh;"></iframe>
 			</div>
 			<div class="col-lg-6">
 				<h4 style="text-align:center;">Neuigkeiten an der FAU</h4>
-				<iframe src="https://www.fau.de/fau/aktuelles/#droppoint" 
-				title="News" style="width:100%; min-width:270px; min-height:40vh;"></iframe>
+				<iframe src="https://www.fau.de/fau/aktuelles/#droppoint" title="News"
+					style="width:100%; min-width:270px; min-height:40vh;"></iframe>
 			</div>
 		</div>
 	</div>
+	<footer class="container">
+		<p>&copy; MSB-Übung1; Andrea Krestakova, Jonas Reif, Paul Huck, Laura Plößner, Paulina Dismann</p>
+	</footer>
 	<!-- Modals -->
 	<div id="modal-signup" class="modal fade" role="dialog">
 		<div class="modal-dialog">
@@ -186,8 +192,18 @@
 				<div class="account-details" style="margin: 5%;">
 					<p>Username: <span id="username"></span></p>
 				</div>
+				<div class="progress">
+					<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+				  </div>
+				
+				<a href="#" class="btn btn-secondary" data-progress="33">LangeGasse</a>
+			<a href="#" class="btn btn-secondary" data-progress="33">FindelGasse</a>
+			<a href="#" class="btn btn-secondary" data-progress="33">Mensa</a>
+		  
 			</div>
 		</div>
+
+
 	</div>
 
 
@@ -225,6 +241,7 @@
 	<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 	<script src="Scripts/main.js"></script>
 	<script src="Scripts/fb_auth.js"></script>
+	<script src="Scripts/progress.js"></script>
 
 	<!-- AOS script for animations -->
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -282,7 +299,7 @@
 		mymap.on('locationerror', onLocationError);
 		mymap.locate({ setView: false, watch: true });
 	</script>
-
+	
 </body>
 
 </html>
