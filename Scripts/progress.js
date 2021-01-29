@@ -4,9 +4,8 @@ class ProgressBar {
     constructor(progressbar, targets){
       this.progressBar = progressbar;    // Progress Bar
       this.targets = targets;            // Step Complete Btns
-      this.progress = 0;                 // Tracking Progress
-      this.aktprocess = 0;
-      console.log("AKT:",this.aktprocess);
+      this.progress;                 // Tracking Progress
+     
     }
     init(){
         const context = this;   // Reference to the instantiated object.
@@ -22,12 +21,43 @@ class ProgressBar {
         });
       }
       changeProgress(e){
-        this.progress = e.target.getAttribute('data-progress');
-        this.aktprocess = this.aktprocess + this.progress;
-        console.log(progress);
-        console.log("AKT:",this.aktprocess);
-        this.progressBar.style.width = this.aktprocess + '%';
+        //this.progress = e.target.getAttribute('data-progress');
+        console.log(this.progress);
+        var ui = firebase.auth().currentUser.uid;
+        console.log(ui)
+    
+   db.collection('Users').doc(ui).get().then(doc =>{
+      this.progress  = doc.data().progress;
+      console.log("DB:entry",this.progress)
+        switch (this.progress) {
+          case "33":
+            this.progress = "66"
+            // Anweisungen werden ausgeführt,
+            // falls expression mit value1 übereinstimmt
+            break;
+          case "66":
+            this.progress = "100"
+            // Anweisungen werden ausgeführt,
+            // falls expression mit value2 übereinstimmt
+           break;
+         
+          default:
+            console.log("Def");
+            this.progress = "33"
+            // Anweisungen werden ausgeführt,
+            // falls keine der case-Klauseln mit expression übereinstimmt
+            break;
+        }
+        
+        console.log("After Switch",this.progress);
+      
+        this.progressBar.style.width = this.progress + '%';
         this.progressBar.setAttribute('aria-valuenow', this.progress);
+      }).then(wer =>{db.collection("Users").doc(ui).update({
+        progress: this.progress
+    });
+  });
+      
       }
   }
 

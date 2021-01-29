@@ -34,8 +34,8 @@ signupForm.addEventListener('submit', (e) => {
     //check credentials
     console.log(username);
     db.collection("Users").doc(cred.user.uid).set({
-      user:  username
-      
+      user:  username,
+      progress: 0
   })
   .then(function() {
       console.log("Document successfully written!");
