@@ -21,10 +21,10 @@ body {
 }
 
 #Tour{
-  margin-top: 30px;
+  
   margin-bottom: 30px;
+  
 }
-
 .modal {
   size: 60%;
 }
@@ -199,8 +199,6 @@ thead {
   align-items: center;
   margin-left:25%;
   margin-top: 500px;
-  
-
 }
 
 #lange{
@@ -209,5 +207,10 @@ thead {
 
 #knopf{
   margin: 5%;
+  text-align: center;
+}
+#quizvs{
+  align-content: center;
+margin-top: 10px;
   text-align: center;
 }

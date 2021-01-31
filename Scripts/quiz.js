@@ -1,6 +1,6 @@
 const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
-const homeButton = document.getElementById('home-btn')
+
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
@@ -16,7 +16,7 @@ nextButton.addEventListener('click', () => {
 
 function startGame() {
   startButton.classList.add('hide')
-  homeButton.classList.add('hide')
+ 
   shuffledQuestions = questions.sort(() => Math.random() - .5)
   currentQuestionIndex = 0
   questionContainerElement.classList.remove('hide')
@@ -59,12 +59,12 @@ function selectAnswer(e) {
   })
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove('hide')
-    homeButton.classList.remove('hide')
+    
   } else {
     startButton.innerText = 'Restart'
-    homeButton.innerText = 'Home'
+    
     startButton.classList.remove('hide')
-    homeButton.classList.remove('hide')
+    
   }
 }
 
