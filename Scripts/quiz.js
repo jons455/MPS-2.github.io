@@ -140,9 +140,9 @@ const questions = [
   {
     question: 'Wo befindet sich die Mensa?',
     answers: [
-      { text: 'Hans-Sachs Platz', correct: false },
-      { text: 'Andrej-Sacharow Platzer', correct: true },
-      { text: 'Albrecht-Dürer Platz', correct: false },
+      { text: 'Hans-Sachs-Platz', correct: false },
+      { text: 'Andreij-Sacharow-Platz', correct: true },
+      { text: 'Albrecht-Dürer-Platz', correct: false },
       { text: 'Aufseßplatz', correct: false }
     ]
   },
